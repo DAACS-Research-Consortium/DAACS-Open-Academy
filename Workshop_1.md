@@ -20,7 +20,7 @@ Can archaeologists correctly distinguish building loci from architectural dispos
 ### **Objective:** Create a sample spreadsheet with the fields you deem essential for collecting variables and answering your question
 #### **To do:**
 * Identify your variable fields (columns) and how you will organize your rows
-* Identify what variable types will go in each field (open text, formalized terms?)
+* Identify what variable types will go in each field (e.g. open text, formalized terms, measurements)
 
 
 
