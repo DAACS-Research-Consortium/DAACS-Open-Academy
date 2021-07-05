@@ -1,4 +1,10 @@
-# Workshop 1
+# Workshop 1: Creating a Digital Dataset That Meets Your Research Needs
+
+## Goals
+### Participants will learn:
+* How your research objectives are directly linked to the types of data you collect and how you collect them.
+* How to develop and refine research questions that can be answered with archaeological evidence/data.
+* How to identify and collect the data you need to answer your research questions. 
 
 ## [Google Slides](https://docs.google.com/presentation/d/1tK9A3OOGIa2ElzsYwi8ybRXsgZGhiaF0/edit#slide=id.ge34780642a_0_57)
 
