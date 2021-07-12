@@ -3,10 +3,10 @@
 ## Goals
 ### Participants will learn:
 * About different digital tools and recognize when to apply them.  For example:
-*   When do you use a spreadsheet?
-*   When do you use a database?
-*   When do you use a stats package?
-*   When do you use a tool to manipulate data?
+1. When do you use a spreadsheet?
+2. When do you use a database?
+3. When do you use a stats package?
+4. When do you use a tool to manipulate data?
 
 * How to create a digital dataset that meets your research needs while also conforming to the best practices of Open Science.
 
