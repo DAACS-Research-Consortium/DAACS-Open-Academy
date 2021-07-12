@@ -6,8 +6,9 @@
 * How to develop and refine research questions that can be answered with archaeological evidence/data.
 * How to identify and collect the data you need to answer your research questions. 
 
-## [Google Slides](https://docs.google.com/presentation/d/1tK9A3OOGIa2ElzsYwi8ybRXsgZGhiaF0/edit#slide=id.ge34780642a_0_57)
+## [PDF of Slides](https://drive.google.com/file/d/15rI-MQCFmPT6KCP65XJeHU8GpIOgsm5y/view?usp=sharing)
 
+## [Video Recording of Workshop 1](https://vimeo.com/572645935)
 
 ## Exercises
 ### Exercise 1 (10 min)
