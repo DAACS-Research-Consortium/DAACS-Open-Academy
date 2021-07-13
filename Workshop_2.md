@@ -28,3 +28,5 @@
 
 ### Exercise 2 (7 min) -- Follow along
 #### We'll demonstrate some of the pitfalls of sorting, filtering, and use pivot tables in Google Sheets.
+
+
