@@ -15,18 +15,17 @@
 ## [Video Recording of Workshop 2](https://vimeo.com/574561557)
 
 ## Exercises
-### Exercise 1 (10 min)
-#### **Objective:** Create the framework for a sample CERAMIC dataset. Create a data structure for the data you want to capture about the object. 
+### Exercise 1: Create a Ceramic Data Table (10 min)
+#### **Objective:** Practice creating a data table to capture information from ceramic artifacts.
 ##### To do:
 1. Introduce yourselves!
-2. Open this link to a [Google spreadsheet](https://docs.google.com/spreadsheets/d/1685ZhEmZsuC35tjdZ-Oosy1e2OmHWrN49u7FlBzWr9o/edit?usp=sharing). Create your own tab for    your group.  Create a basic spreadsheet of variables to capture information from ceramic objects (or should we keep this artifact oriented)? 
+2. With your group, choose the ceramic attributes (variables/columns) that you would like to record.
+3. Put the attributes into columns into a worksheet in the [Google workbook](https://docs.google.com/spreadsheets/d/1685ZhEmZsuC35tjdZ-Oosy1e2OmHWrN49u7FlBzWr9o/edit?usp=sharing) provided. Name the worksheet with group member names.
    * With your group, identify the artifact attributes you would record in the variable field.
-3. [Watch this artifact video](https://vimeo.com/574561557)
-4. Catalog that object into your data structure.  Answer the following questions:
-   * What worked? What didn't work?  Were you missing attributes you wish you had?  Did you have attributes you didn't use?
-5. Return to the classroom and share ideas.
+4. Return to the classroom after 10 minutes.
+5. [Watch this artifact video.](https://vimeo.com/574561557) Pay close attention to the ceramic sherd attributes.
+6. Return to your breakout room and catalog the artifacts into your data sheet. You can watch the video again.
+7. What worked? What didn't work? What would you add? Did you have attributes you didn't use? Return to the classroom and share ideas.
 
-### Exercise 2 (7 min) -- Follow along
-#### We'll demonstrate some of the pitfalls of sorting, filtering, and use pivot tables in Google Sheets.
-
-
+### Exercise 2: Potential Spreadsheet Pitfalls (7 min) -- Follow along
+#### **Objective:** We'll demonstrate some of the pitfalls of sorting, filtering, and using pivot tables in Google Sheets.
