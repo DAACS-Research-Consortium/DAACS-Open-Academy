@@ -25,3 +25,6 @@
 4. Catalog that object into your data structure.  Answer the following questions:
    * What worked? What didn't work?  Were you missing attributes you wish you had?  Did you have attributes you didn't use?
 5. Return to the classroom and share ideas.
+
+### Exercise 2 (7 min) -- Follow along
+#### We'll demonstrate sorting, filtering, and pivot tables in Google Sheets.  You can save your own copy to your Google drive and follow the instructions or just follow along with us as walk you through it.
