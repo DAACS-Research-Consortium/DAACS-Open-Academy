@@ -28,4 +28,4 @@
 7. What worked? What didn't work? What would you add? Did you have attributes you didn't use? Return to the classroom and share ideas.
 
 ### Exercise 2: Potential Spreadsheet Pitfalls (7 min) -- Follow along
-#### **Objective:** We'll demonstrate some of the pitfalls of sorting, filtering, and using pivot tables in Google Sheets.
+#### **Objective:** Demonstrate some of the pitfalls of sorting, filtering, and using pivot tables in Google Sheets.
