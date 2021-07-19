@@ -10,7 +10,7 @@
 
 * How to create a digital dataset that meets your research needs while also conforming to the best practices of Open Science.
 
-## [PDF of Slides](https://drive.google.com/file/d/15rI-MQCFmPT6KCP65XJeHU8GpIOgsm5y/view?usp=sharing)
+## [PDF of Slides](https://drive.google.com/file/d/1DLqI51F8vVG3-aQhlyDT3xNh7HoUMT_p/view?usp=sharing)
 
 ## [Video of Artifacts for Workshop 2 Exercise](https://vimeo.com/574561557)
 
