@@ -12,7 +12,9 @@
 
 ## [PDF of Slides](https://drive.google.com/file/d/15rI-MQCFmPT6KCP65XJeHU8GpIOgsm5y/view?usp=sharing)
 
-## [Video Recording of Workshop 2](https://vimeo.com/574561557)
+## [Video of Artifacts for Workshop 2 Exercise](https://vimeo.com/574561557)
+
+## [Video Recording of Workshop 2](https://vimeo.com/576802211)
 
 ## Exercises
 ### Exercise 1: Create a Ceramic Data Table (10 min)
