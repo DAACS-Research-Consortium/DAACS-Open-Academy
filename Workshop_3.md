@@ -22,7 +22,7 @@ What kinds of research questions could you answer using the following datasets? 
 
 * The collection has context records with quadrat numbers, coordinates, and sediment descriptions by level, and bags with artifacts that have Context IDs based on quadrat and level but no maps or site report.
 
-* You have artifacts labeled by catalog number, an artifact inventory that links the catalog number to a unit/level, and site maps with features, but no unit forms, photos, or site report
+* You have artifacts labeled by catalog number, an artifact inventory that links the catalog number to a unit/level, and site maps with features, but no unit forms, photos, or site report.
 
 * You want to compare collections from two sites that date to the same time period each that you know once had multiple structures standing on them.  Both collections consist of artifacts with provenience labels, context records, and maps.  The excavation extent of one site is an STP survey.  The excavation of second site is comprised of units clustered around structures.  
 
