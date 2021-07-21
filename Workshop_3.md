@@ -27,7 +27,7 @@ What kinds of research questions could you answer using the following datasets? 
 * You want to compare collections from two sites that date to the same time period each that you know once had multiple structures standing on them.  Both collections consist of artifacts with provenience labels, context records, and maps.  The excavation extent of one site is an STP survey.  The excavation of second site is comprised of units clustered around structures.  
 
 
-### Exercise 2: I Spy -- Spotting and Mitigating Issues with Legacy Digital Data (7 min) -- Follow along
+### Exercise 2: I Spy -- Spotting and Mitigating Issues with Legacy Digital Data -- Follow along
 #### **Objective:** Demonstrate some of the common challenges to working with digital legacy datasets and how to handle them
 ##### To do:
 1. [Navigate to this spreadsheet](https://docs.google.com/spreadsheets/d/1aKVIOOTnZZVc-G8SdDYSmKjpKT3a2_quZJLSszunIB4/edit#gid=881604718).  
