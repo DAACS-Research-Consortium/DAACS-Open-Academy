@@ -33,4 +33,5 @@ What kinds of research questions could you answer using the following datasets? 
 1. [Navigate to this spreadsheet](https://docs.google.com/spreadsheets/d/1aKVIOOTnZZVc-G8SdDYSmKjpKT3a2_quZJLSszunIB4/edit#gid=881604718).  
 2. Please save a copy onto your own machine.  
 3. Look at the first tab. Find as many errors as you can using the process outlined in the slides.
-
+4. Look at the second tab. Find errors, parse data by adding new fields you deem necessary and adding standardized terminology.
+5. Check out the key (which will be shared).
