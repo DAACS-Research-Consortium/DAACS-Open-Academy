@@ -29,4 +29,8 @@ What kinds of research questions could you answer using the following datasets? 
 
 ### Exercise 2: I Spy -- Spotting and Mitigating Issues with Legacy Digital Data (7 min) -- Follow along
 #### **Objective:** Demonstrate some of the common challenges to working with digital legacy datasets and how to handle them
+##### To do:
+1. [Navigate to this spreadsheet](https://docs.google.com/spreadsheets/d/1aKVIOOTnZZVc-G8SdDYSmKjpKT3a2_quZJLSszunIB4/edit#gid=881604718).  
+2. Please save a copy onto your own machine.  
+3. Look at the first tab. Find as many errors as you can using the process outlined in the slides.
 
