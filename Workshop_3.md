@@ -7,7 +7,7 @@
 * How to address productively the unique challenges of legacy data. 
 * The basics of data wrangling: identify gaps in the data and discrepancies, learn how to remove or mediate these issues during the data standardization process.
 
-## [PDF of Slides]()
+## [PDF of Slides](https://drive.google.com/file/d/1fvlL2z5fxo2_q4ue5cEMLFbzxH-qT2UV/view?usp=sharing)
 
 ## [Video Recording of Workshop 3]()
 
