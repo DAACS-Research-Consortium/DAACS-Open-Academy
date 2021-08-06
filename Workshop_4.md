@@ -7,7 +7,7 @@
 * If time permits, learn a couple key Excel plotting tools.
 
 
-## [PDF of Slides](https://drive.google.com/file/d/14ss1ccnBaJVJr9xP-pEECu-MX_BlNVEm/view?usp=sharing)
+## [PDF of Slides](https://drive.google.com/file/d/1FJxsXw-lz4Sd-Yfns86BhAipuQK2tQYi/view?usp=sharing)
 
 ## [Video Recording of Workshop 4]()
 
