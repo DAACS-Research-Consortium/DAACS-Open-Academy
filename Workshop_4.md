@@ -7,14 +7,14 @@
 * If time permits, learn a couple key Excel plotting tools.
 
 
-## [PDF of Slides]()
+## [PDF of Slides](https://drive.google.com/file/d/14ss1ccnBaJVJr9xP-pEECu-MX_BlNVEm/view?usp=sharing)
 
 ## [Video Recording of Workshop 4]()
 
 ## Exercises
 ### Exercise 1: Querying Access (Follow along)
 
-### Exercise 2: Pivot tables and Plotting in Excel
+### Exercise 2: Pivot tables and Plotting in Excel (Follow along)
 ##### To do:
 1. [Navigate to qryCeramics dataset and download](https://drive.google.com/file/d/10J7J9AJ_LOf0L2fNRY3vnfaRIttNL4Su/view?usp=sharing).   
 2. [Navigate to qryglass dataset and download](https://drive.google.com/file/d/1NtqOU92lBnvs4WM8UDOkQTrnE-VKCQA3/view?usp=sharing).  
