@@ -13,6 +13,7 @@
 
 ## Exercises
 ### Exercise 1: Querying Access (Follow along)
+1. Check out the video recording to follow along.
 
 ### Exercise 2: Pivot tables and Plotting in Excel (Follow along)
 ##### To do:
