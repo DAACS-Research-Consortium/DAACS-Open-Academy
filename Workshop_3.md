@@ -9,7 +9,7 @@
 
 ## [PDF of Slides](https://drive.google.com/file/d/1fvlL2z5fxo2_q4ue5cEMLFbzxH-qT2UV/view?usp=sharing)
 
-## [Video Recording of Workshop 3]()
+## [Video Recording of Workshop 3](https://vimeo.com/592885164)
 
 ## Exercises
 ### Exercise 1: Working with Data (10 min)
