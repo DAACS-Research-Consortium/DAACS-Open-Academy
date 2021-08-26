@@ -9,7 +9,7 @@
 
 ## [PDF of Slides](https://drive.google.com/file/d/1FJxsXw-lz4Sd-Yfns86BhAipuQK2tQYi/view?usp=sharing)
 
-## [Video Recording of Workshop 4]()
+## [Video Recording of Workshop 4](https://vimeo.com/592817296)
 
 ## Exercises
 ### Exercise 1: Querying Access (Follow along)
