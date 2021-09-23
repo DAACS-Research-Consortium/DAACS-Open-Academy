@@ -1,4 +1,3 @@
-
 #DAACS-Fall-Short-Course-2021
 Materials for the DAACS Fall 2021 Short Course -- Introduction to R Programming for Historical Archaeologists
 
