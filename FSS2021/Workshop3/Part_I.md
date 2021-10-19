@@ -13,5 +13,4 @@ Project for today in RStudio Cloud: https://rstudio.cloud/project/2983017
 We are going to use the function "arrange" on the SCV dataframe.
 Explore the output after you run lines 32 and 33.  
 1. What did the arrange function do to the dataset?
-2. How does running the function this way differ from doing it in Excel?
-
+2. How does performing the action in R differ from doing it in Excel?
