@@ -1,4 +1,4 @@
-## Exercise 2
+## Exercise 2 - `%>%`
 Remember this thing: %>% The Pipe
 ADD pic here
 
