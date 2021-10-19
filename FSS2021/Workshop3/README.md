@@ -9,7 +9,7 @@ A quick recap of the topics we covered last time:
 
 ## Goals for today:
 
-1. How to explore your dataset using R packages/functions
+1. Understand the importance of exploring your dataset 
 2. Understand the differences in how Excel handles these processes and how R handles them
 3. Explore the Stewart Castle dataset
 4. Make more plots!
