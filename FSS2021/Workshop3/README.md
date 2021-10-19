@@ -17,4 +17,4 @@ A quick recap of the topics we covered last time:
 ## Before we get into the code -- a quick poll.
 How many people already have datasets you are currently working with or want to work with?
 
-### On to the exercises
+### [On to the exercises](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_I.md)
