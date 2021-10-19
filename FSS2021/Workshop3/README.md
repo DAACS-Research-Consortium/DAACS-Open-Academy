@@ -7,18 +7,14 @@ A quick recap of the topics we covered last time:
 2. Using functions to summarize and group data
 3. Making our first plot
 
-# Goals for today:
+## Goals for today:
 
 1. How to explore your dataset using R packages/functions
 2. Understand the differences in how Excel handles these processes and how R handles them
 3. Explore the Stewart Castle dataset
 4. Make more plots!
 
-# Before we get into the code -- a quick poll.
+## Before we get into the code -- a quick poll.
+How many people already have datasets you are currently working with or want to work with?
 
-Important Links:
-
-1. RStudio Cloud Project Link: https://rstudio.cloud/project/3037046
-2. Today's Code Example: 
-
-On to the exercises
+# On to the exercises
