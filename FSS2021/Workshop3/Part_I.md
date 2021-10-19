@@ -12,5 +12,7 @@ Project for today in RStudio Cloud: https://rstudio.cloud/project/3037046
 ## Exercise 1
 We are going to use the function "arrange" on the SCV dataframe.
 Explore the output after you run lines 32 and 33.  
+`SCVSortbyPhase <- StewartCastleVillage %>%
+  arrange(DAACSPhase)`
 1. What did the arrange function do to the dataset?
-2. How does performing the action in R differ from doing it in Excel?
+2. How does the output created in R differ from what is produced using a similar function in Excel?
