@@ -15,28 +15,25 @@ SCVTotalArtsNP <- summarise(StewartCastleVillage, TotalArtifacts = sum(Count))
 * Do you get the same result?
 * What's different about the syntax?
 
-## Exercise 3 `%>%' compared to other ways to chain together functions
-Run lines 41-55 and 58-59
-```
-#with pipe
-SCVArtCat <-  StewartCastleVillage %>% 
-  group_by(ArtifactCategory) %>%  # group by tells you which variable to 
-  # summarize by
-  summarise(Count = sum(Count))   # this specifies the field you want 
-  # summarized and what to call that field.
+## Exercise 3 `Filtering(...)`
 
-#without pipe
-#Option 1: Must do intermediate steps
-SCVArtCat2 <- group_by(StewartCastleVillage, ArtifactCategory)
-SCVArtCatSum <- summarise(SCVArtCat2, Count = sum(Count))
+If you remember from last time, we made our first plot of artifacts summarized by category
 
-#another option without the pipe, chain functions together
-SCVArtCatNP <- summarise(
-  group_by(StewartCastleVillage, ArtifactCategory), 
-  Count = sum(Count))
 
-```
-* Do you get the same result?
-* What's different about the process between the two?
+
+but when we do artifacts by type, we have too many options.
+
+So let's filter by Category so we can look at different types.
+
+
+## Exercise 4 `ggplot` -- the grammar of graphics
+
+ggplot is powerful package because it gives you *a lot* of control over the asthetics of your graphics
+
+Important functions to understand that are part of the ggplot package
+* `theme_set` -- the general asthetics of 
+* `aes`  -- asethetics of plot
+* `geom` -- type of plot
+
 
 #[Up next -- Filtering and Plotting!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
