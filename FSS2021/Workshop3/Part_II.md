@@ -15,7 +15,7 @@ SCVTotalArtsNP <- summarise(StewartCastleVillage, TotalArtifacts = sum(Count))
 * Do you get the same result?
 * What's different about the syntax?
 
-## Exercise 3 more %>%
+## Exercise 3 more `%>%`
 Run lines 41-55 and 58-59
 ```
 #with pipe
@@ -30,7 +30,7 @@ SCVArtCat <-  StewartCastleVillage %>%
 SCVArtCat2 <- group_by(StewartCastleVillage, ArtifactCategory)
 SCVArtCatSum <- summarise(SCVArtCat2, Count = sum(Count))
 
-# Option 2: Chain the functions together
+#another option without the pipe, chain functions together
 SCVArtCatNP <- summarise(
   group_by(StewartCastleVillage, ArtifactCategory), 
   Count = sum(Count))
