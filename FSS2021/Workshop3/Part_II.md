@@ -38,3 +38,5 @@ SCVArtCatNP <- summarise(
 ```
 * Do you get the same result?
 * What's different about the process between the two?
+
+#[Up next -- Filtering and Plotting!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
