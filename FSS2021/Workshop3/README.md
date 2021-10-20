@@ -9,9 +9,9 @@ A quick recap of the topics we covered last time:
 
 ## Goals for today:
 
-1. Understand the importance of exploring your dataset 
-2. Understand the differences in how Excel handles these processes and how R handles them
-3. Explore the Stewart Castle dataset
+1. Understand the importance of your exploring your dataset 
+2. Learn some steps by exploring the SC dataset
+3. Understand the differences in how Excel handles these processes and how R handles them
 4. Make more plots!
 
 ## Before we get into the code -- a quick poll.
