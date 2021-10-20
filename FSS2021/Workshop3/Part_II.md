@@ -36,4 +36,4 @@ Important functions to understand that are part of the ggplot package
 * `geom` -- type of plot
 
 
-#[Up next -- Filtering and Plotting!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
+#[Up next -- A deep dive into pipes!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
