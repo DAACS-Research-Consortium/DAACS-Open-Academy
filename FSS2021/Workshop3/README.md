@@ -16,6 +16,7 @@ A quick recap of the topics we covered last time:
 
 ## Before we get into the code -- a quick poll.
 Do you have a digital dataset that you planning on working with R?
+
 If so, would you like us to offer an extra hour after the workshops for a help session?
 
 ### [On to the exercises](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_I.md)
