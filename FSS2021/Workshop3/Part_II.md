@@ -1,6 +1,6 @@
 ## Exercise 2 - `%>%`
 Remember this thing: %>% The Pipe
-ADD pic here
+![](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/FBbJQ2ZUUAwUcyw.png)
 
 Run lines 41-43 and 45-46 
 * Do you get the same result?
