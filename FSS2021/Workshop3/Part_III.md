@@ -1,4 +1,4 @@
-## Exercise 5 `%>%' compared to other ways to chain together functions
+## Exercise 5 `%>%` compared to other ways to chain together functions
 Run lines 41-55 and 58-59
 ```
 #with pipe
