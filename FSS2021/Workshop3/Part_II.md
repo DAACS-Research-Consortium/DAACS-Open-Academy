@@ -1,8 +1,17 @@
 ## Exercise 2 - `%>%`
-Remember this thing: %>% The Pipe
+Remember this thing: `%>%` The Pipe
+
 ![](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/FBbJQ2ZUUAwUcyw.png)
 
 Run lines 41-43 and 45-46 
+`#with pipe
+SCVTotalArts <-  StewartCastleVillage %>%
+  summarise(TotalArtifacts = sum(Count))`
+
+`#without pipe -- different syntax
+
+SCVTotalArtsNP <- summarise(StewartCastleVillage, TotalArtifacts = sum(Count))`
+
 * Do you get the same result?
 * What's different about the syntax?
 
