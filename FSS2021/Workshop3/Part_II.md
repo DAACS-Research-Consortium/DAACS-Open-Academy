@@ -15,7 +15,7 @@ SCVTotalArtsNP <- summarise(StewartCastleVillage, TotalArtifacts = sum(Count))
 * Do you get the same result?
 * What's different about the syntax?
 
-## Exercise 3 more `%>%`
+## Exercise 3 `%>% compared to other ways to chain together functions`
 Run lines 41-55 and 58-59
 ```
 #with pipe
