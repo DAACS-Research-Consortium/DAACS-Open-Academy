@@ -1,19 +1,23 @@
-## Exercise 4 `Filtering(...)`
+## Exercise 5 `%>%' compared to other ways to chain together functions
+Run lines 41-55 and 58-59
+```
+#with pipe
+SCVArtCat <-  StewartCastleVillage %>% 
+  group_by(ArtifactCategory) %>%  # group by tells you which variable to 
+  # summarize by
+  summarise(Count = sum(Count))   # this specifies the field you want 
+  # summarized and what to call that field.
 
-If you remember from last time, we made our first plot of artifacts summarized by category
+#without pipe
+#Option 1: Must do intermediate steps
+SCVArtCat2 <- group_by(StewartCastleVillage, ArtifactCategory)
+SCVArtCatSum <- summarise(SCVArtCat2, Count = sum(Count))
 
+#another option without the pipe, chain functions together
+SCVArtCatNP <- summarise(
+  group_by(StewartCastleVillage, ArtifactCategory), 
+  Count = sum(Count))
 
-
-but when we do artifacts by type, we have too many options.
-
-So let's filter by Category so we can look at different types.
-
-
-## Exercise 5 `ggplot` -- the grammar of graphics
-
-ggplot is powerful package because it gives you *a lot* of control over the asthetics of your graphics
-
-Important functions to understand that are part of the ggplot package
-* `theme_set`
-* `aes`
-* `geom`
+```
+* Do you get the same result?
+* What's different about the process between the two?
