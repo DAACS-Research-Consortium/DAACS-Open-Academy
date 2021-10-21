@@ -1,22 +1,45 @@
-## Exercise 2 -- `Filtering(...)`
+## Exercise 2 -- `ggplot` the grammar of graphics
 
-If you remember from last time, we made our first plot of artifacts summarized by category
+ggplot is powerful package because it gives you *a lot* of control over the asthetics of your graphics using a concept called layering.
+You can learn more about the underlying philsophy and details of ggplot here: https://ggplot2.tidyverse.org/
+```
+ggplot(SCVArtCat, aes(x=ArtifactCategory, y=Count, 
+                      fill=ArtifactCategory)) +   
+  geom_bar(stat="identity", show.legend=F) 
+  scale_fill_brewer(type = "seq", palette = "Paired", direction = 1,
+                    aesthetics = "fill") # I choose a 10 + color ramp from Color Brewer so that I
+```
 
+Important functions to understand that are part of the ggplot package
+* `theme_set` -- theme of the plot -- allows you to adjust the background, presence/absence of grid lines, etc.
+* `aes`  -- asethetics of plot -- you provide the dataframe and variables you want to plot
+* `geom` -- type of plot -- options: bar, line, point, histogram
+* `scale_fill_brewer` -- allows you to set fill colors
 
+## Exercise 3 -- `Filtering(...)`
 
-but when we do artifacts by type, we have too many options.
+Next we wanted to plot a summary of artifact types, but we have too many options.  The plot is illegible.
 
 So let's filter by Category so we can look at different types.
 
+We can either create a separate dataframe by filtering 
 
-## Exercise 3 -- `ggplot` the grammar of graphics
+```
+#Filter Artifact Type
+SCVButtons <-  StewartCastleVillage %>% 
+  filter(ArtifactCategory == 'Button')
+  
+SCVButtonsGrouped<-SCVButtons %>% 
+  group_by(ArtifactType) %>%
+  summarise(Count = sum(Count))
 
-ggplot is powerful package because it gives you *a lot* of control over the asthetics of your graphics
+OR
 
-Important functions to understand that are part of the ggplot package
-* `theme_set` -- the general asthetics of 
-* `aes`  -- asethetics of plot
-* `geom` -- type of plot
+#Group by, Filter, Summarize By Buttons
+SCVButtons2 <-  StewartCastleVillage %>% 
+  group_by(ArtifactType) %>%
+  filter(ArtifactCategory == 'Button') %>%
+  summarise(Count = sum(Count))
 
-
+```
 #[Up next -- A deep dive into pipes!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
