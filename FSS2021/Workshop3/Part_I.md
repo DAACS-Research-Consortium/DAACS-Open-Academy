@@ -10,10 +10,14 @@ Project for today in RStudio Cloud: https://rstudio.cloud/project/3037046
 ![](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/r-pac-man.jpg)
 
 ## Exercise 1 - `arrange(...)`
-We are going to use the function "arrange" on the SCV dataframe.
+We are going to use the function "arrange" on the SCV dataframe. This function allows you to order the rows
+of a dataframe by the values of accepted columns.
+
 Explore the output after you run lines 32 and 33.  
-`SCVSortbyPhase <- StewartCastleVillage %>%
-  arrange(DAACSPhase)`
+
+```SCVSortbyPhase <- StewartCastleVillage %>%
+  arrange(DAACSPhase)```
+  
 1. What did the arrange function do to the dataset?
 2. How does the output created in R differ from what is produced using a similar function in Excel?
 
