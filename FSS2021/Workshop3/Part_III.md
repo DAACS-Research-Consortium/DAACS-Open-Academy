@@ -1,3 +1,19 @@
+## Exercise 4 -- Remember this thing: `%>%` The Pipe
+
+
+Run lines 41-43 and 45-46 
+```
+#with pipe
+SCVTotalArts <-  StewartCastleVillage %>%  
+  summarise(TotalArtifacts = sum(Count))
+
+#without pipe
+SCVTotalArtsNP <- summarise(StewartCastleVillage, TotalArtifacts = sum(Count))
+```
+
+* Do you get the same result?
+* What's different about the syntax?
+
 ## Exercise 5 `%>%` compared to other ways to chain together functions
 Run lines 41-55 and 58-59
 ```
