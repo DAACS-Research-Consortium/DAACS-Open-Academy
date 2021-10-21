@@ -42,4 +42,4 @@ SCVButtons2 <-  StewartCastleVillage %>%
   summarise(Count = sum(Count))
 
 ```
-#[Up next -- A deep dive into pipes!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
+#[Up next -- Mutate](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
