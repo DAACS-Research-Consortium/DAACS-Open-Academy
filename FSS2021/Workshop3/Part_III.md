@@ -1,5 +1,5 @@
 ## Exercise 4 -- `mutate`(...)
-The mutate function allows you to 
+The mutate function allows you to:
 * create, modify, and delete columns
 * add new variables and preserve existing ones
 ```
