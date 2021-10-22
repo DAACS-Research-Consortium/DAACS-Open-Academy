@@ -1,5 +1,5 @@
 
-## Exercise 6 `%>%` compared to other ways to chain together functions
+## Exercise 6 -- `%>%` compared to other ways to chain together functions
 -- Returning to `%>%` The Pipe
 
 Run lines 155-160
