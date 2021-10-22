@@ -3,6 +3,9 @@
 ggplot is powerful package (loads as part of the tidyverse package) because it gives you *a lot* of control over the asthetics of your graphics using a concept called layering.
 You can learn more about the underlying philsophy and details of ggplot here: https://ggplot2.tidyverse.org/
 ```
+theme_set(theme_bw(base_size = 10)) # this sets the background theme of the plot
+# (black out, gray grid lines) and base font 
+# size.  
 ggplot(SCVArtCat, aes(x=ArtifactCategory, y=Count, 
                       fill=ArtifactCategory)) +   
   geom_bar(stat="identity", show.legend=F) 
