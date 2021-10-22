@@ -33,6 +33,7 @@ SCVArtFreqByUnit <-  StewartCastleVillage %>%  # Identify the dataset
 4. Run lines 142-149
 5. What is different about the new plot when compared to the plot of Artifact Category percentage? 
 6. What argument did we add to ggplot that allowed us to make this plot?
+7. Think about how different this process would be if you were performing it in Excel. What benefits does doing it in R provide?
 
 
 [Bonus time -- More on Pipes](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_IV.md)
