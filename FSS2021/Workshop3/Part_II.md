@@ -25,7 +25,7 @@ Next we wanted to plot a summary of artifact types, but we have too many options
 
 So let's filter by Category so we can look at different types.
 
-We can either create a separate dataframe by filtering 
+We can either create a separate dataframe by filtering and then summarise it
 
 ```
 #Filter Artifact Type
@@ -35,9 +35,10 @@ SCVButtons <-  StewartCastleVillage %>%
 SCVButtonsGrouped<-SCVButtons %>% 
   group_by(ArtifactType) %>%
   summarise(Count = sum(Count))
-
+```
 OR
-
+We can pipe the results through a single sequence
+```
 #Group by, Filter, Summarize By Buttons
 SCVButtons2 <-  StewartCastleVillage %>% 
   group_by(ArtifactType) %>%
