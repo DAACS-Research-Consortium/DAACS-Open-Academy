@@ -24,6 +24,7 @@ SCVSortbyPhase <- StewartCastleVillage %>%
   ```
   
 1. What did the arrange function do to the dataset?
-2. How does the output created in R differ from what is produced using a similar function in Excel?
+2. Run lines 34-35. How is the output different from the first example?
+3. How does the output created in R differ from what is produced using a similar function in Excel?
 
 ### [On to Part II](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_II.md)
