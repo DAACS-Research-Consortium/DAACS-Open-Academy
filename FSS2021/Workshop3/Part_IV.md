@@ -38,5 +38,6 @@ SCVArtCatNP <- summarise(
 
 ```
 * Do you get the same result?
-* What's different about the process between the two?
+* What's different about the process between the two options (intermediate steps vs chaining with parentheses?)
+* What is more readible?
 
