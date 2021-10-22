@@ -1,7 +1,6 @@
 
-
--- Remember this thing: `%>%` The Pipe
-
+## Exercise 6 `%>%` compared to other ways to chain together functions
+-- Returning to `%>%` The Pipe
 
 Run lines 155-160
 ```
@@ -16,7 +15,6 @@ SCVTotalArtsNP <- summarise(StewartCastleVillage, TotalArtifacts = sum(Count))
 * Do you get the same result?
 * What's different about the syntax?
 
-## Exercise 5 `%>%` compared to other ways to chain together functions
 Run lines 164-178
 ```
 #with pipe
