@@ -49,5 +49,6 @@ SCVButtons2 <-  StewartCastleVillage %>%
 1. Run lines 89-90
 2. Change `==` to `=` in the filter function arguments
 3. What happened?  Why do you think we got that result?
+4. See what happens when you put 'Butto' as the argument instead of 'Button'
 
 #[Up next -- Mutate](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_III.md)
