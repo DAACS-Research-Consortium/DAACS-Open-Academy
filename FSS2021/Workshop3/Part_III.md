@@ -35,6 +35,6 @@ SCVArtFreqByUnit <-  StewartCastleVillage %>%  # Identify the dataset
 6. What argument did we add to ggplot that allowed us to make this plot?
 7. Think about how different this process would be if you were performing it in Excel. What benefits does doing it in R provide?
 
-##Wrap up/Q&A 
+### Wrap up/Q&A 
 OR
 [Bonus time -- More on Pipes](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_IV.md)
