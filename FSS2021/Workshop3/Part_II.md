@@ -8,7 +8,7 @@ theme_set(theme_bw(base_size = 10)) # this sets the background theme of the plot
 # size.  
 ggplot(SCVArtCat, aes(x=ArtifactCategory, y=Count, 
                       fill=ArtifactCategory)) +   
-  geom_bar(stat="identity", show.legend=F) 
+  geom_bar(stat="identity", show.legend=F) +
   scale_fill_brewer(type = "seq", palette = "Paired", direction = 1,
                     aesthetics = "fill") # I choose a 10 + color ramp from Color Brewer so that I
 ```
