@@ -9,8 +9,8 @@ Project for today in RStudio Cloud: https://rstudio.cloud/project/3037046
 
 ![](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/r-pac-man.jpg)
 
-5. Remember this other thing: the '%>%' (pipe) operator takes the output of one function and passes it into another function as an argument
-6. ![](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/FBbJQ2ZUUAwUcyw.png)
+5. Remember this other thing: the `%>%` (pipe) operator takes the output of one function and passes it into another function as an argument
+<img src="https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/FBbJQ2ZUUAwUcyw.png" width="400" height="450">
 
 ## Exercise 1 - `arrange(...)`
 We are going to use the function "arrange" on the SCV dataframe. 
