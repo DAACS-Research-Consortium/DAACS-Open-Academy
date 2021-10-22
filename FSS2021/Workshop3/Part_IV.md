@@ -3,7 +3,7 @@
 -- Remember this thing: `%>%` The Pipe
 
 
-Run lines 136-138 and 140-141
+Run lines 155-160
 ```
 #with pipe
 SCVTotalArts <-  StewartCastleVillage %>%  
