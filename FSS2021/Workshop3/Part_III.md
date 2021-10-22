@@ -11,3 +11,4 @@ SCVArtFreq <-  StewartCastleVillage %>%  # Identify the dataset
   mutate(Percent = Count/sum(Count))     # Use mutate function to calculate the
 # Percent
 ```
+[Bonus time -- More on Pipes](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_IV.md)
