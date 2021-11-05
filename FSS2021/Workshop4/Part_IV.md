@@ -1,4 +1,7 @@
-## Exercise 3, continued -- those changes and additions...
+## Exercise 3, continued -- Let's list those changes and additions...
+
+* Unit observations: there are multiple different spellings and abbreviations for the same units.
+*  * aefasef
 
 
 ## Exercise 4: Add new variable.
