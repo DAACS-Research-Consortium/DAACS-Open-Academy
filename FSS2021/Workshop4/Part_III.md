@@ -3,7 +3,7 @@
 * We are going to use the arrange, group_by and summarise functions to identify problems with the data.
 
 ### `arrange`(...) by Unit
-1. Run line 53
+1. Run line 54
 ```
 MDUnit<-MDStreamlined%>% arrange(Unit)
 ```
@@ -14,6 +14,7 @@ MDUnit<-MDStreamlined%>% arrange(Unit)
 5. Run lines 57-59
 6. Note how it is easier to spot the problems in the Unit variable.
 7. Run lines 61-69 to check Feature and Artifact Type.
+8. Run lines 72-73 to see how many total artifacts are in the data frame.  An important check for later in this process.
 
 ## Exercise 3 -- Brainstorm! 
 
