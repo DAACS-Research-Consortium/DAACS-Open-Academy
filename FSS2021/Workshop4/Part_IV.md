@@ -48,5 +48,5 @@ NewCompleteFields <- MDStreamlined %>%
   mutate(NewUnit=ifelse(Unit %in% c('Miscellaneous','misc.'), 'Misc', NewUnit))
 ```
 
-## On to Exercise 5 and Wrap Up
+## [On to Exercise 5 and Wrap Up](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_IV.md)
 
