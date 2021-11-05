@@ -1,21 +1,16 @@
-## Exercise 2 -- 'arrange', 'graoup_by' and `summarise`(...)
-We are going to use the arrange, group_by and summarise functions to 
+## Exercise 2 -- 'arrange', 'group_by' and `summarise`(...)
+We are going to use the arrange, group_by and summarise functions to: 
 
+* identify problems with the data
+* 
 
-* create, modify, and delete columns
-* add new variablesWe are going to use the summarise function to nd preserve existing ones
-
-We're going to create a new column for percentage of artifact categories at SCV
-1. Run lines 113-117
+'arrange'(...) by Unit
+1. Run line 53
 ```
-SCVArtFreq <-  StewartCastleVillage %>%  # Identify the dataset
-  group_by(ArtifactCategory) %>%         # Specify the variable you group_by
-  summarise(Count = sum(Count)) %>%      # Summarize to get total count
-  mutate(Percent = Count/sum(Count))     # Use mutate function to calculate the
-# Percent
+MDUnit<-MDStreamlined%>% arrange(Unit)
 ```
-2. Explore SCArtFreq
-3. Compare the output from `SCVArtFreq` to `SCVArtCat`
+2. Scroll through new dataframe, looking at observations in the Unit variable.
+#3. What do you notice?
 4. Run lines 120-126
 5. Compare your new plot with the original plot of counts by Artifact Category.  Do they look the same?
 
