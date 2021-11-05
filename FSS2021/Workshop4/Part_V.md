@@ -1,6 +1,6 @@
 ## Exercise 5: Populate the New Fields
 
-* Unit observations: there are multiple d            ifferent spellings and abbreviations for the same units.
+* Unit observations: there are multiple different spellings and abbreviations for the same units.
     * 'F 26','F. 26'
     * 'SP1','SPav1'
     * 'HWN II','HWN Square II'
