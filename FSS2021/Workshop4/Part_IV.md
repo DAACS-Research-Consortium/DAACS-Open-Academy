@@ -18,7 +18,7 @@
    * Material
    * Others?
 
-## Exercise 4: Add new variables with `mutate`(...)
+## Exercise 4: Add new variables and observations with `mutate`(...)
 
 You can add new variables in several different ways. I am going to show you one way, which uses the `mutate(...)` function.
 Nested within the `mutate(...)` function are two other functions: `ifelse(...)` and `c(...)`
