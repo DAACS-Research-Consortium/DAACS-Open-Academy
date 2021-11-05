@@ -9,7 +9,7 @@ The code used today reinforces concepts you learned in previous weeks and introd
 A quick recap of the topics we covered last time:
 
 1. Reading R code
-2. Using functions to summarize, group, and mutate data
+2. Using functions to summarize, group, arrange, filter, and mutate data
 3. Making plots!
 
 ## Goals for today:
