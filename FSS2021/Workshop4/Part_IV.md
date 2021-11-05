@@ -1,7 +1,17 @@
 ## Exercise 3, continued -- Let's list those changes and additions...
 
-* Unit observations: there are multiple different spellings and abbreviations for the same units.
-    * aefasef
+* Unit observations: there are multiple d            ifferent spellings and abbreviations for the same units.
+    * 'F 26','F. 26'
+    * 'SP1','SPav1'
+    * 'HWN II','HWN Square II'
+    * 'Illegible/unmarked','Illegible'
+    * 'Miscellaneous','misc.'
+
+* Feature observations: there are multiple different spellings and abbreviations for the same features.
+   * 'F166','Fea 166','Feature 166'
+
+* Artifact Type Observations: there are different spellings for the same types.
+* 
 
 
 ## Exercise 4: Add new variable.
