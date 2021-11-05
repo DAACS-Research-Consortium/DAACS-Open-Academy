@@ -1,4 +1,4 @@
-## Exercise 3, continued -- Let's list those changes and additions...
+## Exercise 3, continued: Let's list those changes and additions...
 
 * Unit observations: there are multiple d            ifferent spellings and abbreviations for the same units.
     * 'F 26','F. 26'
@@ -19,11 +19,15 @@
    * Material
    * Others?
 
-## Exercise 4: Add new variables
+## Exercise 4: Add new variables with `mutate`(...)
 
 You can add new varibales in several different ways. I am going to show you two ways.
-* One creates new empty varibales.
+* One way creates new empty varibales.
 * The other way populates the variables as you create them.
+
+
+
+
 
 `mutate` with multiple groups
 Let's say we want to look at artifact percentage by unit type
