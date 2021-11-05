@@ -11,7 +11,10 @@
    * 'F166','Fea 166','Feature 166'
 
 * Artifact Type Observations: there are different spellings for the same types.
-* 
+   * "ccware", "Creamware", "Creamware, bowl"
+   * "White ware", "Whiteware", "Whiteware, annular", "Whiteware, mocha"
+
+* New Variables/Fields?
 
 
 ## Exercise 4: Add new variable.
