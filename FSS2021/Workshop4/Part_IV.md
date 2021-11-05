@@ -23,31 +23,18 @@
 
 ## Exercise 4: Add new variables with `mutate`(...)
 
-You can add new variables in several different ways. I am going to show you two ways, both of which use the `mutate` function.
+You can add new variables in several different ways. I am going to show you one way, which uses the `mutate` function.
 
-* One way creates new empty variables.
-   * Run lines 74-81
-
+* Use mutate to create new variables and populate them at the same time.
+   * Run lines 79-86.
 ```
-NewEmptyFields <- MDStreamlined %>%
-  mutate(NewUnit= ' ')%>%
-  mutate(NewFeature= ' ')%>%
-  mutate(NewArtType= ' ')%>%
-  mutate(NewForm= ' ')%>%
-  mutate(NewMaterial= ' ')%>%
-  mutate(NewDecoration= ' ')%>%
-  mutate(NewColor= ' ')
-```
-
-* The other way populates the variables as you create them.
-   * Run lines 87-92.
-```
-NewCompleteFields <- MDStreamlined %>%
+CleanerData <- MDStreamlined %>%
   mutate(NewUnit=ifelse(Unit %in% c('F 26','F. 26'), 'F26', Unit))%>%
   mutate(NewUnit=ifelse(Unit %in% c('SP1','SPav1'), 'SouthPav1', NewUnit))%>%
   mutate(NewUnit=ifelse(Unit %in% c('HWN II','HWN Square II'), 'HWNII', NewUnit))%>%
   mutate(NewUnit=ifelse(Unit %in% c('Illegible/unmarked','Illegible'), 'Illegible', NewUnit))%>%
-  mutate(NewUnit=ifelse(Unit %in% c('Miscellaneous','misc.'), 'Misc', NewUnit))
+  mutate(NewUnit=ifelse(Unit %in% c('Miscellaneous','misc.'), 'Misc', NewUnit))%>%
+  mutate(NewFeature=ifelse(Feature %in% c('F166','Fea 166','Feature 166'), 'F166', Feature))
 ```
 
 ## [On to Exercise 5 and Wrap Up](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_V.md)
