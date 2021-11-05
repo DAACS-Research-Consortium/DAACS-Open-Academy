@@ -13,6 +13,8 @@
 * Artifact Type Observations: there are different spellings for the same types.
    * "ccware", "Creamware", "Creamware, bowl"
    * "White ware", "Whiteware", "Whiteware, annular", "Whiteware, mocha"
+   * What other spelling issues?
+   * Are there any red flags in these data? (this is a question for the historical archaeologists in the class)
 
 * New Variables/Fields? Yes, please! How about:
    * Form
