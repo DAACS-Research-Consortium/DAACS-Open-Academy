@@ -5,7 +5,7 @@ You will need an [RStudio Cloud](https://rstudio.cloud/) account login to contin
 The login is free and quick to create. 
 
 Today we will explore a new dataset in R. We will look for errors and show you some simple ways to fix them.
-The code used today reinforces code you learned in previous weeks.
+The code used today reinforces concepts you learned in previous weeks and introduces some new ones.
 A quick recap of the topics we covered last time:
 
 1. Reading R code
