@@ -27,5 +27,5 @@ MDStreamlined <- MessyData %>%
 2. Run lines 48-49. How is the output different from the first example?
 3. Notice how you can use select to easily rearrange the order of your variables.
 
-### [On to Exercise II](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/FSS2021/Workshop4/Part_III.md)
+## [On to Exercise II](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_III.md)
 
