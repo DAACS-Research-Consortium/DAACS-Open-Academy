@@ -1,4 +1,4 @@
-## Exercise 2 -- 'arrange', 'group_by' and `summarise`(...)
+## Exercise 2 -- 'arrange'(...), 'group_by'(...) and `summarise`(...)
 We are going to use the arrange, group_by and summarise functions to: 
 
 * identify problems with the data
@@ -10,7 +10,7 @@ We are going to use the arrange, group_by and summarise functions to:
 MDUnit<-MDStreamlined%>% arrange(Unit)
 ```
 2. Scroll through new dataframe, looking at observations in the Unit variable.
-#3. What do you notice?
+# 3. What do you notice?
 4. Run lines 120-126
 5. Compare your new plot with the original plot of counts by Artifact Category.  Do they look the same?
 
