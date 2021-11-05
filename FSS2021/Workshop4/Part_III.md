@@ -4,17 +4,25 @@ We are going to use the arrange, group_by and summarise functions to:
 * identify problems with the data
 * 
 
-'arrange'(...) by Unit
+`arrange`(...) by Unit
 1. Run line 53
 ```
 MDUnit<-MDStreamlined%>% arrange(Unit)
 ```
 2. Scroll through new dataframe, looking at observations in the Unit variable.
-### 3. What do you notice?
-4. Run lines 120-126
-5. Compare your new plot with the original plot of counts by Artifact Category.  Do they look the same?
+3. What do you notice?
 
-## Exercise 5 -- `mutate` with multiple groups
+`group_by`(...) by Unit, `summarize`(...) by Count
+5. Run lines 57-59
+6. Note how it is easier to spot the problems in the Unit variable.
+7. Run lines 61-69 to check Feature and Artifact Type.
+
+## Exercise 3 -- Let's think about the data
+
+
+
+## Exercise 4 -- Let's think about the data
+`mutate` with multiple groups
 Let's say we want to look at artifact percentage by unit type
 1. Run lines 135-139
 
