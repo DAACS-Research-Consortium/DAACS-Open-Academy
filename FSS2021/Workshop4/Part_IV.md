@@ -32,6 +32,7 @@ CleanerData <- MDStreamlined %>% # We take MDStreamlined and will create Cleaner
 * What does the c(...) function do?
    * c('F 26','F. 26') 
    * Run line 85.
+   * You have just created a ##vector.
 
 ## [On to Exercise 5 and Wrap Up](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_V.md)
 
