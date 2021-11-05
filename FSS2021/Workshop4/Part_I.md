@@ -19,4 +19,4 @@ A quick recap of the topics we covered last time:
 3. Understand the differences in how Excel handles these processes and how R handles them
 4. Make more plots!
 
-### [Let's Start!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/FSS2021/Workshop4/Part_II.md)
+### [Let's Start!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_II.md)
