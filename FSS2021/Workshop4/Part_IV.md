@@ -26,7 +26,7 @@ You can add new variables in several different ways. I am going to show you two 
 * One way creates new empty variables.
    * Run lines 74-81
 
-...
+```
 NewEmptyFields <- MDStreamlined %>%
   mutate(NewUnit= ' ')%>%
   mutate(NewFeature= ' ')%>%
@@ -35,19 +35,18 @@ NewEmptyFields <- MDStreamlined %>%
   mutate(NewMaterial= ' ')%>%
   mutate(NewDecoration= ' ')%>%
   mutate(NewColor= ' ')
-...
+```
 
 * The other way populates the variables as you create them.
    * Run lines 87-92.
-...
+```
 NewCompleteFields <- MDStreamlined %>%
   mutate(NewUnit=ifelse(Unit %in% c('F 26','F. 26'), 'F26', Unit))%>%
   mutate(NewUnit=ifelse(Unit %in% c('SP1','SPav1'), 'SouthPav1', NewUnit))%>%
   mutate(NewUnit=ifelse(Unit %in% c('HWN II','HWN Square II'), 'HWNII', NewUnit))%>%
   mutate(NewUnit=ifelse(Unit %in% c('Illegible/unmarked','Illegible'), 'Illegible', NewUnit))%>%
   mutate(NewUnit=ifelse(Unit %in% c('Miscellaneous','misc.'), 'Misc', NewUnit))
-...
-
+```
 
 
 
