@@ -15,15 +15,9 @@
    * "White ware", "Whiteware", "Whiteware, annular", "Whiteware, mocha"
 
 * New Variables/Fields? Yes, please! How about:
-   * Form
+   * Vessel Form
    * Material
    * Others?
 
 ## Exercise 4: Add new variables with `mutate`(...)
 
-You can add new variables in several different ways. I am going to show you two ways, both of which use the `mutate` function.
-
-* One way creates new empty variables.
-   * Run lines 74-81
-
-```
