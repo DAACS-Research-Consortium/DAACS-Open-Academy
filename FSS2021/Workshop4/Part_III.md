@@ -13,8 +13,8 @@ MDUnit<-MDStreamlined%>% arrange(Unit)
 ### `group_by`(...) by Unit, `summarize`(...) by Count
 5. Run lines 57-59
 6. Note how it is easier to spot the problems in the Unit variable.
-7. Run lines 61-69 to check Feature and Artifact Type.
-8. Run lines 72-73 to see how many total artifacts are in the data frame.  An important check for later in this process.
+7. Run lines 62-64 to check Artifact Type.
+8. Run lines 67-68 to see how many total artifacts are in the data frame.  An important check for later in this process.
 
 ## Exercise 3 -- Brainstorm! 
 
