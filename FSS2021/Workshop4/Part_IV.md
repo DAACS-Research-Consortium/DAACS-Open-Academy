@@ -14,10 +14,9 @@
    * "ccware", "Creamware", "Creamware, bowl"
    * "White ware", "Whiteware", "Whiteware, annular", "Whiteware, mocha"
 
-* New Variables/Fields?
+* New Variables/Fields? Yes, please!
 
-
-## Exercise 4: Add new variable.
+## Exercise 4: Add new variables
 
 You can add new varibales in several different ways. I am going to show you two ways.
 * One creates new empty varibales.
