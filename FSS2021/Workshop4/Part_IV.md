@@ -14,7 +14,10 @@
    * "ccware", "Creamware", "Creamware, bowl"
    * "White ware", "Whiteware", "Whiteware, annular", "Whiteware, mocha"
 
-* New Variables/Fields? Yes, please!
+* New Variables/Fields? Yes, please! How about:
+   * Form
+   * Material
+   * Others?
 
 ## Exercise 4: Add new variables
 
