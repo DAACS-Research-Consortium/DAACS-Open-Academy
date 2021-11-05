@@ -1,6 +1,6 @@
 ## Exercise 3, continued: Let's list those changes and additions...
 
-* Unit observations: there are multiple d            ifferent spellings and abbreviations for the same units.
+* Unit observations: there are multiple different spellings and abbreviations for the same units.
     * 'F 26','F. 26'
     * 'SP1','SPav1'
     * 'HWN II','HWN Square II'
@@ -48,5 +48,5 @@ NewCompleteFields <- MDStreamlined %>%
   mutate(NewUnit=ifelse(Unit %in% c('Miscellaneous','misc.'), 'Misc', NewUnit))
 ```
 
-## [On to Exercise 5 and Wrap Up](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_IV.md)
+## [On to Exercise 5 and Wrap Up](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_V.md)
 
