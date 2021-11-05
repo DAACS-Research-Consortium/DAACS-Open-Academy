@@ -36,6 +36,8 @@ CleanerData <- MDStreamlined %>%
   mutate(NewUnit=ifelse(Unit %in% c('Miscellaneous','misc.'), 'Misc', NewUnit))%>%
   mutate(NewFeature=ifelse(Feature %in% c('F166','Fea 166','Feature 166'), 'F166', Feature))
 ```
+* Run summary checks on NewUnit and NewFeature to make sure new data look clean.
+   *Run lines 89-96.
 
 ## [On to Exercise 5 and Wrap Up](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop4/Part_V.md)
 
