@@ -21,9 +21,15 @@
 
 ## Exercise 4: Add new variables with `mutate`(...)
 
-You can add new varibales in several different ways. I am going to show you two ways.
-* One way creates new empty varibales.
+You can add new variables in several different ways. I am going to show you two ways, both of which use the `mutate` function.
+
+* One way creates new empty variables.
+   * Run lines 74-81.
+
 * The other way populates the variables as you create them.
+   * Run lines 87-92.
+
+
 
 
 
