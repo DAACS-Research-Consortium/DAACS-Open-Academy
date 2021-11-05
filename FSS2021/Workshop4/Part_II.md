@@ -12,7 +12,7 @@ Project for today in RStudio Cloud: https://rstudio.cloud/project/3112286
 ![](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/r-pac-man.jpg)
 
 5. Remember this other thing: the `%>%` (pipe) operator takes the output of one function and passes it into another function as an argument
-<img src="https://www.wallpaperup.com/280573/smoking_pipes_Rene_Magritte_The_Treachery_of_Images.html" width="400" height="450">
+<img src="https://images-na.ssl-images-amazon.com/images/I/413f-p1yjTL.jpg" width="400" height="450">
 image credit @AndrewBarnas
 
 ## Exercise 1 - `arrange(...)`
