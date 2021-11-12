@@ -1,1 +1,1 @@
-## Means Ceramic Dates: A Little History
+## Mean Ceramic Dates: A Little History
