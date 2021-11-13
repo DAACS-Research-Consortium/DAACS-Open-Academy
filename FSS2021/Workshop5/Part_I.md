@@ -5,9 +5,16 @@
     - A set of midpoints for the types *m<sub>i</sub>*. For example, for three types,*m<sub>i</sub>* = [1770, 1800, 1820]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 1770, *m<sub>2</sub>* = 1800, *m<sub>3</sub>* = 1820.     
     - A set of counts for the types  *x<sub>i</sub>*. For example, for the same three types,  *x<sub>i</sub>* = [21, 17, 36].
 3. The algorithm:
-    - Multiply the type midpoints by theer corresponding counts.
-    - Add up the products.
-    - Divide the sume of products by the sum of the counts.
-4. Here it is in R:
-    -    
+    - Multiply the type midpoints by their corresponding counts.
+    - Add up the products to get a "sum of products".
+    - Divide the sum of products by the sum of the counts.
+4. Here it is in R: 
+``` m <- c(1770, 1800, 1820)
+x <- c(21, 17, 36 
+mcd <- sum(m*x)/sum(x)``` 
+5. Try it!
+    - ```x``` an ```m``` are *numeric vectors*. 
+    - R is happy to multiply them together, propducing a vector that has the products of the correspoding elements of ```m``` an ```x```.
+
+   
    
