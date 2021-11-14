@@ -9,12 +9,23 @@
     - Add up the products to get a "sum of products".
     - Divide the sum of products by the sum of the counts.
 4. Here it is in R: 
-``` m <- c(1770, 1800, 1820)
-x <- c(21, 17, 36 
-mcd <- sum(m*x)/sum(x)``` 
+``` 
+m <- c(1770, 1800, 1820)
+x <- c(21, 17, 36) 
+mcd <- sum(m*x)/sum(x)
+``` 
 5. Try it!
     - ```x``` an ```m``` are *numeric vectors*. 
-    - R is happy to multiply them together, propducing a vector that has the products of the correspoding elements of ```m``` an ```x```.
+    - R is happy to multiply them together, producing a vector that has the products of the correspoding elements of ```m``` an ```x```.
+    - ```sum(m*x)```sums the products and ```sum(x)``` sums the counts.
+6. The formula:
+<img src="https://render.githubusercontent.com/render/math?math=\Large MCD=\frac{\sum_{i=1}^{T} x_i m_i} { \sum_{i=1}^{T} x_i}">
+
+## Why would this work?
+1.  
+
+
+### [On to Part II...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_II.md)
 
    
    
