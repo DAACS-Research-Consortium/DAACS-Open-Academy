@@ -23,12 +23,17 @@ mcd <- sum(m*x)/sum(x)
 
 ## Why would this work?
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
-    - The model is simple emprical generization: When we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
+    - The model is simple empirical generization: When we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
 ![](./battleships.png)
-    - In this plot, each column of grey bars represents a ceramic type. The bar width scale with type frequency. The y (vertical) axis is time.   
+    - In this plot, each column of grey bars represents a ceramic type. The bar width scale with type frequency in a given time period. The y (vertical) axis is time and spans 100 time periods (e.g. years).
+    - I generated these data in R -- the type frequencies follow Gaussian curves as a function of time.   
+2. As archaeologists we never get to see this. Instead, we might see someting like this:
+![](./RandomOrderBattleships.png)   
 
 
-### [On to Part II: MCDs at San Marcos Pueblo (and writing your own functions),..](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_II.md)
+
+
+### [On to Part II: MCDs at San Marcos Pueblo (and writing your own functions),..](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_II.md)
 
    
    
