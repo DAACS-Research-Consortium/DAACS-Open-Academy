@@ -22,10 +22,13 @@ mcd <- sum(m*x)/sum(x)
 <img src="https://render.githubusercontent.com/render/math?math=\Large MCD=\frac{\sum_{i=1}^{T} x_i m_i} { \sum_{i=1}^{T} x_i}">
 
 ## Why would this work?
-1.  
+1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
+    - The model is simple emprical generization: When we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
 
 
-### [On to Part II...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_II.md)
+
+
+### [On to Part II: MCDs at San Marcos Pueblo (and writing your own functions),..](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_II.md)
 
    
    
