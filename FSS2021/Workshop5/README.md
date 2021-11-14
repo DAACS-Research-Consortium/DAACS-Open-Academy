@@ -14,5 +14,5 @@ Welcome back! And if you are new, welcome! In this lesson we'll learn how to use
 4. And as always, make more plots!
 
 
-## [On to the exercises](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_I.md)
+### [On to Part I: MCDs and the Model Behind Them ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_I.md)
 
