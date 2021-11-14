@@ -25,7 +25,7 @@ mcd <- sum(m*x)/sum(x)
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
     - The model is simple emprical generization: When we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
 ![](./battleships.png)
-    - In this plot, each column of grey bars represents a ceramic type. The bar width scael with type frequency. The y (vertical) axis is time.   
+    - In this plot, each column of grey bars represents a ceramic type. The bar width scale with type frequency. The y (vertical) axis is time.   
 
 
 ### [On to Part II: MCDs at San Marcos Pueblo (and writing your own functions),..](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop3/Part_II.md)
