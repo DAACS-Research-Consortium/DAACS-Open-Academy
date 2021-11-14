@@ -24,7 +24,7 @@ mcd <- sum(m*x)/sum(x)
 ## Why would this work?
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
     - The model is simple emprical generization: When we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
-
+![](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/FSS2021/Workshop5/battleships.png)
 
 
 
