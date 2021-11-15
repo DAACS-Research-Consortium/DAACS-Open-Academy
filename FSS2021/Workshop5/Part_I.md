@@ -25,11 +25,18 @@ mcd <- sum(m*x)/sum(x)
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
     - The model is simple empirical generization: When we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
 ![](./battleships.png)
-    - In this plot, each column of grey bars represents a ceramic type. The bar width scale with type frequency in a given time period. The y (vertical) axis is time and spans 100 time periods (e.g. years).
-    - I generated these data in R -- the type frequencies follow Gaussian curves as a function of time.   
-2. As archaeologists we never get to see this. Instead, we might see someting like this:
+    - In this battleship plot, each column of grey bars represents a ceramic type. The bar width scale with type frequency in a given time period. The y (vertical) axis is time and spans 100 time periods (e.g. years).
+    - We generated these data in R -- the type frequencies follow Gaussian curves as a function of time.   
+2. As archaeologists we never get to see this. Instead, we might see something like this:
 ![](./RandomOrderBattleships.png)   
-
+    - This battleship plot is the result of randomly ordering the rows (assemblages) of the first plot. It represents the fallen state in which we often find ourselves when faced with archaeological data: ignorance.
+    - The question is...if we just have the the assemblage data, how can we get estimate the temporal order?
+3. Let's try MCDs!
+    - Because this is a simulation, we know the midpoints for each of the 10 types. Here they are, strait from R:
+```
+83.43  72.46 131.04 137.17  87.67  -4.12 -18.50  85.70  42.60  -8.05
+```
+    - We can use them and the type frequencies from the simulation to compute MCDs for the 100 assemblages
 
 
 
