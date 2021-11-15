@@ -10,8 +10,8 @@ Welcome back! And if you are new, welcome! In this lesson we'll learn how to use
     - Learn about numeric vectors and matrices.
     - Learn how to write our own functions, including a function to compute MCDs.  
 3. Have peek at some more complex functions that we and our collaborators use to work with data from the DAACS database.  
-4. And as always, make more plots! Including *battleship plots*
-![]./BattleshipPlot.png
+4. And as always, make more plots! Including *battleship plots*:
+![](./Images/BattleshipPlot.png)
 
 
 
