@@ -33,12 +33,21 @@ mcd <- sum(m*x)/sum(x)
     - The question is...if we just have the the assemblage data, how can we get estimate the temporal order?
 3. Let's try MCDs!
     - Because this is a simulation, we know the midpoints for each of the 10 types. Here they are, strait from R:
+
 ```
 83.43  72.46 131.04 137.17  87.67  -4.12 -18.50  85.70  42.60  -8.05
 ```
+
     - We can use them and the type frequencies from the simulation to compute MCDs for the 100 assemblages
+    - What's the MCD recipe again?
+4. Then we compare the *estimated*  with the true dates. And we know they are the rues date,. beasue we made therm up. This NEVER happens in th real worlkd.
+5.     
 
 
+## A Little MCD History
+1. MCDs were introduced by Stanley South (1971) "Evolution and Horizon as Revealed in Ceramic Analysis in Historical Archeology". Here is the ms.: 
+https://scholarcommons.sc.edu/cgi/viewcontent.cgi?article=1014&context=archanth_books
+2. South saw the link to frequency seriation in theory. But he did not see   
 
 ### [On to Part II: MCDs at San Marcos Pueblo (and writing your own functions),..](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_II.md)
 
