@@ -1,9 +1,9 @@
 # MCDs and the Model Behind Them
-## What is an MCD?
+## MCDs and How to Compute them in R
 1. A weighted averaged of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight.  
 2. The ingredients:
     - A set of midpoints for the types *m<sub>i</sub>*. For example, for three types,*m<sub>i</sub>* = [1770, 1800, 1820]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 1770, *m<sub>2</sub>* = 1800, *m<sub>3</sub>* = 1820.     
-    - A set of counts for the types  *x<sub>i</sub>*. For example, for the same three types,  *x<sub>i</sub>* = [21, 17, 36].
+    - A set of counts for the types  *x<sub>i</sub>*. For example, for the same three types,  *x<sub>i</sub>* = [21, 17, 36]. As before, the subscript *i* tells us which type we are dealing with: *x<sub>1</sub>* = 21, *x<sub>2</sub>* = 17, *x<sub>3</sub>* = 36.     
 3. The algorithm:
     - Multiply the type midpoints by their corresponding counts.
     - Add up the products to get a "sum of products".
@@ -18,14 +18,53 @@ mcd <- sum(m*x)/sum(x)
     - ```x``` an ```m``` are *numeric vectors*. 
     - R is happy to multiply them together, producing a vector that has the products of the correspoding elements of ```m``` an ```x```.
     - ```sum(m*x)```sums the products and ```sum(x)``` sums the counts.
-6. The formula:
+  
+6. Can you compute an MCD for these counts for the same 3 types?
+```
+x2 <- c(132, 80, 0) 
+```
+7. The formula:
 <img src="https://render.githubusercontent.com/render/math?math=\Large MCD=\frac{\sum_{i=1}^{T} x_i m_i} { \sum_{i=1}^{T} x_i}">
+
+8. We often have MANY assemblages. How can we estimate MCDs for them in one go?
+    - The secret sauce is to use *matrices*.
+    - In R a *matrix* is one or more vectors glued toether, with a fixed number of rows and columns. 
+    - The vectors must me all the same type. In other words a matrix MUST contain all numbers, all characters, or all logical values (T/F).
+    - Here's how we would create matrix for our two assemblages:
+ ```
+ xMat <- rbind(x,x1)
+ ```
+     - Try it! Anbd then trye these commands:
+ ```
+ xMat
+rownames(xMat)
+colnames(xMat)
+colnames(xMat) <- c('T1', 'T2', 'T3')
+xMat
+```
+    - How cool is that? WE have a number matrix with row and column names to help us keep track.
+    - ON to the answe to our question. Here is the code:
+```
+(xMat %*% m) / rowSums(xMat)
+```
+   - ```%*%``` is R's operator for matrix mutplication. It says: 
+       - take the first row on the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick the sume in the first row and first column of a new matrix.
+       - take the second row of the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick them in the second row and first column of a new matrix. 
+       - etc...
+       - The resuliing matrix will have as many rows an the mtrix onthe left and as many colimn asthe matrix on the left.
+       - For the mutuplication to work, the two arguemnts must be "conformatbl;e): numberof cluumns on t he lkft nust equl the number of rows onthe righht.
+ 
+ 
+     
+     
+
+
 
 ## Why would this work?
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
     - The model is simple empirical generization: when we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
 ![](./Images/TrueOrderBattleshipPlot.png)
-    - In this *battleship plot*, each column of grey bars represents a ceramic type. The bar widths scale with type frequency in a given time period (e.g. 1 year). The y (vertical) axis is time and spans 100 time periods (e.g. years).
+    - In this *battleship plot*, each column of grey bars represents a ceramic type. The bar widths scale with type frequency in a given time period (e.g. 1 year). The y (vertical) axis is time and spans 50 time periods (e.g. years).
     - We generated these data in R -- the type frequencies follow Gaussian curves as a function of time.   
 2. As archaeologists we never get to see this. Instead, we might see something like this:
 ![](./Images/RandomOrderBattleshipPlot.png)   
@@ -58,7 +97,7 @@ https://www.fcnym.unlp.edu.ar/catedras/ecocomunidades/Whittaker%20-%20Vegetation
     - Whitaker's work with non-temporal gradients is a healthy reminder for us that "time is not the only gradient" that might produce Gaussian response curves. For ceramic types, can you think of others? How might we address this ambiguity?
      
 
-### [On to Part II: MCDs at San Marcos Pueblo (and writing your own functions),..](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_II.md)
+### [On to Part II: TPQs,..](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_II.md)
 
    
    
