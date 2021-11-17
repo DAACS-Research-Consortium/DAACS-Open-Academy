@@ -31,7 +31,9 @@ wareCounts2 <- c(132, 80, 0)
  ```
  wareCountsMat <- rbind(wareCounts1,wareCounts2)
  ```
-     - Try it! And then try these commands:
+ 
+ Try it! And then try these commands:
+     
  ```
 wareCountsMat
 rownames(wareCountsMat)
@@ -39,8 +41,9 @@ colnames(wareCountsMat)
 colnames(wareCountsMat) <- c('T1', 'T2', 'T3')
 wareCountsMat
 ```
-    - How cool is that? Ww have a number matrix with row and column names to help us keep track.
-    - On to the answer to our question. Here is the code:
+How cool is that? 
+We have a number matrix with row and column names to help us keep track.
+On to the answer to our question. Here is the code:
 ```
 ( wareCountsMat %*% wareMidPoints) / rowSums( wareCountsMat)
 ```
