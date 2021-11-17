@@ -17,7 +17,6 @@ mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 5. Try it!
     - ```wareMidpoints``` an ```wareCounts1``` are *numeric vectors*. 
     - R is happy to multiply them together, producing a vector that has the products of the corresponding elements of ```wareMidpoints``` an ```wareCounts1```.
-    - ```sum(wareMidpoints*)```sums the products and ```sum(x)``` sums the counts.
     - ```sum(wareMidpoints*wareCounts1)```sums the products and ```sum(wareCounts1)``` sums the counts.
   
 6. Can you compute an MCD for these counts for the same 3 types?
