@@ -34,9 +34,9 @@ wareCounts2 <- c(132, 80, 0)
 2. As archaeologists we never get to see this. Instead, we might see something like this:
 ![](./Images/RandomOrderBattleshipPlot.png)   
     - This battleship plot is the result of randomly ordering the rows (assemblages) of the first plot. It represents the fallen state in which we often find ourselves when faced with archaeological data: ignorance.
-    - The question is...if we just have the the assemblage data, how can we get estimate the temporal order?
+    - The question is...if we just have the assemblage data, how can we estimate the temporal order?
 3. Let's try MCDs!
-    - Because this is a simulation, we know the midpoints for each of the types. 
+    - Because this is a simulation, we *know* the midpoints for each of the types. 
     - We can use the midpoints and the type frequencies from the simulation to compute *estimated MCDs* for the 100 assemblages.
     - What's the MCD recipe again?
 
