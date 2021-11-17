@@ -15,11 +15,11 @@ wareCounts1<- c(21, 17, 36)
 mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 ``` 
 5. Try it!
-    - ```wareMidpoints``` an ```wareCounts1``` are *numeric vectors*. 
-    - R is happy to multiply them together, producing a vector that has the products of the corresponding elements of ```wareMidpoints``` an ```wareCounts1```.
+    - ```wareMidpoints``` and ```wareCounts1``` are *numeric vectors*. 
+    - R is happy to multiply them together, producing a vector that has the products of the corresponding elements of ```wareMidpoints``` and ```wareCounts1```.
     - ```sum(wareMidpoints*wareCounts1)```sums the products and ```sum(wareCounts1)``` sums the counts.
   
-6. Can you compute an MCD for these counts for the same 3 types?
+6. Can you compute an MCD for these counts for the same 3 ware types?
 ```
 wareCounts2 <- c(132, 80, 0) 
 ```
@@ -29,20 +29,20 @@ wareCounts2 <- c(132, 80, 0)
     - The vectors must me all the same type. In other words a matrix MUST contain all numbers, all characters, or all logical values (T/F).
     - Here's how we would create matrix for our two assemblages:
  ```
- xMat <- rbind(x,x1)
+ wareCountsMat <- rbind(wareCounts1,wareCounts2)
  ```
      - Try it! And then try these commands:
  ```
- xMat
-rownames(xMat)
-colnames(xMat)
-colnames(xMat) <- c('T1', 'T2', 'T3')
-xMat
+wareCountsMat
+rownames(wareCountsMat)
+colnames(wareCountsMat)
+colnames(wareCountsMat) <- c('T1', 'T2', 'T3')
+wareCountsMat
 ```
     - How cool is that? Ww have a number matrix with row and column names to help us keep track.
     - On to the answer to our question. Here is the code:
 ```
-(xMat %*% m) / rowSums(xMat)
+( wareCountsMat %*% wareMidPoints) / rowSums( wareCountsMat)
 ```
    - ```%*%``` is R's operator for matrix multplication. It says: 
        - Take the first row on the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick the sum in the first row and first column of a new matrix.
