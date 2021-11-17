@@ -10,7 +10,7 @@
     - Divide the sum of products by the sum of the counts.
 4. Here it is in R: 
 ``` 
-wareMidpoints <- c(1770, 1800, 1820)
+wareMidpoints <- c(1770, 1800, 1820) 
 wareCounts1<- c(21, 17, 36) 
 mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 ``` 
@@ -26,27 +26,24 @@ wareCounts2 <- c(132, 80, 0)
 7. We often have MANY assemblages. How can we estimate MCDs for them in one go?
     - The secret sauce is to use *matrices*.
     - In R a *matrix* is one or more vectors glued toether, with a fixed number of rows and columns. 
-    - The vectors must me all the same type. In other words a matrix MUST contain all numbers, all characters, or all logical values (T/F).
-    - Here's how we would create matrix for our two assemblages:
+    - The vectors must be all the same type. In other words a matrix MUST contain all numbers, all characters, or all logical values (T/F).
+    - Here's how we would create a matrix for our two assemblages.
  ```
  wareCountsMat <- rbind(wareCounts1,wareCounts2)
  ```
- 
- Try it! And then try these commands:
-     
+     - Try it! And then try these commands:
  ```
 wareCountsMat
-rownames(wareCountsMat)
-colnames(wareCountsMat)
-colnames(wareCountsMat) <- c('T1', 'T2', 'T3')
+rownames(wareCountsMat)   # this hows you the row names
+colnames(wareCountsMat)   # this shows you the column names
+colnames(wareCountsMat) <- c('T1', 'T2', 'T3')  # this assigns column names    
 wareCountsMat
 ```
-How cool is that? 
-We have a number matrix with row and column names to help us keep track.
-On to the answer to our question. Here is the code:
+    - How cool is that? Ww have a number matrix with row and column names to help us keep track.
+    - On to the answer to our question. Here is the code:
 ```
 ( wareCountsMat %*% wareMidPoints) / rowSums( wareCountsMat)
-```
+````
    - ```%*%``` is R's operator for matrix multplication. It says: 
        - Take the first row on the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick the sum in the first row and first column of a new matrix.
        - Take the second row of the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick them in the second row and first column of a new matrix. 
@@ -66,8 +63,7 @@ On to the answer to our question. Here is the code:
     - This battleship plot is the result of randomly ordering the rows (assemblages) of the first plot. It represents the fallen state in which we often find ourselves when faced with archaeological data: ignorance.
     - The question is...if we just have the the assemblage data, how can we get estimate the temporal order?
 3. Let's try MCDs!
-    - Because this is a simulation, we know the midpoints for each of the 10 types. Here they are strait from R:
-``` 83.43  72.46 131.04 137.17  87.67  -4.12 -18.50  85.70  42.60  -8.05 ```
+    - Because this is a simulation, we know the midpoints for each of the types. 
     - We can use the midpoints and the type frequencies from the simulation to compute *estimated MCDs* for the 100 assemblages.
     - What's the MCD recipe again?
 
