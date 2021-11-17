@@ -5,12 +5,12 @@ Welcome back! And if you are new, welcome! In this lesson we'll learn how to use
 ## The plan and goals for today:
 
 1. Learn how to compute MCDs and a bit about the model of change over time in type frequencies that is (covertly) being invoked when we compute MCDs. And how to check if the model assumptions are met in your data. 
-2. Write some R code to compute MCDs for a simple dataset -- ceramic assemblages from a stratified sequence excavated from a 1-meter quadrat in slave Village at Stewart Castle, Jamaica.
-    - Refresh our data-wranging and cleaning skilz from last time.
-    - Learn about numeric vectors and matrices.
+2. Ditto TPQs.
+3. Write some R code to compute MCDs for a simple dataset -- ceramic assemblages from a stratified sequence excavated from a 1-meter quadrat in slave Village at Stewart Castle, Jamaica.
+    - Refresh our data-wranging and cleaning skils from last time.
     - Learn how to write our own functions, including a function to compute MCDs.  
-3. Have peek at some more complex functions that we and our collaborators use to work with data from the DAACS database.  
-4. And as always, make more plots! Including *battleship plots*:
+4. Have peek at some more complex functions that we and our collaborators use to work with data from the DAACS database.  
+5. And as always, make more plots! Including cool *battleship plots* like this:
 ![](./Images/BattleshipPlot.png)
 
 
