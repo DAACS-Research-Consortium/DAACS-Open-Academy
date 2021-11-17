@@ -23,34 +23,7 @@ mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 ```
 wareCounts2 <- c(132, 80, 0) 
 ```
-7. We often have MANY assemblages. How can we estimate MCDs for them in one go?
-    - The secret sauce is to use *matrices*.
-    - In R a *matrix* is one or more vectors glued toether, with a fixed number of rows and columns. 
-    - The vectors must be all the same type. In other words a matrix MUST contain all numbers, all characters, or all logical values (T/F).
-    - Here's how we would create a matrix for our two assemblages.
- ```
- wareCountsMat <- rbind(wareCounts1,wareCounts2)
- ```
-     - Try it! And then try these commands:
- ```
-wareCountsMat
-rownames(wareCountsMat)   # this hows you the row names
-colnames(wareCountsMat)   # this shows you the column names
-colnames(wareCountsMat) <- c('T1', 'T2', 'T3')  # this assigns column names    
-wareCountsMat
-```
-    - How cool is that? Ww have a number matrix with row and column names to help us keep track.
-    - On to the answer to our question. Here is the code:
-```
-( wareCountsMat %*% wareMidPoints) / rowSums( wareCountsMat)
-````
-   - ```%*%``` is R's operator for matrix multplication. It says: 
-       - Take the first row on the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick the sum in the first row and first column of a new matrix.
-       - Take the second row of the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick them in the second row and first column of a new matrix. 
-       - Etc...
-       - The resulting matrix will have as many rows an the matrix on the left and as many columns as the matrix on the left.
-       - For the multiplication to work, the two arguments must be "conformable"): number of columns on the he left nust equal the number of rows on the right.
- 
+
     
 ## Why would MCDs work?
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
