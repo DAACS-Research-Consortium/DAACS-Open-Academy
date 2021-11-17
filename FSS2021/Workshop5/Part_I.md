@@ -10,23 +10,21 @@
     - Divide the sum of products by the sum of the counts.
 4. Here it is in R: 
 ``` 
-m <- c(1770, 1800, 1820)
-x <- c(21, 17, 36) 
-mcd <- sum(m*x)/sum(x)
+wareMidpoints <- c(1770, 1800, 1820)
+wareCounts1<- c(21, 17, 36) 
+mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 ``` 
 5. Try it!
-    - ```x``` an ```m``` are *numeric vectors*. 
-    - R is happy to multiply them together, producing a vector that has the products of the corresponding elements of ```m``` an ```x```.
-    - ```sum(m*x)```sums the products and ```sum(x)``` sums the counts.
+    - ```wareMidpoints``` an ```wareCounts1``` are *numeric vectors*. 
+    - R is happy to multiply them together, producing a vector that has the products of the corresponding elements of ```wareMidpoints``` an ```wareCounts1```.
+    - ```sum(wareMidpoints*)```sums the products and ```sum(x)``` sums the counts.
+    - ```sum(wareMidpoints*wareCounts1)```sums the products and ```sum(wareCounts1)``` sums the counts.
   
 6. Can you compute an MCD for these counts for the same 3 types?
 ```
-x2 <- c(132, 80, 0) 
+wareCounts2 <- c(132, 80, 0) 
 ```
-7. The formula:
-<img src="https://render.githubusercontent.com/render/math?math=\Large MCD=\frac{\sum_{i=1}^{T} x_i m_i} { \sum_{i=1}^{T} x_i}">
-
-8. We often have MANY assemblages. How can we estimate MCDs for them in one go?
+7. We often have MANY assemblages. How can we estimate MCDs for them in one go?
     - The secret sauce is to use *matrices*.
     - In R a *matrix* is one or more vectors glued toether, with a fixed number of rows and columns. 
     - The vectors must me all the same type. In other words a matrix MUST contain all numbers, all characters, or all logical values (T/F).
@@ -52,11 +50,9 @@ xMat
        - Take the second row of the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick them in the second row and first column of a new matrix. 
        - Etc...
        - The resulting matrix will have as many rows an the matrix on the left and as many columns as the matrix on the left.
-       - For the multiplication to work, the two arguments must be "conformable"): number of cluumns on the he left nust equal the number of rows on the right.
+       - For the multiplication to work, the two arguments must be "conformable"): number of columns on the he left nust equal the number of rows on the right.
  
- 
-     
-     
+    
 ## Why would MCDs work?
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
     - The model is simple empirical generization: when we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
