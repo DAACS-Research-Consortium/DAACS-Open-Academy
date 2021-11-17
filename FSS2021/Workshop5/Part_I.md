@@ -16,7 +16,7 @@ mcd <- sum(m*x)/sum(x)
 ``` 
 5. Try it!
     - ```x``` an ```m``` are *numeric vectors*. 
-    - R is happy to multiply them together, producing a vector that has the products of the correspoding elements of ```m``` an ```x```.
+    - R is happy to multiply them together, producing a vector that has the products of the corresponding elements of ```m``` an ```x```.
     - ```sum(m*x)```sums the products and ```sum(x)``` sums the counts.
   
 6. Can you compute an MCD for these counts for the same 3 types?
@@ -34,7 +34,7 @@ x2 <- c(132, 80, 0)
  ```
  xMat <- rbind(x,x1)
  ```
-     - Try it! Anbd then trye these commands:
+     - Try it! And then try these commands:
  ```
  xMat
 rownames(xMat)
@@ -42,25 +42,22 @@ colnames(xMat)
 colnames(xMat) <- c('T1', 'T2', 'T3')
 xMat
 ```
-    - How cool is that? WE have a number matrix with row and column names to help us keep track.
-    - ON to the answe to our question. Here is the code:
+    - How cool is that? Ww have a number matrix with row and column names to help us keep track.
+    - On to the answer to our question. Here is the code:
 ```
 (xMat %*% m) / rowSums(xMat)
 ```
-   - ```%*%``` is R's operator for matrix mutplication. It says: 
-       - take the first row on the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick the sume in the first row and first column of a new matrix.
-       - take the second row of the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick them in the second row and first column of a new matrix. 
-       - etc...
-       - The resuliing matrix will have as many rows an the mtrix onthe left and as many colimn asthe matrix on the left.
-       - For the mutuplication to work, the two arguemnts must be "conformatbl;e): numberof cluumns on t he lkft nust equl the number of rows onthe righht.
+   - ```%*%``` is R's operator for matrix multplication. It says: 
+       - Take the first row on the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick the sum in the first row and first column of a new matrix.
+       - Take the second row of the matrix on the left, and multiply it by the first column of the matrix on the right. Add up the products and stick them in the second row and first column of a new matrix. 
+       - Etc...
+       - The resulting matrix will have as many rows an the matrix on the left and as many columns as the matrix on the left.
+       - For the multiplication to work, the two arguments must be "conformable"): number of cluumns on the he left nust equal the number of rows on the right.
  
  
      
      
-
-
-
-## Why would this work?
+## Why would MCDs work?
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
     - The model is simple empirical generization: when we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
 ![](./Images/TrueOrderBattleshipPlot.png)
