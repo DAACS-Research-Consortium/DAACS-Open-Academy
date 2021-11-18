@@ -1,6 +1,6 @@
 # Welcome to Session 5: Mean Ceramic Dates and TPQs in R
 
-Welcome back! And if you are new, welcome! In this lesson we'll learn how to use R to compute mean ceramic dates (MCDs) and *terminus post quem*s (TPQs). Note to the classical R-chaeologists in the crowd: Yup, that should be *termini post quos*:). We'll also make use of some of the data-wrangling and cleaning skills we learned in previous lessons.  
+Welcome back! And if you are new, welcome! In this lesson we'll learn how to use R to compute mean ceramic dates (MCDs) and *terminus post quem*s (TPQs). Note to the classical R-chaeologists in the crowd: Yup, that should be *termini post quos* :). We'll also make use of some of the data-wrangling and cleaning skills we learned in previous lessons.  
 
 ## The plan and goals for today:
 
