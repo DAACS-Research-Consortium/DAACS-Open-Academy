@@ -4,7 +4,11 @@
 3. Questions: 
      - If TPQs date deposition events, what is the "event" that MCDs date?
      - How would you expect MCDs to be related to TPQs for a given set of assemblages?
- 4. Here's a scatter plot of TPQs as a function of 
+ 4. Here's a scatter plot of TPQs as a function of true dates for the same simulation we used to illustrate MCDs:
+ ![](./Images/TPQvsTrueMCD.png) 
+     - Uneven stair steps and the stair treads have holes. What's up with that?
+ 5. And here are the TPQs as a function of the estimated MCDs:
+  ![](./Images/TPQvsEstimatedMCD.png) 
 
 
    
