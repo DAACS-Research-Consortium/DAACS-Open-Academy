@@ -13,6 +13,9 @@
      - Uneven stair steps and the stair treads have holes. What's up with that?
  5. And here are the TPQs as a function of the estimated MCDs:
   ![](./Images/TPQvsEstMCD.png) 
+  
+  
+### [On to Part III: Let's learn how to calculate MCDs and TPQs using R](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_III.md)
 
 
    
