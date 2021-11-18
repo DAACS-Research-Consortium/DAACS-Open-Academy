@@ -7,7 +7,7 @@
     - Multiply the type midpoints by their corresponding counts.
     - Add up the products to get a "sum of products".
     - Divide the sum of products by the sum of the counts.
-4. Here it is in R: 
+4. Here it is in R. Open the [RStudio Cloud Project](https://rstudio.cloud/project/3232458) and follow along.
 ``` 
 wareMidpoints <- c(1770, 1800, 1820) 
 wareCounts1<- c(21, 17, 36) 
