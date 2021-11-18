@@ -41,6 +41,7 @@ wareCounts2 <- c(132, 80, 0)
     - What's the MCD recipe again?
 
 4. Then we compare the estimated MCDs with the *true* dates. And we know they are the true dates because we made them up! Here is the scatter plot:
+
 ![](./Images/TrueMCDvsEstimatedMCD.png)
 
 5. In the real world. we can't check our results by making a plot like the one above. But we can use the *estimated MCDs* to sort the rows (assemblages) of the data matrix that contain the type frequencies. We then make a battleship plot of the the assemblages in MCD order and see if the Gaussian response curves, which are assumed by the MCD model. Here is the result for following those steps with our siulted data: 
