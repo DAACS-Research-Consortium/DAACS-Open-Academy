@@ -2,6 +2,12 @@
 
 Welcome back! And if you are new, welcome! In this lesson we'll learn how to use R to compute mean ceramic dates (MCDs) and *terminus post quem*s (TPQs). Note to the classical R-chaeologists in the crowd: Yup, that should be *termini post quos* :). We'll also make use of some of the data-wrangling and cleaning skills we learned in previous lessons.  
 
+## Important Links
+
+You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. he login is free and quick to create. 
+
+Project for today in RStudio Cloud: https://rstudio.cloud/project/3232458
+
 ## The plan and goals for today:
 
 1. Learn how to compute MCDs and a bit about the model of change over time in type frequencies that is (covertly) being invoked when we compute MCDs. And how to check if the model assumptions are met in your data. 
