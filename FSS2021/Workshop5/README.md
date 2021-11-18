@@ -4,9 +4,9 @@ Welcome back! And if you are new, welcome! In this lesson we'll learn how to use
 
 ## Important Links
 
-You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. he login is free and quick to create. 
-
-Project for today in RStudio Cloud: https://rstudio.cloud/project/3232458
+1. You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. The login is free and quick to create. 
+2. Project for today in RStudio Cloud: https://rstudio.cloud/project/3232458
+3. Find recordings for all previous Introduction to R workshops here: https://vimeo.com/digdaacs
 
 ## The plan and goals for today:
 
