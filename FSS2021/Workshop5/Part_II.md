@@ -1,6 +1,6 @@
 # TPQs 
 1.  *Terminus post quem* is Latin for "boundary after which". In archaeology the boundary is a temporal one: a date, the date after which some event occurred. In the case of a ceramic assemblage, the event is the date when the last sherd was added or (roughly) the date of deposition. 
-2. The cerammic TPQ for an assemblage is just the *latest* beginning manufacturing date among the beginning manufacturing dates for all the ware types found in the assemblage. Here are the beginning manufactrug dates of 4 ware types found in an assemblage. What's the TPQ?
+2. The ceramic TPQ for an assemblage is just the *latest* beginning manufacturing date among the beginning manufacturing dates for all the ware types found in the assemblage. Here are the beginning manufacturing dates of 4 ware types found in an assemblage. What's the TPQ?
     - North Devon Slipware - 1600
     - Slipware, North Midlands/Staffordshire - 1670
     - Slip Dip - 1715
