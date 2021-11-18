@@ -1,4 +1,4 @@
-# Mean Ceramic Dates (MCDs), the Model Behind Them, and how to How to Compute them in R
+# Mean Ceramic Dates (MCDs), the Model Behind Them, and How to Compute them in R
 1. A MCD is the weighted average of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight.  
 2. The ingredients:
     - A set of manufacturing midpoints for ceramics types *m<sub>i</sub>*. For example, for three ceramics types,*m<sub>i</sub>* = [1770, 1800, 1820]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 1770, *m<sub>2</sub>* = 1800, *m<sub>3</sub>* = 1820.     
