@@ -1,9 +1,8 @@
-# MCDs and the Model Behind Them
-## MCDs and How to Compute them in R
-1. A weighted average of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight.  
+# Mean Ceramic Dates (MCDs), the Model Behind Them, and how to How to Compute them in R
+1. A MCD is the weighted average of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight.  
 2. The ingredients:
-    - A set of midpoints for the types *m<sub>i</sub>*. For example, for three types,*m<sub>i</sub>* = [1770, 1800, 1820]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 1770, *m<sub>2</sub>* = 1800, *m<sub>3</sub>* = 1820.     
-    - A set of counts for the types  *x<sub>i</sub>*. For example, for the same three types,  *x<sub>i</sub>* = [21, 17, 36]. As before, the subscript *i* tells us which type we are dealing with: *x<sub>1</sub>* = 21, *x<sub>2</sub>* = 17, *x<sub>3</sub>* = 36.     
+    - A set of manufacturing midpoints for ceramics types *m<sub>i</sub>*. For example, for three ceramics types,*m<sub>i</sub>* = [1770, 1800, 1820]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 1770, *m<sub>2</sub>* = 1800, *m<sub>3</sub>* = 1820.     
+    - A set of counts for the ware types  *x<sub>i</sub>*. For example, for the same three ware types,  *x<sub>i</sub>* = [21, 17, 36]. As before, the subscript *i* tells us which type we are dealing with: *x<sub>1</sub>* = 21, *x<sub>2</sub>* = 17, *x<sub>3</sub>* = 36.     
 3. The algorithm:
     - Multiply the type midpoints by their corresponding counts.
     - Add up the products to get a "sum of products".
