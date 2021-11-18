@@ -8,7 +8,7 @@
  ![](./Images/TPQvsTrueMCD.png) 
      - Uneven stair steps and the stair treads have holes. What's up with that?
  5. And here are the TPQs as a function of the estimated MCDs:
-  ![](./Images/TPQvsEstimatedMCD.png) 
+  ![](./Images/TPQvsEstMCD.png) 
 
 
    
