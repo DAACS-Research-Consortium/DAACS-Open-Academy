@@ -45,7 +45,7 @@ VC.Unit <- merged_VC1 %>% mutate(Unit = Context)
 
 Then we use the ```filter``` function to choose all the levels from Quadrat 003. The last step before we calculate is to use the ```mutate``` function to combine assemblage counts from the last two contexts because they have low counts.  Finally we can compute the MCDs and TPQs!
 
-#### Lines 121-126: Compute MCDs for each context in Quadrat 003
+#### Lines 126-131: Compute MCDs for each context in Quadrat 003
 ```
 MCDs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
 dplyr::summarize (sumOfProducts = sum(midPoint*Count),
@@ -53,7 +53,7 @@ dplyr::summarize (sumOfProducts = sum(midPoint*Count),
                     MCD = sumOfProducts /sumOfCounts)
   ```
 
-#### Lines 130-132: Compute TPQs for each context in Quadrat 003
+#### Lines 133-137: Compute TPQs for each context in Quadrat 003
 To compute TPQs we use the ```max``` function to identify the largest (or latest) beginning manufacturing date (BeginDate).
 ```
 TPQs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
@@ -61,4 +61,3 @@ dplyr::summarize (TPQ = max(BeginDate),
                     sumOfCounts= sum(Count))
 ```
 
-### [Onto Part IV -- One more plot!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_IV.md)
