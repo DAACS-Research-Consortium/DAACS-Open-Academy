@@ -57,7 +57,7 @@ dplyr::summarize (sumOfProducts = sum(midPoint*Count),
 To compute TPQs we use the ```max``` function to identify the largest (or latest) beginning manufacturing date (BeginDate).
 ```
 TPQs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
-  dplyr::summarize (TPQ = max(BeginDate),
+dplyr::summarize (TPQ = max(BeginDate),
                     sumOfCounts= sum(Count))
 ```
 
