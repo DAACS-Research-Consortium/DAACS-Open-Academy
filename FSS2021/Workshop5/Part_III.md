@@ -12,19 +12,18 @@
 ```inner_join(...)``` is a mutating join that adds columns from one data frame to another using a common variable.
 
 
-```merged_VC <- inner_join(VillageCeramics, MCDType, by = "Ware", keep = FALSE)```
+Line 65: ```merged_VC <- inner_join(VillageCeramics, MCDType, by = "Ware", keep = FALSE)```
 
 Here we are joining VillageCeramics and MCType on the "Ware" variable.
 
 What is the structure of this function?
-```inner_join(x, y, by=, keep = )```
-x= data frame1. In this case, VillageCeramics
-y=:data frame2. In this case, MCDType
-by= The names of the varibales that are common to both x and y. The default is to use the variables with common names between the two data frames.
 
-In the case of these data frames, "Ware" is the common variable on which we join the two data frames.
-#all, all.x, all.y:Logical values that specify the type of merge. The default value is all=FALSE (meaning that only the matching rows are returned).
-#Read more about mutating joins here: https://dplyr.tidyverse.org/reference/mutate-joins.html
+```inner_join(x, y, by=, keep = )```
+* x= data frame1. In this case, VillageCeramics
+* y=:data frame2. In this case, MCDType
+* by=: Names of the variable that is common to both x and y. IN the case of these data frames, "Ware" is the common variable on which we join these dataframes.
+* keep=:
+* Read more about mutating joins here: https://dplyr.tidyverse.org/reference/mutate-joins.html
 
 
 
