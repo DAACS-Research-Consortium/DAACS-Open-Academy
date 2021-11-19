@@ -1,4 +1,4 @@
-# Let's create MCDs for Stewart Castle Village
+# Let's create MCDs and TPQs for Stewart Castle Village
 
 ### Lines 33-60: The functions used in these lines should be familiar at this point. 
 
