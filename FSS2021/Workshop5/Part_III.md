@@ -25,7 +25,7 @@ What is the structure of this function?
 * keep=: Should the join variable or "keys" from both x and y be preserved in the output? Here we say FALSE (no) and only keep one "Ware" variable.
 * Read more about mutating joins here: https://dplyr.tidyverse.org/reference/mutate-joins.html
 
-### Lines 88-99: Let's calculate!
+### Lines 88-143: Let's calculate MCDs and TPQs!
 
 Here we add one new numeric variable to the merged data frame.  We will use this variable to calculate the MCD.
 
