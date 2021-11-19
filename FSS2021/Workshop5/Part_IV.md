@@ -7,3 +7,6 @@ Using the plotrix package and ```battleship.plot()``` function we can create a b
 ![](./Images/BattleshipPlot.jpg)
 
 
+Here is another ```battleship.plot()``` that shows the relationship of proportions ordered by Stratigraphy. 
+
+![](./Images/BattleshipPlot.jpg)
