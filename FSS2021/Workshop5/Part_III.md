@@ -19,10 +19,10 @@ Here we are joining VillageCeramics and MCType on the "Ware" variable.
 What is the structure of this function?
 
 ```inner_join(x, y, by=, keep = )```
-* x= data frame1. In this case, VillageCeramics.
-* y=:data frame2. In this case, MCDType.
-* by=: Names of the variable that is common to both x and y. In the case of these data frames, "Ware" is the common variable on which we join these dataframes.
-* keep=: should the join variable or "keys" from both x and y be preserved in the output? Here we say FALSE (no) and only keep one "Ware" variable.
+* x=: data frame1. In this case, VillageCeramics.
+* y=: data frame2. In this case, MCDType.
+* by=: Name of the variable that is common to both x and y. In this case, "Ware" is the common variable on which we join these dataframes.
+* keep=: Should the join variable or "keys" from both x and y be preserved in the output? Here we say FALSE (no) and only keep one "Ware" variable.
 * Read more about mutating joins here: https://dplyr.tidyverse.org/reference/mutate-joins.html
 
 ### Lines 96-99: Let's calculate!
@@ -41,7 +41,7 @@ Line ```merged_VC1 <- merged_VC %>%
          span = (EndDate - BeginDate),
          inverseVar = 1/(span/6)^2)```
          
-A word about inverse variance: The only thing we know about these types is span.  How do we get from the begin and end dates to get to a variance estimate? If you have a Gaussian distribution, roughly 95% of the mass of the curve falls within plus or minus 2 standard deviations of the mean. One way to estimate variance is divide span by two standard deviations on either side of the mid point. That would mean dividing Span by 4. But 99% of the observations under the curve is covered by 3 standard deviations. Then the estimate of variance is the span/6 standard deviations.
+A word about inverse variance: The only thing we know about these types is span.  How do we get from the beginning and end dates to a variance estimate? If you have a Gaussian distribution, roughly 95% of the mass of the curve falls within plus or minus 2 standard deviations of the mean. One way to estimate variance is divide span by two standard deviations on either side of the mid point. That would mean dividing Span by 4. But 99% of the observations under the curve is covered by 3 standard deviations. Then the estimate of variance is the span/6 standard deviations.
 
          
          
