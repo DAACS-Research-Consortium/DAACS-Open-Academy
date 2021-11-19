@@ -43,7 +43,7 @@ Next we create a new field "Unit" and populate it with data from "Context".
 VC.Unit <- merged_VC1 %>% mutate(Unit = Context)
 ```
 
-Next we use the ```filter``` function function to choose all the levels from Unit 003.  Then the ```mutate``` function to combine assemblage counts from the last two layers.  Finally we can then compute the MCDs and TPQs!
+Then we use the ```filter``` function function to choose all the levels from Unit 003. The last step is to use the ```mutate``` function to combine assemblage counts from the last two layers because they have low counts.  Finally we can compute the MCDs and TPQs!
 
 #### Calculate MCDs for each level -- Lines XX 
 ```
