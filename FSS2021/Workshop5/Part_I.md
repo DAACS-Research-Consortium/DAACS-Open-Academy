@@ -1,7 +1,7 @@
 # Mean Ceramic Dates (MCDs), the Model Behind Them, and How to Compute them in R
-1. A MCD is the weighted average of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight.  
+1. An MCD is the weighted average of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight.  
 2. The ingredients:
-    - A set of manufacturing midpoints for ceramics types *m<sub>i</sub>*. For example, for three ceramics types,*m<sub>i</sub>* = [1770, 1800, 1820]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 1770, *m<sub>2</sub>* = 1800, *m<sub>3</sub>* = 1820.     
+    - A set of manufacturing midpoints for ceramic types *m<sub>i</sub>*. For example, for three ceramic types, *m<sub>i</sub>* = [1770, 1800, 1820]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 1770, *m<sub>2</sub>* = 1800, *m<sub>3</sub>* = 1820.     
     - A set of counts for the ware types  *x<sub>i</sub>*. For example, for the same three ware types,  *x<sub>i</sub>* = [21, 17, 36]. As before, the subscript *i* tells us which type we are dealing with: *x<sub>1</sub>* = 21, *x<sub>2</sub>* = 17, *x<sub>3</sub>* = 36.     
 3. The algorithm:
     - Multiply the type midpoints by their corresponding counts.
@@ -26,7 +26,7 @@ wareCounts2 <- c(132, 80, 0)
     
 ## Why would MCDs work?
 1.  There is a model behind the MCD method: our old friend the frequency-seriation model.
-    - The model is simple empirical generization: when we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
+    - The model is simple empirical generalization: when we measure the "popularity" of a series of historical types over time, the trajectories of change will form lenticular, unimodal (battleship-shaped) curves. Something like this:
 ![](./Images/TrueOrderBattleshipPlot.png)
     - In this *battleship plot*, each column of grey bars represents a ceramic type. The bar widths scale with type frequency in a given time period (e.g. 1 year). The y (vertical) axis is time and spans 50 time periods (e.g. years).
     - We generated these data in R -- the type frequencies follow Gaussian curves as a function of time.   
@@ -43,7 +43,7 @@ wareCounts2 <- c(132, 80, 0)
 
 ![](./Images/TrueMCDvsEstimatedMCD.png)
 
-5. In the real world. we can't check our results by making a plot like the one above. But we can use the *estimated MCDs* to sort the rows (assemblages) of the data matrix that contain the type frequencies. We then make a battleship plot of the the assemblages in MCD order and see if the Gaussian response curves, which are assumed by the MCD model. Here is the result for following those steps with our siulted data: 
+5. In the real world. we can't check our results by making a plot like the one above. But we can use the *estimated MCDs* to sort the rows (assemblages) of the data matrix that contain the type frequencies. We then make a battleship plot of the the assemblages in MCD order and see if the Gaussian response curves, which are assumed by the MCD model. Here is the result for following those steps with our simulated data: 
    
 ![](./Images/EstMCDOrderBattlehipPlot.png)  
 
