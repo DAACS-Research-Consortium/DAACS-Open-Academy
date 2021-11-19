@@ -44,7 +44,6 @@ wareCounts2 <- c(132, 80, 0)
 ![](./Images/TrueMCDvsEstimatedMCD.png)
 
 5. In the real world. we can't check our results by making a plot like the one above. But we can use the *estimated MCDs* to sort the rows (assemblages) of the data matrix that contain the type frequencies. We then make a battleship plot of the the assemblages in MCD order and see if the Gaussian response curves, which are assumed by the MCD model. Here is the result for following those steps with our simulated data: 
-   
 ![](./Images/EstMCDOrderBattlehipPlot.png)  
 
     - If we see the curves, what can we conclude? 
