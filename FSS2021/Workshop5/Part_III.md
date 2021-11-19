@@ -25,14 +25,14 @@ What is the structure of this function?
 * keep=: Should the join variable or "keys" from both x and y be preserved in the output? Here we say FALSE (no) and only keep one "Ware" variable.
 * Read more about mutating joins here: https://dplyr.tidyverse.org/reference/mutate-joins.html
 
-### Lines 96-99: Let's calculate!
+### Lines 88-99: Let's calculate!
 
 Here we add one new numeric variable to the merged data frame.  We will use this variable to calculate the MCD.
 
 The variable is:
-* Midpoint: the midpoint of the manufacturing span for a given ware type.  It is calcuated by adding the values in the BeginDate and EndDate fields together and then dividing by 2.
+* Midpoint: the midpoint of the manufacturing span for a given ware type.  It is calcuated using the ```mutate``` function by adding the values in the BeginDate and EndDate fields together and then dividing by 2.
 
-Line XX 
+#### Lines 88-89: 
 ```
 merged_VC1 <- merged_VC %>%
 mutate(midPoint = (EndDate+BeginDate)/2)
@@ -43,9 +43,9 @@ Next we create a new field "Unit" and populate it with data from "Context".
 VC.Unit <- merged_VC1 %>% mutate(Unit = Context)
 ```
 
-Then we use the ```filter``` function function to choose all the levels from Unit 003. The last step before we calculate is to use the ```mutate``` function to combine assemblage counts from the last two layers because they have low counts.  Finally we can compute the MCDs and TPQs!
+Then we use the ```filter``` function to choose all the levels from Quadrat 003. The last step before we calculate is to use the ```mutate``` function to combine assemblage counts from the last two contexts because they have low counts.  Finally we can compute the MCDs and TPQs!
 
-#### Calculate MCDs for each level -- Lines XX 
+#### Lines 121-126: Compute MCDs for each context in Quadrat 003
 ```
 MCDs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
 dplyr::summarize (sumOfProducts = sum(midPoint*Count),
@@ -53,7 +53,8 @@ dplyr::summarize (sumOfProducts = sum(midPoint*Count),
                     MCD = sumOfProducts /sumOfCounts)
   ```
 
-#### Calculate TPQs for each level -- Lines XX 
+#### Lines 130-132: Compute TPQs for each context in Quadrat 003
+To compute TPQs we use the ```max``` function to identify the largest (or latest) beginning manufacturing date (BeginDate).
 ```
 TPQs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
   dplyr::summarize (TPQ = max(BeginDate),
