@@ -25,14 +25,14 @@ What is the structure of this function?
 * keep=: Should the join variable or "keys" from both x and y be preserved in the output? Here we say FALSE (no) and only keep one "Ware" variable.
 * Read more about mutating joins here: https://dplyr.tidyverse.org/reference/mutate-joins.html
 
-### Lines 88-148: Let's calculate MCDs and TPQs!
+### Lines 87-148: Let's calculate MCDs and TPQs!
 
 Here we add one new numeric variable to the merged data frame.  We will use this variable to calculate the MCD.
 
 The variable is:
 * Midpoint: the midpoint of the manufacturing span for a given ware type.  It is calcuated using the ```mutate``` function by adding the values in the BeginDate and EndDate fields together and then dividing by 2.
 
-#### Lines 88-89: 
+#### Lines 87-89: 
 ```
 merged_VC1 <- merged_VC %>%
 mutate(midPoint = (EndDate+BeginDate)/2)
