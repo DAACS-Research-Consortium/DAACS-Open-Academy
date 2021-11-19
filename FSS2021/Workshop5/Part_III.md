@@ -61,3 +61,4 @@ dplyr::summarize (TPQ = max(BeginDate),
                     sumOfCounts= sum(Count))
 ```
 
+### [Part IV: Final Step -- Let's Make a Plot!](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_III.md)
