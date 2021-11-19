@@ -27,25 +27,27 @@ What is the structure of this function?
 
 ### Lines 96-99: Let's calculate!
 
-Here we add three new numeric variables to the merged data frame.  We will use these variables to calculate MCDs and TPQs.
+Here we add one new numeric variable to the merged data frame.  We will use this variable to calculate the MCD.
 
-The three variables are:
-* Midpoint: the midpoint of the manufacturing span for a given ware type.
-* Span: the difference between the end date and beginning date of manufacture for a given ware type.
-* Inverse Variance: We want to put more weight on the types with shorter manufacturing spans. The parameter we are interested in is the standard deviation. The proper weighting for this is to use the inverse of the square of the standard deviation.
+The variable is:
+* Midpoint: the midpoint of the manufacturing span for a given ware type.  It is calcuated by adding the values in the BeginDate and EndDate fields together and then dividing by 2.
 
-The first two variables are created using the BeginDate and EndDate fields in the data frame. Span is then used to create inverseVar.
+Line XX ```merged_VC1 <- merged_VC %>%
+ mutate(midPoint = (EndDate+BeginDate)/2)```
+ 
+Next we create a new field "Unit" and populate it with data from "Context".
+```VC.Unit <- merged_VC1 %>% mutate(Unit = Context)```
 
-Line ```merged_VC1 <- merged_VC %>%
- mutate(midPoint = (EndDate+BeginDate)/2,
-         span = (EndDate - BeginDate),
-         inverseVar = 1/(span/6)^2)```
-         
-A word about inverse variance: The only thing we know about these types is span.  How do we get from the beginning and end dates to a variance estimate? If you have a Gaussian distribution, roughly 95% of the mass of the curve falls within plus or minus 2 standard deviations of the mean. One way to estimate variance is divide span by two standard deviations on either side of the mid point. That would mean dividing Span by 4. But 99% of the observations under the curve is covered by 3 standard deviations. Then the estimate of variance is the span/6 standard deviations.
+After we use the filter function to and mutate function to choose all the levels from Unit 003, and combine assemblage counts from the last two layers, we then compute the MCDs and TPQ!
 
-         
-         
+#### MCDs
+Lines XX ```MCDs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
+  dplyr::summarize (sumOfProducts = sum(midPoint*Count),
+                    sumOfCounts= sum(Count),
+                    MCD = sumOfProducts /sumOfCounts)```
 
-
-
+#### TPQs
+Lines XX ```TPQs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
+  dplyr::summarize (TPQ = max(BeginDate),
+                    sumOfCounts= sum(Count))```
 
