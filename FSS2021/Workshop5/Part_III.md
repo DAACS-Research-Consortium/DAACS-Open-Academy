@@ -32,22 +32,31 @@ Here we add one new numeric variable to the merged data frame.  We will use this
 The variable is:
 * Midpoint: the midpoint of the manufacturing span for a given ware type.  It is calcuated by adding the values in the BeginDate and EndDate fields together and then dividing by 2.
 
-Line XX ```merged_VC1 <- merged_VC %>%
- mutate(midPoint = (EndDate+BeginDate)/2)```
+Line XX 
+```
+merged_VC1 <- merged_VC %>%
+mutate(midPoint = (EndDate+BeginDate)/2)
+ ```
  
 Next we create a new field "Unit" and populate it with data from "Context".
-```VC.Unit <- merged_VC1 %>% mutate(Unit = Context)```
+```
+VC.Unit <- merged_VC1 %>% mutate(Unit = Context)
+```
 
-After we use the filter function to and mutate function to choose all the levels from Unit 003, and combine assemblage counts from the last two layers, we then compute the MCDs and TPQ!
+Next we use the ```filter``` function function to choose all the levels from Unit 003.  Then the ```mutate``` function to combine assemblage counts from the last two layers.  Finally we can then compute the MCDs and TPQs!
 
-#### MCDs
-Lines XX ```MCDs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
-  dplyr::summarize (sumOfProducts = sum(midPoint*Count),
+#### Calculate MCDs for each level -- Lines XX 
+```
+MCDs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
+dplyr::summarize (sumOfProducts = sum(midPoint*Count),
                     sumOfCounts= sum(Count),
-                    MCD = sumOfProducts /sumOfCounts)```
+                    MCD = sumOfProducts /sumOfCounts)
+  ```
 
-#### TPQs
-Lines XX ```TPQs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
+#### Calculate TPQs for each level -- Lines XX 
+```
+TPQs <- VC.Unit.Quad3a %>% group_by(Unit) %>% 
   dplyr::summarize (TPQ = max(BeginDate),
-                    sumOfCounts= sum(Count))```
+                    sumOfCounts= sum(Count))
+```
 
