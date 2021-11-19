@@ -1,4 +1,4 @@
-## Let's make a Battleship Plot
+## Part IV: Let's make a Battleship Plot
 
 ### Lines 150-229 -- Plot time!
 
