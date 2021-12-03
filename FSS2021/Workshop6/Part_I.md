@@ -1,20 +1,24 @@
 # Part 1: Conventional "Vanilla" Relative Frequencies
- ###vanilla (adj.): having no special or extra features; ordinary or standard
+ ## vanilla (adj.): having no special or extra features; ordinary or standard
  - ![](./Images/Vanilla (2).jfif)  
 
-Welcome back! It is December and you have made it to Workshop 6! 
+The conventional application of a relative frequency in archaeology is the count of one artifact type divided by the count of all artifact types in a givem assemblage.
 
-And if you are new, welcome! 
+Relative Frequency = Artifact Type 1/Total Artifacts
 
-In this lesson we'll learn how to calculate two different types of relative frequencies--conventional relative frequencies and abundance indices--and how to plot them.
-We will make use of some of the data-wrangling and data cleaning skills we learned in previous lessons.  
+## Let's calculate the relative frequencies of Buttons, Creamics, and Tobacco Pipes as proportions of the entire artifact assemblages for three sites:
 
-## Important Links
+siteMCDs <- c(1770, 1790, 1810) # We create a numeric vector of site MCDS
+Buttons<- c(12, 17, 25) # We create a numeric vector of counts associated with buttons
+Ceramics<- c(301, 452, 934) # We create a numeric vector of counts associated with ceramics
+TobPipes<- c(56, 78, 102) # We create a numeric vector of counts associated with tobacco pipes
+totalArts<- c(1000, 1540, 2300) # We create a numeric vector of total artifacts in an assemblage
 
-1. You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. The login is free and quick to create. 
-2. Project for today in RStudio Cloud: https://rstudio.cloud/project/3293533
-3. Find recordings for all previous Introduction to R workshops here: https://vimeo.com/digdaacs
-
+df<-data.frame(Buttons, Ceramics, TobPipes, totalArts, siteMCDs)
+  
+RelativeFreqs <-df %>% mutate(ButtonRF=Buttons/totalArts,
+                              CeramicRF=Ceramics/totalArts,
+                              TobPipeRF=TobPipes/totalArts)
 ## The plan for today is to:
 
 1. Learn how to compute and plot conventional "vanilla" relative frequencies in R.
