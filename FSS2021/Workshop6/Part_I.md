@@ -19,17 +19,7 @@ df<-data.frame(Buttons, Ceramics, TobPipes, totalArts, siteMCDs)
 RelativeFreqs <-df %>% mutate(ButtonRF=Buttons/totalArts,
                               CeramicRF=Ceramics/totalArts,
                               TobPipeRF=TobPipes/totalArts)
-## The plan for today is to:
 
-1. Learn how to compute and plot conventional "vanilla" relative frequencies in R.
-2. Meet their more bespoke cousin, the abundance index. You will also learn how to calculate and plot AI data.
-3. Learn how to create and plot confidence limits for the data.
-4. Refresh our data-wranging and cleaning skills from last time.
-    - Get comfortable with using mutate to create new variables.
-    - Think through data cleaning and organization.  
-    - Reacquaint ourselves with ggplot to make cool plots like this: 
-    - ![](./Images/BattleshipPlot.png)  
-5. Finally, we will be staying after class today to help anyone with questions or problems related to their own research datasets.
 
-### [On to Part I: Vanilla Relative Frequencies ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop6/Part_II.md)
+### [On to Part II: The Abundance Index ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop6/Part_II.md)
 
