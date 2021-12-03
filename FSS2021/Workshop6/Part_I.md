@@ -1,4 +1,6 @@
-# Welcome to Session 6: Calculate and Plot Relative Frequencies and Abundance Indices in R
+# Part 1: Conventional "Vanilla" Relative Frequencies
+ vanilla (adj.): having no special or extra features; ordinary or standard
+ - ![](./Images/Vanilla(2).png)  
 
 Welcome back! It is December and you have made it to Workshop 6! 
 
