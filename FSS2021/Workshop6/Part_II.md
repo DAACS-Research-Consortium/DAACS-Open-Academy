@@ -5,7 +5,7 @@
  
  * Abundance indices provide estimates of discard rates relative to a baseline discard rate, with the assumption that the base discard rate of the denominator class either does not change or, if it does change, it does so in a predictable manner. As a result, we only have to be concerned with correlated discard rate variation in a single denominator class, not many artifact classes.  
  
- * ** An Abundance Index is estimated as**: AI = (Artifact Group 1) / (Artifact Group 1) +(Artifact Group 2), where Group 1 is the artifact group whose variation we are interested in measuring and Group 2 represents the class whose discard rate we hypothesize is constant across the assemblages being compared.  
+ * **An Abundance Index is estimated as**: AI = (Artifact Group 1) / (Artifact Group 1) +(Artifact Group 2), where Group 1 is the artifact group whose variation we are interested in measuring and Group 2 represents the class whose discard rate we hypothesize is constant across the assemblages being compared.  
 
 **The Challenge!**
 
