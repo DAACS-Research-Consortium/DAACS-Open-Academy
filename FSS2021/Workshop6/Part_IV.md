@@ -17,7 +17,7 @@ A thought experiment...
  - Our confidence will be a function of sample size: the bigger the assemblage, the more "confident" we should be that our estimate is close to the true value.
  - We can make the imagining process more useful with the help of a statisticial model.
  - The model we use in this case is called the *binomial distribution*. It's a formula that we can use to predict the probability of drawing a sample in which we get *x* "successes", when the total sample size is *n* and the true proportion in the underlying population is &phi;.
- - With some algrbra, we can also use the binomial distrbution model to estimate *confidence limits*.    
+ - With some algebra, we can also use the binomial distrbution model to estimate *confidence limits*.    
 
 **Confidence limits** on a point estimate are the upper and lower bounds of an interval that we can expect will contain the true value some specified percentage of the time that we compute such an interval. The interval is (not surprisingly) call a *confidence interval*. To compute CLs, we need to specify the percentage. Tradition, dating back to R.A. Fisher, is to specify 95%. But we could also go with 90, or 80, or 89! 
 
