@@ -1,4 +1,4 @@
-# # Welcome to Session 4: Using R to Clean Data
+#Welcome to Session 4: Using R to Clean Data
 
 Welcome back! And if you are new, welcome! 
 You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class.  
