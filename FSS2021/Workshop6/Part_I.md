@@ -1,6 +1,6 @@
 # Part 1: Conventional "Vanilla" Relative Frequencies
  ## vanilla (adj.): having no special or extra features; ordinary or standard
- - ![](./Workshop6/Vanilla (2).jfif)  
+ <img src="https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop6/Vanilla.png" width="400" height="450"> 
 
 The conventional application of a relative frequency in archaeology is the count of one artifact type divided by the count of all artifact types in a givem assemblage.
 
