@@ -13,18 +13,16 @@ We will make use of some of the data-wrangling and data cleaning skills we learn
 2. Project for today in RStudio Cloud: https://rstudio.cloud/project/3293533
 3. Find recordings for all previous Introduction to R workshops here: https://vimeo.com/digdaacs
 
-## The plan and goals for today:
+## The plan for today is to:
 
 1. Learn how to compute and plot conventional "vanilla" relative frequencies in R.
 2. Meet their more bespoke cousin, the abundance index. You will also learn how to calculate and plot AI data.
 3. Learn how to create and plot confidence limits for the data.
-4. Ditto TPQs.
-5. Write some R code to compute MCDs for a simple dataset -- ceramic assemblages from a stratified sequence excavated from a 1-meter quadrat in the slave village site at Stewart Castle, Jamaica.
-    - Refresh our data-wranging and cleaning skills from last time.
-    - Compute MCDs for the stratified assemblages.
-    - Compute TPQs too!  
+4. Refresh our data-wranging and cleaning skills from last time.
+    - Get comfortable with using mutate to create new variables.
+    - Think through data cleaning and organization.  
 6. And as always, make more plots! Including cool *battleship plots* like this:
 ![](./Images/BattleshipPlot.png)
 
-### [On to Part I: MCDs and the Model Behind Them ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop5/Part_I.md)
+### [On to Part I: Vanilla Relative Frequencies ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop6/Part_II.md)
 
