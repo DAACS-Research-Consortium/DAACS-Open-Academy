@@ -21,8 +21,9 @@ We will make use of some of the data-wrangling and data cleaning skills we learn
 4. Refresh our data-wranging and cleaning skills from last time.
     - Get comfortable with using mutate to create new variables.
     - Think through data cleaning and organization.  
-6. And as always, make more plots! Including cool *battleship plots* like this:
-![](./Images/BattleshipPlot.png)
+    - Reacquaint ourselves with ggplot to make cool plots like this: 
+    - ![](./Images/BattleshipPlot.png)  
+5. Finally, we will be staying after class today to help anyone with questions or problems related to their own research datasets.
 
 ### [On to Part I: Vanilla Relative Frequencies ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop6/Part_II.md)
 
