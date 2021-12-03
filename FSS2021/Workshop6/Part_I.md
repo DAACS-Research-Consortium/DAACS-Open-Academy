@@ -1,6 +1,6 @@
 # Part 1: Conventional "Vanilla" Relative Frequencies
- vanilla (adj.): having no special or extra features; ordinary or standard
- - ![](./Images/Vanilla(2).png)  
+ ###vanilla (adj.): having no special or extra features; ordinary or standard
+ - ![](./Images/Vanilla (2).jfif)  
 
 Welcome back! It is December and you have made it to Workshop 6! 
 
