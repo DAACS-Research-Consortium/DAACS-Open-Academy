@@ -38,7 +38,15 @@ RelativeFreqs <-df %>% mutate(ButtonRF=Buttons/totalArts,
                               CeramicRF=Ceramics/totalArts,
                               TobPipeRF=TobPipes/totalArts)
  ```
+## Things to Keep in Mind about Relative Frequencies
 
+* Relative frequencies are one of the most commonly used measures of assemblage variation. 
+
+* They are ideal for seriation and related chronology methods such as mean ceramic dates and pipe stem bore diameter dating. 
+
+* **However**, they are problematic if you want to reliably measure and compare variation in discard patterns.  Relative frequencies  are based on the assumption that the discard rate of the artifact class in the numerator is independent of the discard rates for all the artifact classes that make up the denominator. This is rarely the case. 
+
+* For traditional relative frequencies of a given artifact type, relative to all other artifact types , to provide an accurate picture of discard, the discard rate of all the other types must be constant. A constant discard rate of all other artifact types, within a single site and between sites, is highly unlikely. As a result, archaeologists need a measure that is sensitive to the discard of not simply the artifact being measured, but also the other artifact classes that comprise the assemblage.
 
 
 ### [On to Part II: The Abundance Index ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop6/Part_II.md)
