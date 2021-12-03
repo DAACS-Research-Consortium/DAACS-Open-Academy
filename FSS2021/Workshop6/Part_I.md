@@ -16,9 +16,11 @@ totalArts<- c(1000) # We create a numeric vector of total artifacts in an assemb
 
 ``` df<-data.frame(Buttons, Ceramics, TobPipes, totalArts) ```
   
-``` RelativeFreqs <-df %>% mutate(ButtonRF=Buttons/totalArts,
+``` 
+RelativeFreqs <-df %>% mutate(ButtonRF=Buttons/totalArts,
                               CeramicRF=Ceramics/totalArts,
-                              TobPipeRF=TobPipes/totalArts) ```
+                              TobPipeRF=TobPipes/totalArts) 
+```
 
 #### Now let's calculate relative frequencies of these three artifact types as proportions of artifact assemblages from three sites:
 
