@@ -6,7 +6,8 @@ Welcome back! And if you are new, welcome! In this lesson we'll learn how to use
 
 1. You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. The login is free and quick to create. 
 2. Project for today in RStudio Cloud: https://rstudio.cloud/project/3232458
-3. Find the recording of this workshop here: https://vimeo.com/user124556947
+3. Find the recording of this workshop here: https://player.vimeo.com/video/572645935?h=4dbc3c44e1
+
 
 ## The plan and goals for today:
 
