@@ -36,7 +36,7 @@ Everytime a function is used there is a name followed by a '('
 Now let's go hunting
 
 1. We are going to look at some code but ... you have one job ... identify functions. Resist the temptation to understand what the code does.
-2. Click on this link ---> [link](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/RWorkshop1_SCV.R)
+2. Click on this link ---> [link](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop1/RWorkshop1_SCV.R)
 3. Read the code but don't try to understand anything, just identify functions. For everyone you see record the line number and the function
     * eg: line 10, library
     * eg: line 11, library
@@ -56,7 +56,7 @@ Packages are bundles of functions. There is more going on but for the moment a p
 ### Exercise 4
 In this exercise we will make a list of all the packages used in our example code.
 
-1. Click on this link ---> [link](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/RWorkshop1_SCV.R) (n.b.: it is the same link as the previous exercise)
+1. Click on this link ---> [link](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop1/RWorkshop1_SCV.R) (n.b.: it is the same link as the previous exercise)
 2. Write down all of the libraries that are loaded in this code.
 
 
