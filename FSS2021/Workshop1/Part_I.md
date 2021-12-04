@@ -20,7 +20,7 @@ What is a pirate's favorate programming language?
 ![](https://github.com/alonzi/DAACS-Intro-to-R/blob/ccac08ef4b1fab0a6dc7fe976a2c642c3be7e1a0/glinda.png)
 
 
-# [on to part II](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/part-II.md)
+# [on to part II](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop1/Part_II.md)
 
 
 
