@@ -28,7 +28,7 @@ By comparing the function call and the variable we created you can see that we g
 
 ### Heuristic: The `<-` operator 'catches' the output of functions and stores them in variables.
 
-![](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/r-pac-man.jpg)
+![](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop2/r-pac-man.jpg)
 
 ### A note about variable names - clarity and brevity
 
