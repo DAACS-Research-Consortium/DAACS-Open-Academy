@@ -1,6 +1,3 @@
-## Important Links
-Project for today in RStudio Cloud: https://rstudio.cloud/project/3037046
-
 ## Quick Review
 1. Load the packages
 2. Import CSV
