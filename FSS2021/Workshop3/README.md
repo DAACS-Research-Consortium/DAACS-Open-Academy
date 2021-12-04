@@ -3,8 +3,9 @@
 Welcome back! And if you are new, welcome! In this session we are going to continue exploring a sample dataset in R and learn more about ggplot.
 
 ## Important Links
-Project for today in RStudio Cloud: https://rstudio.cloud/project/3037046
-You can find the video of the workshop here: https://vimeo.com/641592878
+
+* Project for today in RStudio Cloud: https://rstudio.cloud/project/3037046
+* You can find the video of the workshop here: https://vimeo.com/641592878
 
 ## A quick recap of the topics we covered last time:
 
