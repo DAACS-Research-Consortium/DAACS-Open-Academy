@@ -21,7 +21,7 @@ Everyone look at the last person with their hand up
 
 * Part I - [link](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop1/Part_I.md)
 * Part II - [link](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop1/Part_II.md)
-* Reference - [link](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/reference.md)
+* Reference - [link](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop1/Reference.md)
 
 
 
