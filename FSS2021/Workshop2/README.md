@@ -17,4 +17,4 @@ Welcome back! And if you are new, welcome! In this session we are going to get i
 
 #### Important Links
 * RStudio Cloud Project Link: https://rstudio.cloud/project/2983017
-* Today's Code Example: https://github.com/alonzi/DAACS-Intro-to-R/blob/main/RWorkshop2_SCV.R
+* Today's Code Example: https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop2/RWorkshop2_SCV.R
