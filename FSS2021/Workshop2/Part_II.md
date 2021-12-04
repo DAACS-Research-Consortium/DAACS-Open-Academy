@@ -1,4 +1,4 @@
-# Part IV: Using code to accomplish a task
+# Part II: Using code to accomplish a task
 In this part we will explore Lines 21-66 in the sample code (and maybe more). In these lines the DAACS team performs common analysis techniques including summarising and graphing.
 
 ## Exercise 1 - `summarise(...)`
