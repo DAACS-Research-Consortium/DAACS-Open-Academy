@@ -1,6 +1,8 @@
 # DAACS-Intro-to-R
-This repository contains the materials for Lesson 1 of the DAACS Fall 2021 Short Course: Introduction to R Programming for Historical Archaeologists.  It is meant to be followed through as the lesson and then reviewed later as reference materials.
-Dr. Pete Alonzi developed the materials for the first two workshops.  
+These materials are for Workshop 1 of the DAACS Fall 2021 Short Course: Introduction to R Programming for Historical Archaeologists.  It is meant to be followed through as the lesson and then reviewed later as reference materials.
+Dr. Pete Alonzi from the University of Virginia School of Data Science developed the materials for the first two workshops.  
+
+The link to the video of workshop 1 is here: https://vimeo.com/623828934.
 
 ## Goals
 Everyone will:
