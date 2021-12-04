@@ -1,5 +1,5 @@
 
-# Part III: Variables and Data Structures
+# Part I: Variables and Data Structures
 In this part we are going to dig into some code and investigate what is going on. Along the way we will learn about variables and data structures. We will focus on Lines 15-19 in our sample code. I will guide you through the exercises.
 
 * We will use a new R project for these exercises, please access it here: https://rstudio.cloud/project/2983017
@@ -67,4 +67,4 @@ We are going to look at a couple functions that help to describe data frames.
 &nbsp;
 
 
-## [On to part IV](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/part-IV.md)
+## [On to part II](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop2/Part_II.md)
