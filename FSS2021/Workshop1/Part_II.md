@@ -97,8 +97,6 @@ If that is the case you need to install the package, this is different from load
 The whole reason we use R is for the packages. Before you try to understand code, understand the packages it uses, that will give great insight into what the code is about.
 
 
-## [On to part III](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/part-III.md)
-
 ## Bonus Material
 We will take a couple quick polls using the zoom tools. And that will show if we want to hit the following two points.
 
