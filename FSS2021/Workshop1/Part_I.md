@@ -7,7 +7,7 @@ We will be using RStudio Cloud.
 2. RStudio Cloud project link: https://rstudio.cloud/project/2928062
 
 ## Pop Quiz
-What is a pirate's favorate programming language?
+What is a pirate's favorite programming language?
 
 ## Game Plan
 1. Pete will lead a guided tour of RStudio - (core takeaway: type code into console and see what happens)
