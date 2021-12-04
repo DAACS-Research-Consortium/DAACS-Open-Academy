@@ -26,4 +26,4 @@ Everyone look at the last person with their hand up
 
 
 # License
-![](https://github.com/alonzi/DAACS-Intro-to-R/blob/main/2880px-Cc-by-nc-sa_icon.svg.png)
+![](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop1/2880px-Cc-by-nc-sa_icon.svg.png)
