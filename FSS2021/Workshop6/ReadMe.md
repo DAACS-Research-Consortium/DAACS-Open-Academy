@@ -11,7 +11,7 @@ We will make use of some of the data-wrangling and data cleaning skills we learn
 
 1. You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. The login is free and quick to create. 
 2. Project for today in RStudio Cloud: https://rstudio.cloud/project/3293533
-3. Find recordings for all previous Introduction to R workshops here: https://vimeo.com/digdaacs
+3. Find the recording of this workshop here: https://vimeo.com/653816785
 
 ## The plan for today is to:
 
