@@ -3,7 +3,9 @@ These materials are for Workshop 1 of the DAACS Fall 2021 Short Course: Introduc
 Dr. Pete Alonzi from the University of Virginia School of Data Science developed the materials for the first two workshops.  
 
 ## Important Links
-The link to the video of workshop 1 is here: https://vimeo.com/623828934.
+1. You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. The login is free and quick to create. 
+2. Project for today in RStudio Cloud: https://rstudio.cloud/project/2928062
+3. Find the recording of this workshop here: https://vimeo.com/653816785
 
 ## Goals
 Everyone will:
