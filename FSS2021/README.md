@@ -8,4 +8,4 @@ Materials for the DAACS Fall 2021 Short Course -- Introduction to R Programming 
 4. Lesson 4 -- [Using R to Clean Data](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/tree/main/FSS2021/Workshop4)
 5. Lesson 5 -- [Mean Ceramic Dates and TPQs in R](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/tree/main/FSS2021/Workshop5)
 6. Lesson 6 -- [Calculate and Plot Relative Frequencies and Abundance Indices in R](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/tree/main/FSS2021/Workshop6)
-7. Lesson 7 -- Learn Seriation in R
+7. Lesson 7 -- Learn How to Do Seriations in R using Correspondence Analysis 
