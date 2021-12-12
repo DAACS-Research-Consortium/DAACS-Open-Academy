@@ -34,6 +34,7 @@ Date Type1 Type2 Type3
 20    11   179    86
 ```
 And here is the battleship plot: 
+
 ![](./Images/propMat.png)
 
 ## 3. Now we pretend we are archaeologsists
