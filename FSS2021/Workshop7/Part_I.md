@@ -33,3 +33,35 @@ Date Type1 Type2 Type3
 19    13   196    92
 20    11   179    86
 ```
+And here is the battleship plot: 
+![](./Images/propMat.png)
+
+## 3. Now we pretend we are archaeologsists
+- Here is what we see:
+
+![](./Images/propMatRan.png)
+
+## 4. MCDs  
+- The MCD method says that we can infer the dates of each assemblage from this mess if we know the type means. 
+- All we do is multiply the vector of 3 type means *m<sub>i</sub>* = [ 2, 29, 9] by the vector of relative frequencies in each assemblage and add the products. We get a weighted average, where the weights are the type relative frequnecies. This is the MCD estimate for each assemblage. 
+- Then we sort the assmblagess of the MCD estiamates to see if we see the Gaussian reponses that the model assumes. Here is the plot:
+
+![](./Images/propMatSortedByMCD.png)
+
+- Hooray!!
+- And we can go one step further here. This is a simulation,so we KNOW the true assemblage dates. We can plot MCDs against the true dates (the time periods: 1,2,3,…20) to see how well the method works: 
+
+![](./Images/MCDxDate.png)
+
+
+## 5. MCD Problems
+But what if we do not know the  means for our types?
+	- We don't have the documentary data on manufacturing midpoints.
+	- We are unwilling to assume that the manufacturing midpoinst apply to the local cultural tradition that generated our assemblages.
+
+CA offers a way forward!
+
+### [On to Part II: Introduction to CA basics -- with a simple seriation example...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop7/Part_II.md)
+
+
+
