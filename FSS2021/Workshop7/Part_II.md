@@ -1,7 +1,8 @@
 # Part II: Introduction to CA Basics -- With a Simple Seriation Example.
 
 ## 1. CA from Geometric Perspective.
-- There are several different ways to understand CA and motivate the math behind it. We'll start with geometry. We can think of the rows of our data table (the assemblages) as points in space. The each axis of the space measures the relative frequency of a type. So the axes represent the columns. In our MCD example, we had three types. So there are three axes. Here they are:
+- There are several different ways to understand CA and motivate the math behind it. We'll start with geometry. 
+- We can think of the rows of our data table (the assemblages) as points in space. The each axis of the space measures the relative frequency of a type. So the axes represent the columns. In our MCD example, we had three types. So there are three axes. Here they are:
 ![](./Images/3dCoords.png) 
 - Each axis represents the proportion of its type -- from 0 to 1 -- in an assemblage. So we can plot each assembage on the 3 axes. Here's what that plot looks like:
 ![](./Images/3dCoordsPoints.png) 
