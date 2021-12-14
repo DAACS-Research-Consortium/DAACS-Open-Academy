@@ -5,7 +5,12 @@
 - A statistical way to say this is: type frequencies follow Gaussian response functions to time.
 - The date of peak popularity is the mean of the Gausssian curve for each type. So each type has its own mean.
 
-## 2. Here's an example, simulated in R: 
+
+###New PArt 2
+
+MCD model, quick review.
+
+## 3. Recall why this works. Here's an example, simulated in R: 
 - We have three types that attain maximum popularity in the following time periods (e.g. years). In our simulation, the type means are 
  *m<sub>i</sub>* = [ 2, 29, 9]. 
  	-Here *m* stands for the mean for ceramic types mi. For example, for three ceramic types, mi = [1770, 1800, 1820]. Here the subscript i tells us which type we are dealing with: m1 = 1770, m2 = 1800, m3 = 1820.
