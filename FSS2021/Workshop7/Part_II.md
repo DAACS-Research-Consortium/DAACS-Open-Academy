@@ -37,9 +37,15 @@ Let's think again about how to describe the job we want to do:
 - In a case with 10 types, the geeks are asking for a 1 or maybe 2-d summary. They might let us get away with a 3-d summary, if  it turned out that 3 dismnison were required for a good summary of the major trends in the data.
 - So in all cases, we are going to a completely accurate higher-dimensional description, to a less accurate low-dimensional summary.
 - But some low-dimensional summaries are better than others!! 
-- To pick the best one, we need a way to measure how much variation there is in the original data. We can then compare it to how much variation is captured in the summary. We want low-dimensional pictures that capture the highest proportion of the variation in the original data. To pick the picture
-- Here's another picture:
-- ![](./Images/3dCoordsPointsSimplexRMean.png)
+- To pick the best one, we need a way to measure how much variation there is in the original data. We can then compare it to how much variation is captured in the summary. We want low-dimensional pictures that capture the highest proportion of the variation in the original data. 
+- Here's another picture. It will help us think about how to measure the total amount of variation in the orginal data.
+![](./Images/3dCoordsPointsSimplexRMean.png)
+- The red dot is the *mean* of the type proportions. We compute it by adding up counts for each of the types and dividing by the sum of the counts in all the assemblages.
+- Here how we are going to compute our measure of total variation:
+  - Compute the mean of the type proportions (the red dot).
+  - Compute the distance from each assemblage to the red dot. The distance we use to do this in CA is called (geek lingo!) the *chi-square distance*.
+  - Compute a weighted sum of the distances, where the weights are the sizes of the assmblages: bigger asssemblages get more weight. This weighted sum is called (more geek lingo) the *Inertia* 
+- In the next section, we use R to compute both these measures for our simple 3-type dataset.   
 
 
   
