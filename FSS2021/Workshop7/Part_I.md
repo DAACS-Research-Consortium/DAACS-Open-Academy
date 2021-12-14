@@ -1,13 +1,14 @@
 # Part I: Review of the Frequency-Seriation Model and MCDs 
 
 ## 1. Recall the seriation model
-- Over time the relative frequencies of  certain artifact types ("historical types") tend to follow a battleship-shaped curves: they start off rare, get popular, then get rare again.
+- Over time the relative frequencies of certain artifact types ("historical types") tend to follow a battleship-shaped curves: they start off rare, get popular, then get rare again.
 - A statistical way to say this is: type frequencies follow Gaussian response functions to time.
 - The date of peak popularity is the mean of the Gausssian curve for each type. So each type has its own mean.
 
 ## 2. Here's an example, simulated in R: 
 - We have three types that attain maximum popularity in the following time periods (e.g. years). In our simulation, the type means are 
  *m<sub>i</sub>* = [ 2, 29, 9]. 
+ 	-Here *m* stands for the mean for ceramic types mi. For example, for three ceramic types, mi = [1770, 1800, 1820]. Here the subscript i tells us which type we are dealing with: m1 = 1770, m2 = 1800, m3 = 1820.
 - We ask R to generate assemblages from time periods 1,2,3 … 20, according to the Gaussian response model.
 - Here's what we get: 
 ```
@@ -44,7 +45,7 @@ And here is the battleship plot:
 
 ## 4. MCDs  
 - The MCD method says that we can infer the dates of each assemblage from this mess if we know the type means. 
-- All we do is multiply the vector of 3 type means *m<sub>i</sub>* = [ 2, 29, 9] by the vector of relative frequencies in each assemblage and add the products. We get a weighted average, where the weights are the type relative frequnecies. This is the MCD estimate for each assemblage. 
+- All we do is multiply the vector of 3 ware type manufacturing dates *m<sub>i</sub>* = [ 1780, 1790, 1815] by the vector of relative frequencies in each assemblage and add the products. We get a weighted average, where the weights are the type relative frequnencies. This is the MCD estimate for each assemblage. 
 - Then we sort the assmblagess of the MCD estiamates to see if we see the Gaussian reponses that the model assumes. Here is the plot:
 
 ![](./Images/propMatSortedByMCD.png)
