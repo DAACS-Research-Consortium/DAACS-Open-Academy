@@ -6,7 +6,7 @@
 - The date of peak popularity is the mean of the Gausssian curve for each type. So each type has its own mean.
 
 
-###New PArt 2
+## New PArt 2
 
 MCD model, quick review.
 
