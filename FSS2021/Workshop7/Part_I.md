@@ -1,23 +1,29 @@
-# Part I: Review of the Frequency-Seriation Model and MCDs 
+# Part I: Review of MCDs and the Frequnecy Seriation Model  
 
-## 1. Recall the seriation model
+## 1. Recall how to Compute an MCD
+- Think back to Workshop 5...
+- An MCD is the weighted average of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight. 
+- Here's the R code from our first example:
+
+``` 
+wareMidpoints <- c(1770, 1800, 1820) 
+wareCounts1<- c(21, 17, 36) 
+mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
+``` 
+## 2. Recall the Frequency Seriation Model
 - Over time the relative frequencies of certain artifact types ("historical types") tend to follow a battleship-shaped curves: they start off rare, get popular, then get rare again.
-- A statistical way to say this is: type frequencies follow Gaussian response functions to time.
-- The date of peak popularity is the mean of the Gausssian curve for each type. So each type has its own mean.
+- A geeky way to make this more precise: type frequencies follow Gaussian response functions to time. This implies that the curves are symmetrical.
+- Because the curve for each type is symmetrical, the date of the type's peak popularity is both the midpoint and the mean for the curve.
 
-
-## New PArt 2
-
-MCD model, quick review.
-
-## 3. Recall why this works. Here's an example, simulated in R: 
-- We have three types that attain maximum popularity in the following time periods (e.g. years). In our simulation, the type means are 
- *m<sub>i</sub>* = [ 2, 29, 9]. 
- 	-Here *m* stands for the mean for ceramic types mi. For example, for three ceramic types, mi = [1770, 1800, 1820]. Here the subscript i tells us which type we are dealing with: m1 = 1770, m2 = 1800, m3 = 1820.
-- We ask R to generate assemblages from time periods 1,2,3 … 20, according to the Gaussian response model.
+## 3. The Seriation Model is the Foundation for MCDs
+- Once again think back to Workshop 5 on MCDs. There we used a simulation to understand why MCDs work (and why they might not). Here's a quick refresher with a diifferent example.
+- We ask R to simulate 20 time periods -- you can think of these as years. So start in year *1* and end in year *20*.  
+- Then we get R to simulate the popularity curves for three types (Types 1, 2, and 3) for these 20 years. 
+- The type frequencies follow symmetrical "battleship-shaped" curves across time. (Geek lingo: the type frequencies follow Gaussian responses).      
+- For the data show below, the "years" of maximum popularity -- the "midpoints" -- for the three types are: *m<sub>i</sub>* = [ 2, 29, 9]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 2, *m<sub>2</sub>* = 29, *m<sub>3</sub>* = 9.
 - Here's what we get: 
 ```
-Date Type1 Type2 Type3
+Year Type1 Type2 Type3
 1    323     8   191
 2    360     2   209
 3    344    12   234
@@ -50,13 +56,13 @@ And here is the battleship plot:
 
 ## 4. MCDs  
 - The MCD method says that we can infer the dates of each assemblage from this mess if we know the type means. 
-- All we do is multiply the vector of 3 ware type manufacturing dates *m<sub>i</sub>* = [ 1780, 1790, 1815] by the vector of relative frequencies in each assemblage and add the products. We get a weighted average, where the weights are the type relative frequnencies. This is the MCD estimate for each assemblage. 
-- Then we sort the assmblagess of the MCD estiamates to see if we see the Gaussian reponses that the model assumes. Here is the plot:
+- All we do is multiply the vector that conatains the midpoints of 3 type *m<sub>i</sub>* = [ 2, 29, 9] by the vector of frequencies in each assemblage, add the products, and divide by the sum of the frequencies. We get a weighted average, where the weights are the type relative frequnencies. This is the MCD estimate for each assemblage. 
+- Then we sort the assmblages on the MCD estimates to see if we see the Gaussian reponses that the model assumes. Here is the plot:
 
 ![](./Images/propMatSortedByMCD.png)
 
 - Hooray!!
-- And we can go one step further here. This is a simulation,so we KNOW the true assemblage dates. We can plot MCDs against the true dates (the time periods: 1,2,3,…20) to see how well the method works: 
+- And we can go one step further here. This is a simulation,so we KNOW the true assemblage dates. We can plot MCDs against the true dates (the time periods or "years": 1,2,3,…20) to see how well the method works: 
 
 ![](./Images/MCDxDate.png)
 
