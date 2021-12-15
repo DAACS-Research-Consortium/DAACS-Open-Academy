@@ -26,7 +26,7 @@ There are several different ways to understand CA and motivate the math behind i
 - Here's another view of the point scatter:
 ![](./Images/3dCoordsPointsSimplexR.png)
 - Note how the points of the triangle represent the locations of (hypothetical) assemblages that have 100% of the corresponding type.
-- This means that we can get some idea of the composition of an assmeblage by noting what triangle point it is close to. This relationship will carry over to interpreting the results of CA.  
+- This means that we can get some idea of the composition of an assemblage by noting what triangle point it is close to. This relationship will carry over to interpreting the results of CA.  
 - For 3 types, the assemblage points lie in a 2-d space. With only 2 dimensions, it is pretty easy to guess the chronological order by eyeballing the curved point cloud. 
 - But this approach will not work if we have 10 types. Then we are dealing with a 10-1 = 9 dimensional space.
 - And even with two dimensions, the geeks in the crowd will insist that we use a reproducible computational method to assign scores to the assemblages such that, when we sort the assemblages on their scores, we get the chronological order. So these scores would serve the same function as MCDs. But they would not be calibrated in "years".
@@ -35,11 +35,11 @@ There are several different ways to understand CA and motivate the math behind i
 ## 2. From Higher-Dimensional Descriptions to Lower Dimensional Summaries
 Let's think again about how to describe the job we want to do:
 - In our example with 3 types, we have seen that the locations of the assemblage points (and the pattern of distances among them) can be completely described in 2 dimensions.  
-- But what the geeks ask is for us to replace that 2-d description with a 1-d summary that would consist of a single set of scores along a new axis. We'd want a single set of scores such that when we comnpute the pattern of distances among the points on the new axis, the distances approximate -- as much as possible -- the distances in the orginal 2-d space.  
-- In a case with 10 types, the geeks are asking for a 1 or maybe 2-d summary. They might let us get away with a 3-d summary, if  it turned out that 3 dimenisons were required for a good summary of the major trends in the data.
+- But what the geeks want is to replace that 2-d description with a 1-d summary. The 1-d summary would consist of a single set of scores along a *new* axis. We want a single set of scores such that when we compute the pattern of distances among the points on the new axis, the distances approximate -- as much as possible -- the distances in the orginal 2-d space.  
+- In a case with 10 types, the geeks are asking for a 1 or maybe 2-d summary. They might let us get away with a 3-d summary, if it turned out that 3 dimenisons were required for a good summary of the major trends in the data.
 - So in all cases, we are going to a completely accurate higher-dimensional description, to a less accurate low-dimensional summary.
 - But some low-dimensional summaries are better than others!! 
-- To pick the best one, we need a way to measure how much variation there is in the original data. We can then compare it to how much variation is captured in the summary. We want a low-dimensional summary that captures the highest possible proportion of the variation in the original data
+- To pick the best one, we need a way to measure how much variation there is in the original data. We can then compare it to how much variation is captured in the summary. We want a low-dimensional summary that captures the highest possible amount of the variation in the original data
 
 ## 3. Measuring Distances and Variation
 - Here's another picture. It will help us think about how to measure the total amount of variation in the orginal data.
@@ -59,31 +59,31 @@ Let's think again about how to describe the job we want to do:
 0.3585859 0.1555985 0.4858156 
 ```
 
-2. Compute the squared distance from each assemblage to the red dot. The distance we use to do this in CA is called (geek lingo) the *chi-square distance*. Here is the computation for the first row of the matrix of type proportions in each assemblage. First we check the proportions for the first assemblage:
+2. Compute the squared distance from each assemblage to the red dot. The distance we use to do this in CA is called (more geek lingo) the *chi-square distance*. Here is the computation for the first row of the matrix of type proportions. First, we check the proportions for the first assemblage:
 ```
   propMat[1,]
      Type1      Type2      Type3 
 0.61877395 0.01532567 0.36590038 
 ```
-Get the sum of squared differences between the mean proportions (centroid) and the proportions in the first assemblage: 
+Now we get the sum of squared differences between the mean proportions (the centroid) and the proportions in the first assemblage: 
 ```
 > (propMat[1,] - colProps)^2
      Type1      Type2      Type3 
 0.06769784 0.01967648 0.01437966
 ```
-To get the *Squared chi-square distance* we square the differences, divide by the mean proportions, and add it all up.
+To get the *squared chi-square distance* we square the differences, divide by the mean proportions, and add it all up.
 ```
 > squaredChi2DistFromMean <- sum((propMat[1,] - colProps)^2/colProps)
 > squaredChi2DistFromMean
 [1] 0.3448469
 ```
-If we had skipped the division step, we would have a *squared Euclidean distance*. It's dividing by the column means (centroid) that makes it a *squared chi-squared distance*. Think back to intro stats.... The guts of the chi-squared statistic is *(O-E)<sup>2</sup>/E*, where *O* is a *observed* count and *E* is an *expected* count. See the parallel?
+If we had skipped the division step, we would have a *squared Euclidean distance*. It's dividing by the column means (centroid) that makes it a *chi-squared distance*. Think back to intro stats.... The guts of the chi-squared statistic is *(O-E)<sup>2</sup>/E*, where *O* is a *observed* count and *E* is an *expected* count. See the parallel?
 
 The division step weights the final distance inversely in proportion to the overall frequency of each type. So rare types contribute more!
 
-We compute the squared chi-sqaured distances to the mean (centroid) for all the assemblages.
+Now we compute the squared chi-squared distances to the mean (centroid) for all the other assemblages the assemblages. Check the code file for how to do this. 
 
- 3. Here is the last step in getting our measure of variation in the data (*inertia*):  We compute a weighted sum of the square chi-squared distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is the *inertia*. Here is the code:
+ 3. Here is the last step in getting our measure of variation in the data (*inertia*):  We compute a weighted sum of the square chi-squared distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is the *inertia* value we need. Here is the code:
  ```
 > rowProps <- rowSums(simData)/ sum(simData) 
 > inertia <- sum(squaredChi2DistsFromMean * rowProps)
@@ -134,7 +134,7 @@ It turns out the function call *ca()* produces a *list*. You can get a descripti
 ```
 ?ca
 ```
-We are going to focus on the following bits: 
+We are going to focus on just three objects following bits: 
 - The *singular values*:
 ```
 > ca1$sv
