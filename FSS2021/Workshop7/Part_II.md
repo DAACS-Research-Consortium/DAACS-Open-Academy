@@ -25,9 +25,11 @@ There are several different ways to understand CA and motivate the math behind i
 ![](./Images/usdaSoilTexture.jpg)
 - Here's another view of the point scatter:
 ![](./Images/3dCoordsPointsSimplexR.png)
+- Note how the points of the triangle represent the locations of (hypothetical) assemblages that have 100% of the corresponding type.
+- This means that we can get some idea of the composition of an assmeblage by noting what triangle point it is close to. This relationship will carry over to interpreting the results of CA.  
 - For 3 types, the assemblage points lie in a 2-d space. With only 2 dimensions, it is pretty easy to guess the chronological order by eyeballing the curved point cloud. 
 - But this approach will not work if we have 10 types. Then we are dealing with a 10-1 = 9 dimensional space.
-- And even with two dimensions, the geeks in the crowd will insist that we use a reproducible computational method to assign scores to the assemblages such that when we sort the assemblages on their scores, we get the chronological order. So these scores would serve the same function as MCDs. But they would not be calibrated in "years".
+- And even with two dimensions, the geeks in the crowd will insist that we use a reproducible computational method to assign scores to the assemblages such that, when we sort the assemblages on their scores, we get the chronological order. So these scores would serve the same function as MCDs. But they would not be calibrated in "years".
 - CA is all about figuring out the assemblage scores. But to do that we also have to figure out a "corresponding" (get it?) set of scores for the types. And just as with MCDs, the assemblage scores in CA are proportional to weighted avarages of the types scores.  
 
 ## 2. From Higher-Dimensional Descriptions to Lower Dimensional Summaries
@@ -132,7 +134,48 @@ It turns out the function call *ca()* produces a *list*. You can get a descripti
 ```
 ?ca
 ```
-We are going to focus on the following bits:
+We are going to focus on the following bits: 
+- The *singular values*:
+```
+> ca1$sv
+[1] 0.5519299 0.1835650
+```
+  - Note there are two of them, one for each new axis or dimension computed by CA. There are only 2 in this case because our simulatied data have three types (columns). But the closed-sum constaint means that all the *inertia* can the described in 2 dimensions. More generally, there will *number of columns-1* or *number of rows-1* singular values and corresponding new dimensions or axes in a CA, whichever is less.
+
+  - The squares of the *singular values* measure the amount on inertia that is described by each new dimension.
+```
+> ca1$sv^2
+[1] 0.3046266 0.0336961
+> sum(ca1$sv^2)
+[1] 0.3383227
+```
+  - Hmm... where have we seen that number before?
+  - When reporting the results of a CA, what matters is not the absolute values of the inetrtia associated with each new CA dimension, but the percentages.  So we want to say something like "the first CA dimension accounted for x% of the itotal inertia in the data". Here is the computation: 
+> ca1$sv^2/sum(ca1$sv^2)
+[1] 0.9004025 0.0995975
+  - Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the variation in the orginail (2-d) data by just looking at the scores of the assemblages one dimension.
+  - Here is the code to do a plot of the proportion of intertia:
+ ``` 
+ # put the result in a data frames for ggplot
+inertia <- data.frame('Prop.Inertia' = prop.table(ca1$sv^2))
+# plot the proportion of inertia
+theme_set(theme_classic(base_size = 16))
+ggplot(data=inertia , aes(x= 1:length(Prop.Inertia), y=Prop.Inertia)) +
+  scale_x_continuous(breaks= 1:length(inertia$Prop.Inertia)) +
+  geom_bar(stat="identity", fill="grey") +
+  labs( title="",
+        x="Dimension", y='Proportion of Inertia')
+```
+  - And here is the plot:
+![](./Images/PropInertiaSim.png) 
+  
+ - The *row coordinates*. These are the scores of the assemblages on the new CA dimensions.
+ ![](./Images/RowScoresSim.png) 
+ - Let's see how well the score on CA Dimension 1 fit the "true dates" from the simulation.
+  ![](./Images/TrueDatevsDim1Sim.png) 
+- And finally let's check the *column coordinates*. These are scores of the types on the new CA dimensions.
+  ![](./Images/colScoresSim.png) 
+
 
 
 
