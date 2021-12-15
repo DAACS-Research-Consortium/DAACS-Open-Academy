@@ -47,7 +47,7 @@ Let's think again about how to describe the job we want to do:
     Type1     Type2     Type3 
 0.3585859 0.1555985 0.4858156 
 ```
-- Here's how  we are going to compute our measure of total variation:
+- Here's how  we are going to compute our measure of total variation (geek lingo: *inertia*):
 1. Compute the mean of the type proportions (the red dot). We did that! But here is the code:
 ```
 > # the compute the mean proportions for the three types
@@ -57,8 +57,8 @@ Let's think again about how to describe the job we want to do:
 0.3585859 0.1555985 0.4858156 
 ```
 
-2. Compute the distance from each assemblage to the red dot. The distance we use to do this in CA is called (geek lingo!) the *chi-square distance*. Here is the computation for the first row of the matrix of type proportions in each assemblage. First we chck the proportions for the first assemblage:
- ```
+2. Compute the squared distance from each assemblage to the red dot. The distance we use to do this in CA is called (geek lingo) the *chi-square distance*. Here is the computation for the first row of the matrix of type proportions in each assemblage. First we check the proportions for the first assemblage:
+```
   propMat[1,]
      Type1      Type2      Type3 
 0.61877395 0.01532567 0.36590038 
@@ -69,19 +69,82 @@ Get the sum of squared differences between the mean proportions (centroid) and t
      Type1      Type2      Type3 
 0.06769784 0.01967648 0.01437966
 ```
-To get the *Squared chi-square distance* we square the differences, add them up, and divide by the mean proportions:
+To get the *Squared chi-square distance* we square the differences, divide by the mean proportions, and add it all up.
 ```
-> squaredChi2Dist <- (propMat[1,] - colProps)^2/colProps
-> squaredChi2Dist
-     Type1      Type2      Type3 
-0.18879116 0.12645670 0.02959901 
-> colProps<- colSums(simData)/ sum(simData)
+> squaredChi2DistFromMean <- sum((propMat[1,] - colProps)^2/colProps)
+> squaredChi2DistFromMean
+[1] 0.3448469
 ```
-If we skipped the didicion stp, we dould have a *squared Euclidean distance*. It's diciving by the column means (centroidfa) that makes it a chi-squarted distance. Thoinnk back to intor stats... The guts of  the chisquared statiotsc in (O-E)   
+If we had skipped the division step, we would have a *squared Euclidean distance*. It's dividing by the column means (centroid) that makes it a *squared chi-squared distance*. Think back to intro stats.... The guts of the chi-squared statistic is *(O-E)<sup>2</sup>/E*, where *O* is a *observed* count and *E* is an *expected* count. See the parallel?
+
+The division step weights the final distance inversely in proportion to the overall frequency of each type. So rare types contribute more!
+
+We compute the squared chi-sqaured distances to the mean (centroid) for all the assemblages.
+
+ 3. Here is the last step in getting our measure of variation in the data (*inertia*):  We compute a weighted sum of the square chi-squared distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is the *inertia*. Here is the code:
+ ```
+> rowProps <- rowSums(simData)/ sum(simData) 
+> inertia <- sum(squaredChi2DistsFromMean * rowProps)
+> inertia
+[1] 0.3383227
+```
+So *inertia = sum( i'th row proportion x squared chi-squared distance from the i'th row to the the centroid)*
+
+where the *row proportion* is the sum of the row counts, divided by the total count in the entire dataset. In other words, it's the proportion of the total dataset comprised by that assemblage. 
+
+## 4. Computing CA
+Chi-squared distance and inertia are the basic concepts that we need to begin to interpret CA results. We will be using the ca() function in the *ca* R package, which was written by Micheal Greenacre (see README for his wonderful book on CA). We don't have time to cover how the CA results are actually computed. The guts of computational methods are from linear algebra. There are two related techniques. One is called *singular value decomposition*. It's used by the *ca* package and described in Greenacre's book. A related technque is called *eigenanalysis*. They produce the same results. These are the same techniques that are used to do *principal component analysis*. In fact, CA may be regarded as a version of PCA, especially tailored to count data (vs. measurements).     
+
+## 5. Doing a CA of our Simulated Data 
+For our first time out with CA, let's analyze the simulated data with three types and 20 assemblages. Here is the code:
+```
+> ca1 <- ca(simData)
+```
+Let's check what's in the *ca1* object 
+```
+> str(ca1)
+List of 16
+ $ sv        : num [1:2] 0.552 0.184
+ $ nd        : logi NA
+ $ rownames  : chr [1:20] "1" "2" "3" "4" ...
+ $ rowmass   : num [1:20] 0.0561 0.0614 0.0634 0.065 0.0632 ...
+ $ rowdist   : num [1:20] 0.587 0.62 0.524 0.501 0.391 ...
+ $ rowinertia: num [1:20] 0.01934 0.02358 0.0174 0.01631 0.00965 ...
+ $ rowcoord  : num [1:20, 1:2] -0.98 -1.045 -0.899 -0.844 -0.707 ...
+  ..- attr(*, "dimnames")=List of 2
+  .. ..$ : chr [1:20] "1" "2" "3" "4" ...
+  .. ..$ : chr [1:2] "Dim1" "Dim2"
+ $ rowsup    : logi(0) 
+ $ colnames  : chr [1:3] "Type1" "Type2" "Type3"
+ $ colmass   : num [1:3] 0.359 0.156 0.486
+ $ coldist   : num [1:3] 0.547 1.171 0.189
+ $ colinertia: num [1:3] 0.1074 0.2135 0.0174
+ $ colcoord  : num [1:3, 1:2] -0.9399 2.0951 0.0227 0.9515 1.0186 ...
+  ..- attr(*, "dimnames")=List of 2
+  .. ..$ : chr [1:3] "Type1" "Type2" "Type3"
+  .. ..$ : chr [1:2] "Dim1" "Dim2"
+ $ colsup    : logi(0) 
+ $ N         : int [1:20, 1:3] 323 360 344 350 293 295 270 226 195 162 ...
+ $ call      : language ca.matrix(obj = as.matrix(obj))
+ - attr(*, "class")= chr "ca"
+```
+It turns out the function call *ca()* produces a *list*. You can get a description of what's in the list by doing:
+```
+?ca
+```
+We are going to focus on the following bits:
 
 
- 3. Compute a weighted sum of the distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is called (more geek lingo) the *Inertia* 
-- In the next section, we use R to compute both these measures for our simple 3-type dataset.   
+
+
+
+
+
+
+
+
+
+ 
 
 
   
