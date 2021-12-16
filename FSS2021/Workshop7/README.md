@@ -12,7 +12,7 @@ Welcome back! And if you are new, welcome! In this workshop we'll learn the basi
  31:157–184.
 - Ramenofsky, A. F., Neiman, F. D., & Pierce, C. D. (2009). "Measuring time, population, and residential mobility from the surface at San Marcos Pueblo, North Central New Mexico". *American Antiquity*, 74(3), 505-530.
 - Smith, K. Y., & Neiman, F. D. (2007). Frequency seriation, correspondence analysis, and Woodland period ceramic assemblage variation in the Deep South. *Southeastern Archaeology* 31(2):47-72.  
-The pdfs are in [here] (https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/tree/main/FSS2021/Workshop7/articles)  
+The pdfs are in [here](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/tree/main/FSS2021/Workshop7/articles)  
 4. The project for today in RStudio Cloud is here: https://rstudio.cloud/project/3372410
 5. You will be able to find a the recording of this workshop here:
 
