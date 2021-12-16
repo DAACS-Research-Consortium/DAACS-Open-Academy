@@ -37,7 +37,7 @@ Let's think again about how to describe the job we want to do:
 - In our example with 3 types, we have seen that the locations of the assemblage points (and the pattern of distances among them) can be completely described in 2 dimensions.  
 - But what the geeks want is to replace that 2-d description with a 1-d summary. The 1-d summary would consist of a single set of scores along a *new* axis. We want a single set of scores such that when we compute the pattern of distances among the points on the new axis, the distances approximate -- as much as possible -- the distances in the orginal 2-d space.  
 - In a case with 10 types, the geeks are asking for a 1 or maybe 2-d summary. They might let us get away with a 3-d summary, if it turned out that 3 dimenisons were required for a good summary of the major trends in the data.
-- So in all cases, we are going to a completely accurate higher-dimensional description, to a less accurate low-dimensional summary.
+- So in all cases, we want to go from a completely accurate higher-dimensional description, to a less accurate low-dimensional summary.
 - But some low-dimensional summaries are better than others!! 
 - To pick the best one, we need a way to measure how much variation there is in the original data. We can then compare it to how much variation is captured in the summary. We want a low-dimensional summary that captures the highest possible amount of the variation in the original data
 
@@ -58,7 +58,6 @@ Let's think again about how to describe the job we want to do:
     Type1     Type2     Type3 
 0.3585859 0.1555985 0.4858156 
 ```
-
 2. Compute the squared distance from each assemblage to the red dot. The distance we use to do this in CA is called (more geek lingo) the *chi-square distance*. Here is the computation for the first row of the matrix of type proportions. First, we check the proportions for the first assemblage:
 ```
   propMat[1,]
@@ -71,7 +70,7 @@ Now we get the sum of squared differences between the mean proportions (the cent
      Type1      Type2      Type3 
 0.06769784 0.01967648 0.01437966
 ```
-To get the *squared chi-square distance* we square the differences, divide by the mean proportions, and add it all up.
+To get the *squared chi-square distance* we square the differences, divide by the mean proportions, and add the terms up.
 ```
 > squaredChi2DistFromMean <- sum((propMat[1,] - colProps)^2/colProps)
 > squaredChi2DistFromMean
@@ -81,9 +80,9 @@ If we had skipped the division step, we would have a *squared Euclidean distance
 
 The division step weights the final distance inversely in proportion to the overall frequency of each type. So rare types contribute more!
 
-Now we compute the squared chi-squared distances to the mean (centroid) for all the other assemblages the assemblages. Check the code file for how to do this. 
+Now we compute the squared chi-squared distances to the mean (centroid) for all the other assemblages. Check the code file for how to do this. 
 
- 3. Here is the last step in getting our measure of variation in the data (*inertia*):  We compute a weighted sum of the square chi-squared distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is the *inertia* value we need. Here is the code:
+ 3. Here is the last step in getting our measure of variation in the data:  We compute a weighted sum of the square chi-squared distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is the *inertia* value we need. Here is the code:
  ```
 > rowProps <- rowSums(simData)/ sum(simData) 
 > inertia <- sum(squaredChi2DistsFromMean * rowProps)
@@ -135,26 +134,26 @@ It turns out the function call *ca()* produces a *list*. You can get a descripti
 ?ca
 ```
 We are going to focus on just three objects following bits: 
-- The *singular values*:
+- The *singular values*. These are the square roots of the inertia values for each new CA dimension.
+```
 ```
 > ca1$sv
 [1] 0.5519299 0.1835650
 ```
-  - Note there are two of them, one for each new axis or dimension computed by CA. There are only 2 in this case because our simulatied data have three types (columns). But the closed-sum constaint means that all the *inertia* can the described in 2 dimensions. More generally, there will *number of columns-1* or *number of rows-1* singular values and corresponding new dimensions or axes in a CA, whichever is less.
-
-  - The squares of the *singular values* measure the amount on inertia that is described by each new dimension.
+  - There are 2 singular values, one for each new axis or dimension computed by CA. There are only 2 in this case because our simulated data have three types (columns). But the closed-sum constaint means that all the *inertia* can the described in 2 dimensions. More generally, there will *number of columns-1* or *number of rows-1* singular values and corresponding new dimensions or axes in a CA, whichever is less.
+  - The squares of the *singular values* are called the *eigenvalues*. They measure the amount on inertia that is described by each new dimension.
 ```
 > ca1$sv^2
 [1] 0.3046266 0.0336961
-> sum(ca1$sv^2)
-[1] 0.3383227
+> sum(ca1$sv^2)[1] 0.3383227
 ```
   - Hmm... where have we seen that number before?
-  - When reporting the results of a CA, what matters is not the absolute values of the inetrtia associated with each new CA dimension, but the percentages.  So we want to say something like "the first CA dimension accounted for x% of the itotal inertia in the data". Here is the computation: 
+  - The inertia values decline across the CA dimensions. The first dimension or axis is placed through point scatter so that it the accounts for the most possible inertia. The second dimension is placed so it accounts for the most possible inertia, with the constraint that the scores on it are uncorrelated with the scores on the first dimension. If there is a third dimension, it is placed so that accounts for the the most inertia, with the constraint that it is uncorrelated with the previous dimensions, and so forth for higher dimensions. 
+  - When judging the results of a CA, what matters is not the absolute values of the inertia associated with each new CA dimension, but the percentage inertia, relative to the total inertia.  So we want to say something like "the first CA dimension accounted for *x* % of the total inertia in the data". Here is the computation: 
 > ca1$sv^2/sum(ca1$sv^2)
 [1] 0.9004025 0.0995975
-  - Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the variation in the orginail (2-d) data by just looking at the scores of the assemblages one dimension.
-  - Here is the code to do a plot of the proportion of intertia:
+  - Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the inertia in the orginail (2-d) data by just looking at the scores of the assemblages *one dimension*.
+  - Here is the code to do a plot of the proportion of inertia:
  ``` 
  # put the result in a data frames for ggplot
 inertia <- data.frame('Prop.Inertia' = prop.table(ca1$sv^2))
@@ -166,7 +165,7 @@ ggplot(data=inertia , aes(x= 1:length(Prop.Inertia), y=Prop.Inertia)) +
   labs( title="",
         x="Dimension", y='Proportion of Inertia')
 ```
-  - And here is the plot:
+  - And here is the plot. It's called a *scree plot*.
 ![](./Images/PropInertiaSim.png) 
   
  - The *row coordinates*. These are the scores of the assemblages on the new CA dimensions.
