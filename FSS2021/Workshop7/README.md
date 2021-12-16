@@ -7,7 +7,7 @@ Welcome back! And if you are new, welcome! In this workshop we'll learn the basi
 
 1. You will need an [RStudio Cloud](https://rstudio.cloud/) account login to continue with today's class. The login is free and quick to create.
 2. If you want to learn more about CA, there is not better place to start than Micheal Greenacres's *Correspondence Analysis in Practice*. You can find a pdf of the second edition here:http://www.ru.ac.bd/stat/wp-content/uploads/sites/25/2019/03/503_01_Greenacre_Correspondence-analysis-in-practice.pdf 
-3. The project for today in RStudio Cloud is here: 
+3. The project for today in RStudio Cloud is here: https://rstudio.cloud/project/3372410
 4. You will be able to find a the recording of this workshop here:
 
 ## The plan and goals for today:
