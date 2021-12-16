@@ -14,7 +14,7 @@ Welcome back! And if you are new, welcome! In this workshop we'll learn the basi
 
 1. Quick review of the frequency-seriation model and MCDs (see Workshop 5).
 2. Introduction to CA basics -- with a simple seriation example. 
-3. CA of some real-world data: ceramic assemblages from Morne Patate, Domincia.
+3. CA of some real-world data: ceramic assemblages from Morne Patate, Dominica.
 4. And as always, make more plots!
 
 ### [On to Part I: Review of the Frequency-Seriation Model and MCDs ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop7/Part_I.md)
