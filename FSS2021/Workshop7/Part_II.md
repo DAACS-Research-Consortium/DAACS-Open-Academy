@@ -133,9 +133,8 @@ It turns out the function call *ca()* produces a *list*. You can get a descripti
 ```
 ?ca
 ```
-We are going to focus on just three objects following bits: 
+We are going to focus on just three objects: 
 - The *singular values*. These are the square roots of the inertia values for each new CA dimension.
-```
 ```
 > ca1$sv
 [1] 0.5519299 0.1835650
