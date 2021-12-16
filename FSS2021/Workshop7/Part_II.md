@@ -166,16 +166,44 @@ ggplot(data=inertia , aes(x= 1:length(Prop.Inertia), y=Prop.Inertia)) +
 ```
   - And here is the plot. It's called a *scree plot*.
 ![](./Images/PropInertiaSim.png) 
-  
- - The *row coordinates*. These are the scores of the assemblages on the new CA dimensions.
- ![](./Images/RowScoresSim.png) 
- - Let's see how well the score on CA Dimension 1 fit the "true dates" from the simulation.
-  ![](./Images/TrueDatevsDim1Sim.png) 
+
+  - It's already obvious from the percentage values (90% , 10%) that a 1-d summary is likely to capture what we want to know about the pattern of of variation in the 2-d data. So we have accomplish our goal of going from higher-dimenional description (the data) to a low-dimenional summary. So the scree plot here adds little here.
+  - But for real data that are noisy and lie in a higher dimensional space (say 10 or 20 dimensions), deciding on how many CA dimensions to use for the low-dimensional summary can be harder.
+  - Here the scree plot can help. We look for the place on the *x* axis (the CA dimension number) where the percentage of inertia flattens out and keep the CA dimensions that lie to the left of it. We'll see an example in a minute.            
+
+- The *row coordinates*. These are the scores of the assemblages on the new CA dimensions. Here's the code:
+ ```
+# get the row scores in a dataframe and plot 
+rowScores <- data.frame(ca1$rowcoord, unit =ca1$rownames, stringsAsFactors = F)
+# ggplot of row scores dim 1 and dim 2
+set.seed(42)
+ggplot(rowScores, aes(x=Dim1,y=Dim2)) +
+  coord_fixed() +
+  geom_point(shape=21, size=5, colour="black", fill='grey', alpha=.75)   +
+  geom_text_repel(aes(label= unit), cex = 4) +
+  labs(title = "Row Scores",
+       x = paste ("Dimension 1",":  ", round(inertia[1,]*100),'%', sep=''), 
+       y= paste ("Dimension 2",":  ", round(inertia[2,]*100),'%', sep=''))
+ ```
+ ![](./Images/RowScoresSim.png)
+  - Check out the arch pattern in the point scatter!! Look familiar?
+  - The arch typically appears when the type frequencies have battleship-shaped curves and fit the seriation model.
+  - In that case, the arch is a mathematical artifact, but a useful indicator of fit to the seriation model.
+  - Note that the shape of the arch in the CA space is different from the the shape of the arc in the original space of the type frequenies. Here why:
+    - In the space of the type frequencies, the straight-line distances between the assemblage points are *Euclidean distances*.  
+    - In the CA space, the straight-line distances between the points are proportional to the *chi-squared distances*, when the *x* and *y* axes on the plot are scaled the same. Thats why we use ```coord_fixed()```.                        
+  - Let's see how well the scores on CA dimension 1 fit the "true dates" from the simulation.
+  ![](./Images/TrueDatevsDim1Sim.png)
+    - Not bad!! (he fact that the correlation is so good is an indicator that CA dimension-1 scores offer an excellent summary of the temporal trend in the data. We don't need to consider the CA dimension-2 scores.
 - And finally let's check the *column coordinates*. These are scores of the types on the new CA dimensions.
   ![](./Images/colScoresSim.png) 
+  - Note the *correspondence* between the scores of the types and teh score of the assemblages.
+  - Type 1 has a low CA dimension-1 score, as do assemblages that have higher frequencies of Type 1.
+  - Type 3 has a medium CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
+  - Type 2 has a high CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
+  - This correspondence is a re-expression of the relatoinship between the points of the triangle and the type frequenecies that we saw in section 1 above on geometry.  
 
-
-
+### [On to Part III: CA of some real-world data: ceramic assemblages from Morne Patate, Domincia ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop7/Part_III.md)
 
 
 
