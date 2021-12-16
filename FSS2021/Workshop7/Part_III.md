@@ -3,3 +3,6 @@ We are going to be orking with data from Morne Patate, a sugar plantation in Dom
 - Lynsey A., Jillian E. Galle, and Fraser D. Neiman 2020. "Building an Archaeological Chronologyfor Morne Patate". In *Archaeology in Dominica: Everyday Ecologies and Economies at Morne Patate*, edited by Mark W. Hauser and Diane Wallman. University of Florida Press, Gainsville(2020), pp. 64-87. 
 
 - Code, data and a preprint of the article are availbale here: https://osf.io/52jfn/
+- Complete data from Morne Patate are available on the DAACS website: https://www.daacs.org/plantations/morne-patate-estate/ 
+- Here is a schematic site plan (click for more detail): 
+![](./Images/MornePatatePlantation.png) 
