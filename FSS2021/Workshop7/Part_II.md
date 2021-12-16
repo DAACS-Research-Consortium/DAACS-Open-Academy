@@ -129,33 +129,42 @@ List of 16
  $ call      : language ca.matrix(obj = as.matrix(obj))
  - attr(*, "class")= chr "ca"
 ```
+
 It turns out the function call *ca()* produces a *list*. You can get a description of what's in the list by doing:
 ```
 ?ca
 ```
+
 We are going to focus on just three objects: 
 - The *singular values*. These are the square roots of the inertia values for each new CA dimension.
+
 ```
 > ca1$sv
 [1] 0.5519299 0.1835650
 ```
+
     - There are 2 singular values, one for each new axis or dimension computed by CA. There are only 2 in this case because our simulated data have three types (columns). But the closed-sum constaint means that all the *inertia* can the described in 2 dimensions. More generally, there will *number of columns-1* or *number of rows-1* singular values and corresponding new dimensions or axes in a CA, whichever is less.
   - The squares of the *singular values* are called the *eigenvalues*. They measure the amount on inertia that is described by each new dimension.
+
 ```
 > ca1$sv^2
 [1] 0.3046266 0.0336961
 > sum(ca1$sv^2)[1] 0.3383227
 ```
+
     - Hmm... where have we seen that number before?
     - The inertia values decline across the CA dimensions. The first dimension or axis is placed through point scatter so that it the accounts for the most possible inertia. The second dimension is placed so it accounts for the most possible inertia, with the constraint that the scores on it are uncorrelated with the scores on the first dimension. If there is a third dimension, it is placed so that accounts for the the most inertia, with the constraint that it is uncorrelated with the previous dimensions, and so forth for higher dimensions. 
     - When judging the results of a CA, what matters is not the absolute values of the inertia associated with each new CA dimension, but the percentage inertia, relative to the total inertia.  So we want to say something like "the first CA dimension accounted for *x* % of the total inertia in the data". Here is the computation:
+    
 ``` 
 > ca1$sv^2/sum(ca1$sv^2)
 [1] 0.9004025 0.0995975
 ```
+
     - Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the inertia in the orginail (2-d) data by just looking at the scores of the assemblages *one dimension*.
     - Here is the code to do a plot of the proportion of inertia:
- ``` 
+
+``` 
  # put the result in a data frames for ggplot
 inertia <- data.frame('Prop.Inertia' = prop.table(ca1$sv^2))
 # plot the proportion of inertia
@@ -166,14 +175,15 @@ ggplot(data=inertia , aes(x= 1:length(Prop.Inertia), y=Prop.Inertia)) +
   labs( title="",
         x="Dimension", y='Proportion of Inertia')
 ```
+
     - And here is the plot. It's called a *scree plot*.
 ![](./Images/PropInertiaSim.png) 
-
     - It's already obvious from the percentage values (90% , 10%) that a 1-d summary is likely to capture what we want to know about the pattern of of variation in the 2-d data. So we have accomplish our goal of going from higher-dimenional description (the data) to a low-dimenional summary. So the scree plot here adds little here.
     - But for real data that are noisy and lie in a higher dimensional space (say 10 or 20 dimensions), deciding on how many CA dimensions to use for the low-dimensional summary can be harder.
     - Here the scree plot can help. We look for the place on the *x* axis (the CA dimension number) where the percentage of inertia flattens out and keep the CA dimensions that lie to the left of it. We'll see an example in a minute.            
 
 - The *row coordinates*. These are the scores of the assemblages on the new CA dimensions. Here's the code:
+ 
  ```
 # get the row scores in a dataframe and plot 
 rowScores <- data.frame(ca1$rowcoord, unit =ca1$rownames, stringsAsFactors = F)
@@ -187,6 +197,7 @@ ggplot(rowScores, aes(x=Dim1,y=Dim2)) +
        x = paste ("Dimension 1",":  ", round(inertia[1,]*100),'%', sep=''), 
        y= paste ("Dimension 2",":  ", round(inertia[2,]*100),'%', sep=''))
  ```
+ 
  ![](./Images/RowScoresSim.png)
     - Check out the arch pattern in the point scatter!! Look familiar?
     - The arch typically appears when the type frequencies have battleship-shaped curves and fit the seriation model.
@@ -195,6 +206,7 @@ ggplot(rowScores, aes(x=Dim1,y=Dim2)) +
     - In the space of the type frequencies, the straight-line distances between the assemblage points are *Euclidean distances*.  
     - In the CA space, the straight-line distances between the points are proportional to the *chi-squared distances*, when the *x* and *y* axes on the plot are scaled the same. Thats why we use ```coord_fixed()```.                        
     - Let's see how well the scores on CA dimension 1 fit the "true dates" from the simulation. Here is the code:
+
 ```
 # Plot the dim1 scores against the true dates
 ggplot(rowScores, aes(x= as.numeric(rownames(rowScores)), y=Dim1)) +
@@ -204,10 +216,12 @@ ggplot(rowScores, aes(x= as.numeric(rownames(rowScores)), y=Dim1)) +
        x = "True Date", 
        y= paste ("Dimension 1",":  ", round(inertia[1,]*100),'%', sep=''))
  ```
+
     - And here is the plot:
   ![](./Images/TrueDatevsDim1Sim.png)
     - Not bad!! (he fact that the correlation is so good is an indicator that CA dimension-1 scores offer an excellent summary of the temporal trend in the data. We don't need to consider the CA dimension-2 scores.
 - And finally let's check the *column coordinates*. These are scores of the types on the new CA dimensions. Here is the code:
+
 ```
 # get the col scores in a dataframe and plot
 colScores <- data.frame(ca1$colcoord, type =ca1$colnames, stringsAsFactors = F)
@@ -220,7 +234,8 @@ ggplot(colScores, aes(x=Dim1,y=Dim2)) +
        x = paste ("Dimension 1",":  ", round(inertia[1,]*100),'%', sep=''), 
        y= paste ("Dimension 2",":  ", round(inertia[2,]*100),'%', sep='')) 
 ```
-  - And here is the plot:
+
+    - And here is the plot:
   ![](./Images/ColScoresSim.png) 
     - Note the *correspondence* between the scores of the types and teh score of the assemblages.
     - Type 1 has a low CA dimension-1 score, as do assemblages that have higher frequencies of Type 1.
