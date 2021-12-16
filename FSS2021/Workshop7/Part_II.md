@@ -58,7 +58,7 @@ Let's think again about how to describe the job we want to do:
     Type1     Type2     Type3 
 0.3585859 0.1555985 0.4858156 
 ```
-2. Compute the squared distance from each assemblage to the red dot. The distance we use to do this in CA is called (more geek lingo) the *chi-square distance*. Here is the computation for the first row of the matrix of type proportions. First, we check the proportions for the first assemblage:
+2. Compute the distance from each assemblage to the red dot. The particular kind of distance we use to do this in CA is called (more geek lingo) the *chi-square distance*. Here is the computation for the first row of the matrix of type proportions. First, we check the proportions for the first assemblage:
 ```
   propMat[1,]
      Type1      Type2      Type3 
@@ -70,31 +70,31 @@ Now we get the sum of squared differences between the mean proportions (the cent
      Type1      Type2      Type3 
 0.06769784 0.01967648 0.01437966
 ```
-To get the *squared chi-square distance* we square the differences, divide by the mean proportions, and add the terms up.
+To get the squared *chi-square distance* we square the differences, divide by the mean proportions, and add the terms up.
 ```
 > squaredChi2DistFromMean <- sum((propMat[1,] - colProps)^2/colProps)
 > squaredChi2DistFromMean
 [1] 0.3448469
 ```
-If we had skipped the division step, we would have a *squared Euclidean distance*. It's dividing by the column means (centroid) that makes it a *chi-squared distance*. Think back to intro stats.... The guts of the chi-squared statistic is *(O-E)<sup>2</sup>/E*, where *O* is a *observed* count and *E* is an *expected* count. See the parallel?
+If we had skipped the division step, we would have a squared *Euclidean distance*. It's dividing by the column means (centroid) that makes it a squared *chi-square distance*. Think back to intro stats.... The guts of the chi-square statistic is *(O-E)<sup>2</sup>/E*, where *O* is a *observed* count and *E* is an *expected* count. See the parallel?
 
 The division step weights the final distance inversely in proportion to the overall frequency of each type. So rare types contribute more!
 
-Now we compute the squared chi-squared distances to the mean (centroid) for all the other assemblages. Check the code file for how to do this. 
+Now we compute the squared chi-square distances to the mean (centroid) for all the other assemblages. Check the code file for how to do this. 
 
- 3. Here is the last step in getting our measure of variation in the data:  We compute a weighted sum of the square chi-squared distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is the *inertia* value we need. Here is the code:
+ 3. Here is the last step in getting our measure of variation in the data:  We compute a weighted sum of the square chi-square distances, where the weights are the sizes of the assemblages: bigger asssemblages get more weight. This weighted sum is the *inertia* value we need. Here is the code:
  ```
 > rowProps <- rowSums(simData)/ sum(simData) 
 > inertia <- sum(squaredChi2DistsFromMean * rowProps)
 > inertia
 [1] 0.3383227
 ```
-So *inertia = sum( i'th row proportion x squared chi-squared distance from the i'th row to the the centroid)*
+So *inertia = sum( i'th row proportion x squared chi-square distance from the i'th row to the the centroid)*
 
 where the *row proportion* is the sum of the row counts, divided by the total count in the entire dataset. In other words, it's the proportion of the total dataset comprised by that assemblage. 
 
 ## 4. Computing CA
-Chi-squared distance and inertia are the basic concepts that we need to begin to interpret CA results. We will be using the ca() function in the *ca* R package, which was written by Micheal Greenacre (see README for his wonderful book on CA). We don't have time to cover how the CA results are actually computed. The guts of computational methods are from linear algebra. There are two related techniques. One is called *singular value decomposition*. It's used by the *ca* package and described in Greenacre's book. A related technque is called *eigenanalysis*. They produce the same results. These are the same techniques that are used to do *principal component analysis*. In fact, CA may be regarded as a version of PCA, especially tailored to count data (vs. measurements).     
+Chi-square distance and inertia are the basic concepts that we need to begin to interpret CA results. We will be using the ca() function in the *ca* R package, which was written by Micheal Greenacre (see README for his wonderful book on CA). We don't have time to cover how the CA results are actually computed. The guts of computational methods are from linear algebra. There are two related techniques. One is called *singular value decomposition*. It's used by the *ca* package and described in Greenacre's book. A related technque is called *eigenanalysis*. They produce the same results. These are the same techniques that are used to do *principal component analysis*. In fact, CA may be regarded as a version of PCA, especially tailored to count data (vs. measurements).     
 
 ## 5. Doing a CA of our Simulated Data 
 For our first time out with CA, let's analyze the simulated data with three types and 20 assemblages. Here is the code:
@@ -139,20 +139,22 @@ We are going to focus on just three objects:
 > ca1$sv
 [1] 0.5519299 0.1835650
 ```
-  - There are 2 singular values, one for each new axis or dimension computed by CA. There are only 2 in this case because our simulated data have three types (columns). But the closed-sum constaint means that all the *inertia* can the described in 2 dimensions. More generally, there will *number of columns-1* or *number of rows-1* singular values and corresponding new dimensions or axes in a CA, whichever is less.
+    - There are 2 singular values, one for each new axis or dimension computed by CA. There are only 2 in this case because our simulated data have three types (columns). But the closed-sum constaint means that all the *inertia* can the described in 2 dimensions. More generally, there will *number of columns-1* or *number of rows-1* singular values and corresponding new dimensions or axes in a CA, whichever is less.
   - The squares of the *singular values* are called the *eigenvalues*. They measure the amount on inertia that is described by each new dimension.
 ```
 > ca1$sv^2
 [1] 0.3046266 0.0336961
 > sum(ca1$sv^2)[1] 0.3383227
 ```
-  - Hmm... where have we seen that number before?
-  - The inertia values decline across the CA dimensions. The first dimension or axis is placed through point scatter so that it the accounts for the most possible inertia. The second dimension is placed so it accounts for the most possible inertia, with the constraint that the scores on it are uncorrelated with the scores on the first dimension. If there is a third dimension, it is placed so that accounts for the the most inertia, with the constraint that it is uncorrelated with the previous dimensions, and so forth for higher dimensions. 
-  - When judging the results of a CA, what matters is not the absolute values of the inertia associated with each new CA dimension, but the percentage inertia, relative to the total inertia.  So we want to say something like "the first CA dimension accounted for *x* % of the total inertia in the data". Here is the computation: 
+    - Hmm... where have we seen that number before?
+    - The inertia values decline across the CA dimensions. The first dimension or axis is placed through point scatter so that it the accounts for the most possible inertia. The second dimension is placed so it accounts for the most possible inertia, with the constraint that the scores on it are uncorrelated with the scores on the first dimension. If there is a third dimension, it is placed so that accounts for the the most inertia, with the constraint that it is uncorrelated with the previous dimensions, and so forth for higher dimensions. 
+    - When judging the results of a CA, what matters is not the absolute values of the inertia associated with each new CA dimension, but the percentage inertia, relative to the total inertia.  So we want to say something like "the first CA dimension accounted for *x* % of the total inertia in the data". Here is the computation:
+``` 
 > ca1$sv^2/sum(ca1$sv^2)
 [1] 0.9004025 0.0995975
-  - Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the inertia in the orginail (2-d) data by just looking at the scores of the assemblages *one dimension*.
-  - Here is the code to do a plot of the proportion of inertia:
+```
+    - Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the inertia in the orginail (2-d) data by just looking at the scores of the assemblages *one dimension*.
+    - Here is the code to do a plot of the proportion of inertia:
  ``` 
  # put the result in a data frames for ggplot
 inertia <- data.frame('Prop.Inertia' = prop.table(ca1$sv^2))
@@ -164,12 +166,12 @@ ggplot(data=inertia , aes(x= 1:length(Prop.Inertia), y=Prop.Inertia)) +
   labs( title="",
         x="Dimension", y='Proportion of Inertia')
 ```
-  - And here is the plot. It's called a *scree plot*.
+    - And here is the plot. It's called a *scree plot*.
 ![](./Images/PropInertiaSim.png) 
 
-  - It's already obvious from the percentage values (90% , 10%) that a 1-d summary is likely to capture what we want to know about the pattern of of variation in the 2-d data. So we have accomplish our goal of going from higher-dimenional description (the data) to a low-dimenional summary. So the scree plot here adds little here.
-  - But for real data that are noisy and lie in a higher dimensional space (say 10 or 20 dimensions), deciding on how many CA dimensions to use for the low-dimensional summary can be harder.
-  - Here the scree plot can help. We look for the place on the *x* axis (the CA dimension number) where the percentage of inertia flattens out and keep the CA dimensions that lie to the left of it. We'll see an example in a minute.            
+    - It's already obvious from the percentage values (90% , 10%) that a 1-d summary is likely to capture what we want to know about the pattern of of variation in the 2-d data. So we have accomplish our goal of going from higher-dimenional description (the data) to a low-dimenional summary. So the scree plot here adds little here.
+    - But for real data that are noisy and lie in a higher dimensional space (say 10 or 20 dimensions), deciding on how many CA dimensions to use for the low-dimensional summary can be harder.
+    - Here the scree plot can help. We look for the place on the *x* axis (the CA dimension number) where the percentage of inertia flattens out and keep the CA dimensions that lie to the left of it. We'll see an example in a minute.            
 
 - The *row coordinates*. These are the scores of the assemblages on the new CA dimensions. Here's the code:
  ```
@@ -186,22 +188,45 @@ ggplot(rowScores, aes(x=Dim1,y=Dim2)) +
        y= paste ("Dimension 2",":  ", round(inertia[2,]*100),'%', sep=''))
  ```
  ![](./Images/RowScoresSim.png)
-  - Check out the arch pattern in the point scatter!! Look familiar?
-  - The arch typically appears when the type frequencies have battleship-shaped curves and fit the seriation model.
-  - In that case, the arch is a mathematical artifact, but a useful indicator of fit to the seriation model.
-  - Note that the shape of the arch in the CA space is different from the the shape of the arc in the original space of the type frequenies. Here why:
+    - Check out the arch pattern in the point scatter!! Look familiar?
+    - The arch typically appears when the type frequencies have battleship-shaped curves and fit the seriation model.
+    - In that case, the arch is a mathematical artifact, but a useful indicator of fit to the seriation model.
+    - Note that the shape of the arch in the CA space is different from the the shape of the arc in the original space of the type frequencies. Here why:
     - In the space of the type frequencies, the straight-line distances between the assemblage points are *Euclidean distances*.  
     - In the CA space, the straight-line distances between the points are proportional to the *chi-squared distances*, when the *x* and *y* axes on the plot are scaled the same. Thats why we use ```coord_fixed()```.                        
-  - Let's see how well the scores on CA dimension 1 fit the "true dates" from the simulation.
+    - Let's see how well the scores on CA dimension 1 fit the "true dates" from the simulation. Here is the code:
+```
+# Plot the dim1 scores against the true dates
+ggplot(rowScores, aes(x= as.numeric(rownames(rowScores)), y=Dim1)) +
+  geom_point(shape=21, size=5, colour="black", fill='grey', alpha=.75)   +
+  geom_text_repel(aes(label= unit), cex = 4) +
+  labs(title = "Row Scores and True Dates",
+       x = "True Date", 
+       y= paste ("Dimension 1",":  ", round(inertia[1,]*100),'%', sep=''))
+ ```
+    - And here is the plot:
   ![](./Images/TrueDatevsDim1Sim.png)
     - Not bad!! (he fact that the correlation is so good is an indicator that CA dimension-1 scores offer an excellent summary of the temporal trend in the data. We don't need to consider the CA dimension-2 scores.
-- And finally let's check the *column coordinates*. These are scores of the types on the new CA dimensions.
-  ![](./Images/colScoresSim.png) 
-  - Note the *correspondence* between the scores of the types and teh score of the assemblages.
-  - Type 1 has a low CA dimension-1 score, as do assemblages that have higher frequencies of Type 1.
-  - Type 3 has a medium CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
-  - Type 2 has a high CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
-  - This correspondence is a re-expression of the relatoinship between the points of the triangle and the type frequenecies that we saw in section 1 above on geometry.  
+- And finally let's check the *column coordinates*. These are scores of the types on the new CA dimensions. Here is the code:
+```
+# get the col scores in a dataframe and plot
+colScores <- data.frame(ca1$colcoord, type =ca1$colnames, stringsAsFactors = F)
+# ggplot version of row scores dim 1 and dim 2
+ggplot(colScores, aes(x=Dim1,y=Dim2)) +
+  coord_fixed() +
+  geom_point(shape=21, size=5, colour="black", fill='grey', alpha=.75)   +
+  geom_text_repel(aes(label= type), cex = 6) +
+  labs(title = "Column Scores",
+       x = paste ("Dimension 1",":  ", round(inertia[1,]*100),'%', sep=''), 
+       y= paste ("Dimension 2",":  ", round(inertia[2,]*100),'%', sep='')) 
+```
+  - And here is the plot:
+  ![](./Images/ColScoresSim.png) 
+    - Note the *correspondence* between the scores of the types and teh score of the assemblages.
+    - Type 1 has a low CA dimension-1 score, as do assemblages that have higher frequencies of Type 1.
+    - Type 3 has a medium CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
+    - Type 2 has a high CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
+    - This correspondence is a re-expression of the relatoinship between the points of the triangle and the type frequenecies that we saw in section 1 above on geometry.  
 
 ### [On to Part III: CA of some real-world data: ceramic assemblages from Morne Patate, Domincia ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop7/Part_III.md)
 
