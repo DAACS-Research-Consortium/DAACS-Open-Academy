@@ -94,7 +94,7 @@ So *inertia = sum( i'th row proportion x squared chi-square distance from the i'
 where the *row proportion* is the sum of the row counts, divided by the total count in the entire dataset. In other words, it's the proportion of the total dataset comprised by that assemblage. 
 
 ## 4. Computing CA
-Chi-square distance and inertia are the basic concepts that we need to begin to interpret CA results. We will be using the ca() function in the *ca* R package, which was written by Micheal Greenacre (see README for his wonderful book on CA). We don't have time to cover how the CA results are actually computed. The guts of computational methods are from linear algebra. There are two related techniques. One is called *singular value decomposition*. It's used by the *ca* package and described in Greenacre's book. A related technque is called *eigenanalysis*. They produce the same results. These are the same techniques that are used to do *principal component analysis*. In fact, CA may be regarded as a version of PCA, especially tailored to count data (vs. measurements).     
+Chi-square distance and inertia are the basic concepts that we need to begin to interpret CA results. We will be using the ```ca(...)``` function in the *ca* R package, which was written by Micheal Greenacre (see README for his wonderful book on CA). We don't have time to cover how the CA results are actually computed. The guts of computational methods are from linear algebra. There are two related techniques. One is called *singular value decomposition*. It's used by the *ca* package and described in Greenacre's book. A related technque is called *eigenanalysis*. They produce the same results. These are the same techniques that are used to do *principal component analysis*. In fact, CA may be regarded as a version of PCA, especially tailored to count data (vs. measurements).     
 
 ## 5. Doing a CA of our Simulated Data 
 For our first time out with CA, let's analyze the simulated data with three types and 20 assemblages. Here is the code:
@@ -130,7 +130,7 @@ List of 16
  - attr(*, "class")= chr "ca"
 ```
 
-It turns out the function call *ca()* produces a *list*. You can get a description of what's in the list by doing:
+It turns out the function call ```ca(...)``` produces a *list*. You can get a description of what's in the list by doing:
 ```
 ?ca
 ```
@@ -239,11 +239,11 @@ ggplot(colScores, aes(x=Dim1,y=Dim2)) +
 - And here is the plot:
 
 ![](./Images/ColScoresSim.png) 
-- Note the *correspondence* between the scores of the types and teh score of the assemblages.
+- Note the *correspondence* between the scores of the types and the score of the assemblages.
 - Type 1 has a low CA dimension-1 score, as do assemblages that have higher frequencies of Type 1.
 - Type 3 has a medium CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
 - Type 2 has a high CA dimension-1 score, as do assemblages that have higher frequencies of Type 3.
-- This correspondence is a re-expression of the relatoinship between the points of the triangle and the type frequenecies that we saw in section 1 above on geometry.  
+- This correspondence is a re-expression of the relationship between the points of the triangle and the type frequenecies that we saw in section 1 above on geometry.  
 
 ### [On to Part III: CA of some real-world data: ceramic assemblages from Morne Patate, Domincia ...](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/blob/main/FSS2021/Workshop7/Part_III.md)
 
