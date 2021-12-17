@@ -18,7 +18,7 @@ There are several different ways to understand CA and motivate the math behind i
 - Things to note about the shape: point scatter looks like an arch.
   - Why does this happen ?   
   - This is the hallmark of data that fit the seriation model and we will encounter it in CA.
-- Things to note abou the orientation: the points all fall on the surface of the triangle. 
+- Things to note about the orientation: the points all fall on the surface of the triangle. 
   - Why? Geek answer: the assemblage proportions must obey a "closed sum constraint".
   - So even though we initially plotted the data in 3 dimensions, they actually fall in a 2-d subspace (geek lingo: a simplex).
 - The triangle may look familar...   
@@ -36,7 +36,7 @@ There are several different ways to understand CA and motivate the math behind i
 Let's think again about how to describe the job we want to do:
 - In our example with 3 types, we have seen that the locations of the assemblage points (and the pattern of distances among them) can be completely described in 2 dimensions.  
 - But what the geeks want is to replace that 2-d description with a 1-d summary. The 1-d summary would consist of a single set of scores along a *new* axis. We want a single set of scores such that when we compute the pattern of distances among the points on the new axis, the distances approximate -- as much as possible -- the distances in the orginal 2-d space.  
-- In a case with 10 types, the geeks are asking for a 1 or maybe 2-d summary. They might let us get away with a 3-d summary, if it turned out that 3 dimenisons were required for a good summary of the major trends in the data.
+- In a case with 10 types, the geeks are asking for a 1 or maybe 2-d summary. They might let us get away with a 3-d summary, if it turned out that 3 dimensions were required for a good summary of the major trends in the data.
 - So in all cases, we want to go from a completely accurate higher-dimensional description, to a less accurate low-dimensional summary.
 - But some low-dimensional summaries are better than others!! 
 - To pick the best one, we need a way to measure how much variation there is in the original data. We can then compare it to how much variation is captured in the summary. We want a low-dimensional summary that captures the highest possible amount of the variation in the original data
@@ -44,12 +44,12 @@ Let's think again about how to describe the job we want to do:
 ## 3. Measuring Distances and Variation
 - Here's another picture. It will help us think about how to measure the total amount of variation in the orginal data.
 ![](./Images/3dCoordsPointsSimplexRMean.png)
-- The red dot is the *mean* of the type proportions(geek lingo: "centroid"). We compute it by adding up counts for each of the types and dividing by the sum of the counts in all the assemblages. Here is the vector, straight from the R console: 
+- The red dot is the *mean* of the type proportions (geek lingo: "centroid"). We compute it by adding up counts for each of the types and dividing by the sum of the counts in all the assemblages. Here is the vector, straight from the R console: 
 ```
     Type1     Type2     Type3 
 0.3585859 0.1555985 0.4858156 
 ```
-- Here's how  we are going to compute our measure of total variation (geek lingo: *inertia*):
+- Here's how we are going to compute our measure of total variation (geek lingo: *inertia*):
 1. Compute the mean of the type proportions (the red dot). We did that! But here is the code:
 ```
 > # the compute the mean proportions for the three types
