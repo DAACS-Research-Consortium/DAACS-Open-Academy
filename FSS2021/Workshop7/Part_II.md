@@ -162,7 +162,7 @@ We are going to focus on just three objects:
 [1] 0.9004025 0.0995975
 ```
 
-- Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the inertia in the orginail (2-d) data by just looking at the scores of the assemblages *one dimension*.
+- Wow! The first CA dimension or axis accounts for 90% of the inertia in the data. That means that we can see nearly all of the inertia in the original (2-d) data by just looking at the scores of the assemblages *one dimension*.
 - Here is the code to do a plot of the proportion of inertia:
 
 ``` 
@@ -179,7 +179,7 @@ ggplot(data=inertia , aes(x= 1:length(Prop.Inertia), y=Prop.Inertia)) +
 
 - And here is the plot. It's called a *scree plot*.
 ![](./Images/PropInertiaSim.png) 
-- It's already obvious from the percentage values (90% , 10%) that a 1-d summary is likely to capture what we want to know about the pattern of of variation in the 2-d data. So we have accomplish our goal of going from higher-dimenional description (the data) to a low-dimenional summary. So the scree plot here adds little here.
+- It's already obvious from the percentage values (90% , 10%) that a 1-d summary is likely to capture what we want to know about the pattern of variation in the 2-d data. So we have accomplished our goal of going from higher-dimensional description (the data) to a low-dimenional summary. So the scree plot here adds little here.
 - But for real data that are noisy and lie in a higher dimensional space (say 10 or 20 dimensions), deciding on how many CA dimensions to use for the low-dimensional summary can be harder.
 - Here the scree plot can help. We look for the place on the *x* axis (the CA dimension number) where the percentage of inertia flattens out and keep the CA dimensions that lie to the left of it. We'll see an example in a minute.            
 
