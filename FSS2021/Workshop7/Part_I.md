@@ -19,9 +19,10 @@ mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 - Once again think back to Workshop 5 on MCDs. There we used a simulation to understand why MCDs work (and why they might not). Here's a quick refresher with a diifferent example.
 - We ask R to simulate 20 time periods -- you can think of these as years. So start in year *1* and end in year *20*.  
 - Then we get R to simulate the popularity curves for three types (Types 1, 2, and 3) for these 20 years. 
-- The type frequencies follow symmetrical "battleship-shaped" curves across time. (Geek lingo: the type frequencies follow Gaussian responses).      
-- For the data shown below, the "years" of maximum popularity -- the "midpoints" -- for the three types are: *m<sub>i</sub>* = [ 2, 29, 9]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 2, *m<sub>2</sub>* = 29, *m<sub>3</sub>* = 9.
-- Here's what we get: 
+- The type frequencies follow symmetrical "battleship-shaped" curves across time. (Geek lingo: the type frequencies follow Gaussian responses).     - So to get a set of three populatity curves, we need to tell R the following:
+	- The "years" of maximum popularity -- the "midpoints" -- for the three types are: *m<sub>i</sub>* = [ 2, 29, 9]. These are means of the Gaussian responses. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 2, *m<sub>2</sub>* = 29, *m<sub>3</sub>* = 9.
+	- We also need to tell R how spread out in time each popularity curve should be. This models the duration of the type. The spread is set by the (geek lingo) *variance*, which also determines the what we might think of as the beginning and ending dates for the type. *But all we need to worry about here is the type means or midpoints.*          
+- When we run the simulation and get the "data" shown below, 
 ```
 Year Type1 Type2 Type3
 1    323     8   191
@@ -56,7 +57,7 @@ And here is the battleship plot:
 
 ## 5. MCDs  
 - The MCD method says that we can infer the dates of each assemblage from this mess if we know the type means. 
-- All we do is multiply the vector that conatains the midpoints of 3 type *m<sub>i</sub>* = [ 2, 29, 9] by the vector of frequencies in each assemblage, add the products, and divide by the sum of the frequencies. We get a weighted average, where the weights are the type relative frequencies. This is the MCD estimate for each assemblage. 
+- All we do is multiply the vector that contains the midpoints of 3 type *m<sub>i</sub>* = [ 2, 29, 9] by the vector of frequencies in each assemblage, add the products, and divide by the sum of the frequencies. We get a weighted average, where the weights are the type relative frequencies. This is the MCD estimate for each assemblage. 
 - Then we sort the assemblages on the MCD estimates to see if we see the Gaussian reponses that the model assumes. Here is the plot:
 
 ![](./Images/propMatSortedByMCD.png)
