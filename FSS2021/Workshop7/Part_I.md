@@ -70,8 +70,8 @@ And here is the battleship plot:
 
 ## 6. MCD Problems
 But what if we do not know the means for our types?
-	- We don't have the documentary data on manufacturing midpoints.
-	- We are unwilling to assume that the manufacturing midpoints apply to the local cultural tradition that generated our assemblages.
+	-We don't have the documentary data on manufacturing midpoints.
+	-We are unwilling to assume that the manufacturing midpoints apply to the local cultural tradition that generated our assemblages.
 
 CA offers a way forward!
 
