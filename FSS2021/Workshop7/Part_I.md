@@ -63,7 +63,7 @@ And here is the battleship plot:
 ![](./Images/propMatSortedByMCD.png)
 
 - Hooray!!
-- And we can go one step further here. This is a simulation,so we KNOW the true assemblage dates. We can plot MCDs against the true dates (the time periods or "years": 1,2,3,…20) to see how well the method works: 
+- And we can go one step further here. This is a simulation, so we KNOW the true assemblage dates. We can plot MCDs against the true dates (the time periods or "years": 1,2,3,…20) to see how well the method works: 
 
 ![](./Images/MCDxDate.png)
 
