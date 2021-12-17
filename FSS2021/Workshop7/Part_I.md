@@ -12,7 +12,7 @@ mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 ``` 
 ## 2. Recall the Frequency Seriation Model
 - Over time the relative frequencies of certain artifact types ("historical types") tend to follow battleship-shaped curves: they start off rare, get popular, then get rare again.
-- We "keep things simple" by assuming that the curve for each type is symmetrical around the date of the type's peak popularity. This ensures that the peak is both the midpoint and the mean for the curve.
+- We "keep things simple" in the model in the next section by assuming that the curve for each type is symmetrical around the date of the type's peak popularity. This ensures that the peak is both the midpoint and the mean for the curve.
 
 ## 3. The Seriation Model is the Foundation for MCDs
 - Once again think back to Workshop 5 on MCDs. There we used a simulation to understand why MCDs work (and why they might not). Here's a quick refresher with a different example.
