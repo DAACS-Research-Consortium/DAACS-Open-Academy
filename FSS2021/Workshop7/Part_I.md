@@ -56,8 +56,8 @@ And here is the battleship plot:
 
 ## 5. MCDs  
 - The MCD method says that we can infer the dates of each assemblage from this mess if we know the type means. 
-- All we do is multiply the vector that conatains the midpoints of 3 type *m<sub>i</sub>* = [ 2, 29, 9] by the vector of frequencies in each assemblage, add the products, and divide by the sum of the frequencies. We get a weighted average, where the weights are the type relative frequnencies. This is the MCD estimate for each assemblage. 
-- Then we sort the assmblages on the MCD estimates to see if we see the Gaussian reponses that the model assumes. Here is the plot:
+- All we do is multiply the vector that conatains the midpoints of 3 type *m<sub>i</sub>* = [ 2, 29, 9] by the vector of frequencies in each assemblage, add the products, and divide by the sum of the frequencies. We get a weighted average, where the weights are the type relative frequencies. This is the MCD estimate for each assemblage. 
+- Then we sort the assemblages on the MCD estimates to see if we see the Gaussian reponses that the model assumes. Here is the plot:
 
 ![](./Images/propMatSortedByMCD.png)
 
@@ -68,9 +68,9 @@ And here is the battleship plot:
 
 
 ## 6. MCD Problems
-But what if we do not know the  means for our types?
+But what if we do not know the means for our types?
 	- We don't have the documentary data on manufacturing midpoints.
-	- We are unwilling to assume that the manufacturing midpoinst apply to the local cultural tradition that generated our assemblages.
+	- We are unwilling to assume that the manufacturing midpoints apply to the local cultural tradition that generated our assemblages.
 
 CA offers a way forward!
 
