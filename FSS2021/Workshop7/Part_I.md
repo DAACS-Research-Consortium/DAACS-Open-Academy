@@ -20,7 +20,7 @@ mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 - We ask R to simulate 20 time periods -- you can think of these as years. So start in year *1* and end in year *20*.  
 - Then we get R to simulate the popularity curves for three types (Types 1, 2, and 3) for these 20 years. 
 - The type frequencies follow symmetrical "battleship-shaped" curves across time. (Geek lingo: the type frequencies follow Gaussian responses).      
-- For the data show below, the "years" of maximum popularity -- the "midpoints" -- for the three types are: *m<sub>i</sub>* = [ 2, 29, 9]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 2, *m<sub>2</sub>* = 29, *m<sub>3</sub>* = 9.
+- For the data shown below, the "years" of maximum popularity -- the "midpoints" -- for the three types are: *m<sub>i</sub>* = [ 2, 29, 9]. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 2, *m<sub>2</sub>* = 29, *m<sub>3</sub>* = 9.
 - Here's what we get: 
 ```
 Year Type1 Type2 Type3
