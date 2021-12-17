@@ -19,7 +19,7 @@ There are several different ways to understand CA and motivate the math behind i
   - Why does this happen ?   
   - This is the hallmark of data that fit the seriation model and we will encounter it in CA.
 - Things to note about the orientation: the points all fall on the surface of the triangle. 
-  - Why? Geek answer: the assemblage proportions must obey a "closed sum constraint".
+  - Why? Geek answer: the assemblage proportions must obey a "closed sum constraint": the numbers in each row must add up to some constant, in this case *1*. This means that once you know the values of the proportions for 2 types, the value of the proportion for the third type is completely determinied. The third value cannot vary.    
   - So even though we initially plotted the data in 3 dimensions, they actually fall in a 2-d subspace (geek lingo: a simplex).
 - The triangle may look familar...   
 ![](./Images/usdaSoilTexture.jpg)
