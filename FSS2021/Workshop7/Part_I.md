@@ -16,7 +16,7 @@ mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 - Because the curve for each type is symmetrical, the date of the type's peak popularity is both the midpoint and the mean for the curve.
 
 ## 3. The Seriation Model is the Foundation for MCDs
-- Once again think back to Workshop 5 on MCDs. There we used a simulation to understand why MCDs work (and why they might not). Here's a quick refresher with a diifferent example.
+- Once again think back to Workshop 5 on MCDs. There we used a simulation to understand why MCDs work (and why they might not). Here's a quick refresher with a different example.
 - We ask R to simulate 20 time periods -- you can think of these as years. So start in year *1* and end in year *20*.  
 - Then we get R to simulate the popularity curves for three types (Types 1, 2, and 3) for these 20 years. 
 - The type frequencies follow symmetrical "battleship-shaped" curves across time. (Geek lingo: the type frequencies follow Gaussian responses).     - So to get a set of three populatity curves, we need to tell R the following:
