@@ -3,7 +3,7 @@
 ## 1. Some Geometry.
 There are several different ways to understand CA and motivate the math behind it. We'll start with geometry. That means pictures!! 
 - We will be using the "data" from our simulation of the frequencies of 3 types over 20 years to make our first pictures.
-- We can think of the 20 rows of our data matrix (the assemblages) as points in space. The each axis of the space measures the relative frequency of one of the 3 types. So the axes represent the columns of the matrix. Three types gets us three axes. Here they are:
+- We can think of the 20 rows of our data matrix (the assemblages) as points in space. Each axis of the space measures the relative frequency of one of the 3 types. So the axes represent the columns of the matrix. Three types gets us three axes. Here they are:
 ![](./Images/3dCoords.png) 
 - Each axis represents the proportion of its type -- from 0 to 1 -- in an assemblage. So we can plot each assembage on the 3 axes. Here's what that plot looks like:
 ![](./Images/3dCoordsPoints.png) 
