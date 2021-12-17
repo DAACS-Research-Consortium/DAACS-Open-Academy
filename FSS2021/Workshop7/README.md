@@ -16,7 +16,7 @@ Welcome back! And if you are new, welcome! In this workshop we'll learn the basi
 - The pdfs are in [here](https://github.com/DAACS-Research-Consortium/DAACS-Open-Academy/tree/main/FSS2021/Workshop7/articles)  
 
 4. The project for today in RStudio Cloud is here: https://rstudio.cloud/project/3372410
-5. You will be able to find a the recording of this workshop here:
+5. You will be able to find a the recording of this workshop here: Link will be posted after workshop.
 
 ## The plan and goals for today:
 
