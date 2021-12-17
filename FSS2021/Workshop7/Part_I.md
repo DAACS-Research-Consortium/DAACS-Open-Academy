@@ -18,9 +18,9 @@ mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 - Once again think back to Workshop 5 on MCDs. There we used a simulation to understand why MCDs work (and why they might not). Here's a quick refresher with a different example.
 - We ask R to simulate 20 time periods -- you can think of these as years. So start in year *1* and end in year *20*.  
 - Then we get R to simulate the popularity curves for three types (Types 1, 2, and 3) for these 20 years. 
-- The type frequencies follow symmetrical "battleship-shaped" curves across time. (Geek lingo: the type frequencies follow Gaussian responses).     - So to get a set of three populatity curves, we need to tell R the following:
-	- The "years" of maximum popularity -- the "midpoints" -- for the three types are: *m<sub>i</sub>* = [ 2, 29, 9]. These are means of the Gaussian responses. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 2, *m<sub>2</sub>* = 29, *m<sub>3</sub>* = 9.
-	- We also need to tell R how spread out in time each popularity curve should be. This models the duration of the type. The spread is set by the (geek lingo) *standard deviation* or *tolerance*, which also determines the what we might think of as the beginning and ending dates for the type. 
+- The type frequencies follow symmetrical "battleship-shaped" curves across time. (Geek lingo: the type frequencies follow Gaussian responses). So to get a set of three popularity curves, we need to tell R the following:
+	- The "years" of maximum popularity -- the "midpoints" -- for the three types. We used: *m<sub>i</sub>* = [ 2, 29, 9]. These are means of the Gaussian responses. Here the subscript *i* tells us which type we are dealing with: *m<sub>1</sub>* = 2, *m<sub>2</sub>* = 29, *m<sub>3</sub>* = 9.
+	- We also need to tell R how spread out in time each popularity curve should be. This models the duration of the type. The spread is set by the (geek lingo) *standard deviation* or *tolerance*, which also determines what we might think of as the beginning and ending dates for the type. 
 	- For example, here is a popularity curve, with *mean* = 10 and *tolerance* = 3.
 ![](./Images/grf.png)          
 - When we run the simulation and get the "data" shown below, 
