@@ -11,7 +11,7 @@ wareCounts1<- c(21, 17, 36)
 mcd <- sum(wareMidpoints*wareCounts1)/sum(wareCounts1)
 ``` 
 ## 2. Recall the Frequency Seriation Model
-- Over time the relative frequencies of certain artifact types ("historical types") tend to follow a battleship-shaped curves: they start off rare, get popular, then get rare again.
+- Over time the relative frequencies of certain artifact types ("historical types") tend to follow battleship-shaped curves: they start off rare, get popular, then get rare again.
 - A geeky way to make this more precise: type frequencies follow Gaussian response functions to time. This implies that the curves are symmetrical.
 - Because the curve for each type is symmetrical, the date of the type's peak popularity is both the midpoint and the mean for the curve.
 
