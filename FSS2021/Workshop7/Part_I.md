@@ -1,6 +1,6 @@
 # Part I: Review of MCDs and the Frequnecy Seriation Model  
 
-## 1. Recall how to Compute an MCD
+## 1. Recall how to Compute a Mean Ceramic Date (MCD)
 - Think back to Workshop 5...
 - An MCD is the weighted average of dates. The dates are estimates of the midpoints of the span of time over which each ceramic type found in an assemblage was manufactured. The weights are frequencies of each type in the assemblage -- more popular types get more weight. 
 - Here's the R code from our first example:
