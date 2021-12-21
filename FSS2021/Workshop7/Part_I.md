@@ -1,4 +1,4 @@
-# Part I: Review of MCDs and the Frequnecy Seriation Model  
+# Part I: Review of MCDs and the Frequency Seriation Model  
 
 ## 1. Recall how to Compute a Mean Ceramic Date (MCD)
 - Think back to Workshop 5...
